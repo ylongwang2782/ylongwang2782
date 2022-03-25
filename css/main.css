@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #bf7eee;
+  background: #953e62;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2439,4 +2439,11 @@ ul.breadcrumb li + li:last-child {
 }
 .links-of-blogroll-item {
   padding: 0;
+}
+.fa-bilibili {
+  background: url("/images/bilibili.svg");
+  background-position: 50% 75%;
+  background-repeat: no-repeat;
+  height: 1rem;
+  width: 1rem;
 }
