@@ -2660,3 +2660,23 @@ ul.breadcrumb li:last-child {
 .bilibili:hover {
   opacity: 1;
 }
+/* brand�ı���ɫ */
+.site-brand-container {
+  background: #c5d8a4;
+}
+/* brand��������ɫ */
+.brand {
+  color: #534340;
+}
+/* body�ı�����ɫ */
+body {
+  background: #f4fcd9;
+}
+/* �󱳾�����ɫ */
+.main-inner {
+  background: #faffea;
+}
+/* �����ӵ���ɫ */
+a {
+  color: #61a4bc;
+}
