@@ -20,22 +20,24 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"ylongwang2782.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="前言折腾了大概一天，东拼西凑终于还是搞定了 外网访问那里花费的时间最多 感慨颇多，前前后后还是做了很久的，必须要好好总结一下 jellyfin安装参考的这篇文章 群晖NAS安装Jellyfin+TMM影片刮削器入门教程，完美硬解，轻松打造家庭影音中心！不敲一行命令轻松部署_NAS存储_什么值得买 (smzdm.com) 安装较为简单 且jellyfin使用也比较简单，简单的设置，主要就是添加媒体库">
+    <meta name="description" content="前言折腾了大概一天，东拼西凑终于还是搞定了 外网访问那里花费的时间最多 感慨颇多，前前后后还是做了很久的，必须要好好总结一下">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jellyfin建立自己的媒体库">
 <meta property="og:url" content="https://ylongwang2782.github.io/2022/03/27/jellyfin/">
 <meta property="og:site_name" content="来日方长">
-<meta property="og:description" content="前言折腾了大概一天，东拼西凑终于还是搞定了 外网访问那里花费的时间最多 感慨颇多，前前后后还是做了很久的，必须要好好总结一下 jellyfin安装参考的这篇文章 群晖NAS安装Jellyfin+TMM影片刮削器入门教程，完美硬解，轻松打造家庭影音中心！不敲一行命令轻松部署_NAS存储_什么值得买 (smzdm.com) 安装较为简单 且jellyfin使用也比较简单，简单的设置，主要就是添加媒体库">
+<meta property="og:description" content="前言折腾了大概一天，东拼西凑终于还是搞定了 外网访问那里花费的时间最多 感慨颇多，前前后后还是做了很久的，必须要好好总结一下">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.imgdb.cn/item/623ff6ff27f86abb2a934d7a.jpg">
+<meta property="og:image" content="https://pic.imgdb.cn/item/623f538927f86abb2a42f603.png">
 <meta property="og:image" content="https://pic.imgdb.cn/item/623f538927f86abb2a42f5ed.png">
 <meta property="og:image" content="https://pic.imgdb.cn/item/623f538927f86abb2a42f635.png">
-<meta property="og:image" content="https://pic.imgdb.cn/item/623f538927f86abb2a42f603.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/623ff9c427f86abb2aa0657a.jpg">
 <meta property="article:published_time" content="2022-03-26T17:53:00.000Z">
-<meta property="article:modified_time" content="2022-03-26T18:05:12.280Z">
+<meta property="article:modified_time" content="2022-03-27T06:11:20.275Z">
 <meta property="article:author" content="Rainlong">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pic.imgdb.cn/item/623f538927f86abb2a42f5ed.png">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/623ff6ff27f86abb2a934d7a.jpg">
 
 
 <link rel="canonical" href="https://ylongwang2782.github.io/2022/03/27/jellyfin/">
@@ -126,7 +128,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jellyfin%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">jellyfin安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BE%8E%E5%8C%96jellyfin"><span class="nav-number">3.</span> <span class="nav-text">美化jellyfin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tmm%E5%88%AE%E5%89%8A-Y"><span class="nav-number">4.</span> <span class="nav-text">tmm刮削 Y</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B%E5%85%A8%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%AE%E5%89%8A"><span class="nav-number">5.</span> <span class="nav-text">建立全自动化刮削</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BC%94%E5%91%98%E5%A4%B4%E5%83%8F%E7%AE%A1%E7%90%86"><span class="nav-number">6.</span> <span class="nav-text">演员头像管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clash"><span class="nav-number">7.</span> <span class="nav-text">clash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A1%AC%E9%93%BE%E6%8E%A5"><span class="nav-number">8.</span> <span class="nav-text">硬链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rename%E9%87%8D%E5%91%BD%E5%90%8D"><span class="nav-number">9.</span> <span class="nav-text">rename重命名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#movie-data-capture%E5%88%AE%E5%89%8A"><span class="nav-number">10.</span> <span class="nav-text">movie data capture刮削</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE"><span class="nav-number">11.</span> <span class="nav-text">外网访问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8kodi%E5%81%9A%E6%92%AD%E6%94%BE%E5%99%A8"><span class="nav-number">12.</span> <span class="nav-text">用kodi做播放器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#issue"><span class="nav-number">13.</span> <span class="nav-text">issue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">14.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jellyfin%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">jellyfin安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#issue"><span class="nav-number">2.1.</span> <span class="nav-text">issue</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A1%AC%E9%93%BE%E6%8E%A5"><span class="nav-number">3.</span> <span class="nav-text">硬链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B5%84%E6%96%99%E5%88%AE%E5%89%8A"><span class="nav-number">4.</span> <span class="nav-text">资料刮削</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tmm%E5%88%AE%E5%89%8A%E6%99%AE%E9%80%9A%E7%94%B5%E5%BD%B1"><span class="nav-number">4.1.</span> <span class="nav-text">tmm刮削普通电影</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#movie-data-capture%E5%88%AE%E5%89%8A%E5%A5%B3%E5%8F%8B%E8%B5%84%E6%96%99"><span class="nav-number">4.2.</span> <span class="nav-text">movie data capture刮削女友资料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#renamer%E9%87%8D%E5%91%BD%E5%90%8D"><span class="nav-number">4.3.</span> <span class="nav-text">renamer重命名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BC%94%E5%91%98%E5%A4%B4%E5%83%8F%E7%AE%A1%E7%90%86"><span class="nav-number">5.</span> <span class="nav-text">演员头像管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A5%B3%E5%8F%8B%E7%85%A7%E7%89%87"><span class="nav-number">5.1.</span> <span class="nav-text">女友照片</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="nav-number">5.1.1.</span> <span class="nav-text">解决办法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E6%BC%94%E5%91%98%E7%85%A7%E7%89%87"><span class="nav-number">5.2.</span> <span class="nav-text">普通演员照片</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">5.2.1.</span> <span class="nav-text">使用方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BE%8E%E5%8C%96jellyfin"><span class="nav-number">6.</span> <span class="nav-text">美化jellyfin</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E8%99%9A%E5%8C%96%E9%97%AE%E9%A2%98"><span class="nav-number">6.1.</span> <span class="nav-text">背景虚化问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#logo%E9%97%AE%E9%A2%98"><span class="nav-number">6.2.</span> <span class="nav-text">logo问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clash%EF%BC%88%E5%BA%9F%E5%BC%83%EF%BC%89"><span class="nav-number">7.</span> <span class="nav-text">clash（废弃）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE"><span class="nav-number">8.</span> <span class="nav-text">外网访问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8kodi%E5%81%9A%E6%92%AD%E6%94%BE%E5%99%A8"><span class="nav-number">9.</span> <span class="nav-text">用kodi做播放器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B%E5%85%A8%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%AE%E5%89%8A"><span class="nav-number">10.</span> <span class="nav-text">建立全自动化刮削</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">11.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">12.</span> <span class="nav-text">后记</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -226,7 +228,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-03-27 01:53:00 / 修改时间：02:05:12" itemprop="dateCreated datePublished" datetime="2022-03-27T01:53:00+08:00">2022-03-27</time>
+      <time title="创建时间：2022-03-27 01:53:00 / 修改时间：14:11:20" itemprop="dateCreated datePublished" datetime="2022-03-27T01:53:00+08:00">2022-03-27</time>
     </span>
 
   
@@ -258,7 +260,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.1k</span>
+      <span>2.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -279,42 +281,36 @@
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>折腾了大概一天，东拼西凑终于还是搞定了</p>
 <p>外网访问那里花费的时间最多</p>
 <p>感慨颇多，前前后后还是做了很久的，必须要好好总结一下</p>
+<span id="more"></span>
+
 <h2 id="jellyfin安装"><a href="#jellyfin安装" class="headerlink" title="jellyfin安装"></a>jellyfin安装</h2><p>参考的这篇文章</p>
 <p><a target="_blank" rel="noopener" href="https://post.smzdm.com/p/a4dm5z2k/">群晖NAS安装Jellyfin+TMM影片刮削器入门教程，完美硬解，轻松打造家庭影音中心！不敲一行命令轻松部署_NAS存储_什么值得买 (smzdm.com)</a></p>
 <p>安装较为简单</p>
 <p>且jellyfin使用也比较简单，简单的设置，主要就是添加媒体库就行</p>
 <p>一步步来就行</p>
 <p>因为不需要改造版的硬解码，故重新安装原版jellyfin</p>
-<h2 id="美化jellyfin"><a href="#美化jellyfin" class="headerlink" title="美化jellyfin"></a>美化jellyfin</h2><p><a target="_blank" rel="noopener" href="https://github.com/danieladov/jellyfin-plugin-skin-manager">danieladov&#x2F;jellyfin-plugin-skin-manager: Jellyfin Skin Manager is a plugin that helps you to download and install skins (github.com)</a></p>
-<p>这里有人提供了一个成熟的版本，稍微简单一些</p>
-<h2 id="tmm刮削-Y"><a href="#tmm刮削-Y" class="headerlink" title="tmm刮削 Y"></a>tmm刮削 Y</h2><p>直接百度下载tmm的v3版本，v4版本收费</p>
+<h3 id="issue"><a href="#issue" class="headerlink" title="issue"></a>issue</h3><p>原版和nayn版jellyfin都会爆内存，不过nyan版会自动关机，原本则需手动关机</p>
+<p>故此选择nayn版配合自动启动，能够勉强正常使用，目前不知道什么原因</p>
+<p><img src="https://pic.imgdb.cn/item/623ff6ff27f86abb2a934d7a.jpg"></p>
+<h2 id="硬链接"><a href="#硬链接" class="headerlink" title="硬链接"></a>硬链接</h2><p>推荐使用硬链接原影片后再进行刮削重命名整理一系列操作，更加合理</p>
+<p>使用hlink项目：<a target="_blank" rel="noopener" href="https://github.com/likun7981/hlink">likun7981&#x2F;hlink: 批量硬链接创建工具，又能PT做种，又能刮削电影资料 (github.com)</a></p>
+<p>因为刮削的缘故，应该有更好的名字以及更好的文件层次分类</p>
+<p>但因为PT，所以不能更改源地址</p>
+<p>好在Linux支持硬链接</p>
+<p>简单点说，就是复制，但复制和原本的文件，都是主体，两个文件只占一个存储，但可分别管理</p>
+<p>两个必须同时删除，源文件才会被删除</p>
+<h2 id="资料刮削"><a href="#资料刮削" class="headerlink" title="资料刮削"></a>资料刮削</h2><h3 id="tmm刮削普通电影"><a href="#tmm刮削普通电影" class="headerlink" title="tmm刮削普通电影"></a>tmm刮削普通电影</h3><p>直接百度下载tmm的v3版本，v4版本收费</p>
 <p>使用过程简单，按照自己的需求设置，摸索一下就行</p>
 <p>部分没有成功，不知道是不是因为命名的问题</p>
-<p><a target="_blank" rel="noopener" href="https://codeantenna.com/a/S3ZLUBM910">群晖Nas通过jellyfin搭建本地影音库详细全过程（二）：jellyfin影音库信息手动刮削和相关设置（100%扫库成功） - CodeAntenna</a></p>
-<p>该文章提到了申请TMDB的api</p>
-<h2 id="建立全自动化刮削"><a href="#建立全自动化刮削" class="headerlink" title="建立全自动化刮削"></a>建立全自动化刮削</h2><p><a target="_blank" rel="noopener" href="https://post.smzdm.com/p/aox8wp36/">Emby正传 篇二：万剑归宗之刮削大法！史上最全从Emby命名规则到刮削设置一条龙图文教程！_NAS存储_什么值得买 (smzdm.com)</a></p>
-<p><a target="_blank" rel="noopener" href="https://leishi.io/blog/posts/2021-12/home-nas-media-center/">https://leishi.io/blog/posts/2021-12/home-nas-media-center/</a></p>
-<p>硬链接加重命名管理</p>
-<p>可能会有必要去学习bash，shell语言了</p>
-<p><img src="https://pic.imgdb.cn/item/623f538927f86abb2a42f5ed.png" alt="image-20220318140439937"></p>
-<p>效果是这样</p>
-<p>但我的是</p>
-<p><img src="https://pic.imgdb.cn/item/623f538927f86abb2a42f635.png" alt="image-20220318140824531"></p>
-<p>商标没有，背景blur也没有</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/prayag17/JellySkin">prayag17&#x2F;JellySkin: Vibrante&#x2F;minimal Jellyfin CSS using custom Icons and more!!, created for Jellyfin web, can be used by just one line. (github.com)</a></p>
-<p>再次尝试新项目</p>
-<p>背景问题解决，需要在设置中自行开启</p>
-<p>还有其他不对称问题，应该是因为dpi</p>
-<p>将欧美导入了</p>
-<p>但是，欧美封面太丑，想筛选掉</p>
-<p>开始新添片源</p>
-<p>以后应该是不会添加欧美的了</p>
-<p>准备重新整理</p>
-<p>学习renamer</p>
-<p>不用renamer，直接tmm自动改名字</p>
-<p>目前放弃了iv的图像管理，过于卡顿</p>
-<h2 id="演员头像管理"><a href="#演员头像管理" class="headerlink" title="演员头像管理"></a>演员头像管理</h2><p><a target="_blank" rel="noopener" href="https://github.com/xinxin8816/gfriends">xinxin8816&#x2F;gfriends: 媒体服务器演员头像仓库 (github.com)</a></p>
-<p>该项目会出现黑裙jellyfin连接失败，故放弃</p>
+<p>该文章提到了申请TMDB的api：<a target="_blank" rel="noopener" href="https://codeantenna.com/a/S3ZLUBM910">群晖Nas通过jellyfin搭建本地影音库详细全过程（二）：jellyfin影音库信息手动刮削和相关设置（100%扫库成功） - CodeAntenna</a></p>
+<p>实际测试，提供API后能够更准确的刮削到电影资料，建议注册TMDB获得API</p>
+<h3 id="movie-data-capture刮削女友资料"><a href="#movie-data-capture刮削女友资料" class="headerlink" title="movie data capture刮削女友资料"></a>movie data capture刮削女友资料</h3><p>使用该项目：<a target="_blank" rel="noopener" href="https://github.com/yoshiko2/Movie_Data_Capture/wiki">Home · yoshiko2&#x2F;Movie_Data_Capture Wiki (github.com)</a></p>
+<p>具体操作看wiki</p>
+<p>能够正常使用，能够刮削到大部分日产，但部分国产不行</p>
+<h3 id="renamer重命名"><a href="#renamer重命名" class="headerlink" title="renamer重命名"></a>renamer重命名</h3><p>使用tmm自动重命名更为方便</p>
+<p>但renamer是一个好用的软件，有特殊用途。</p>
+<h2 id="演员头像管理"><a href="#演员头像管理" class="headerlink" title="演员头像管理"></a>演员头像管理</h2><h3 id="女友照片"><a href="#女友照片" class="headerlink" title="女友照片"></a>女友照片</h3><p>使用gfriends项目刮削：<a target="_blank" rel="noopener" href="https://github.com/xinxin8816/gfriends">xinxin8816&#x2F;gfriends: 媒体服务器演员头像仓库 (github.com)</a></p>
+<p>该项目会出现黑裙jellyfin连接失败</p>
 <p>安装原版jellyfin后可以使用</p>
 <p>不行，原版主放弃了jellyfin的更新</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/JavScraper/Emby.Plugins.JavScraper">JavScraper&#x2F;Emby.Plugins.JavScraper: Emby&#x2F;Jellyfin 的一个日本电影刮削器插件，可以从某些网站抓取影片信息。 (github.com)</a></p>
@@ -325,29 +321,36 @@
 <p>最后关闭了代理</p>
 <p>竟然成功了</p>
 <p>后面再次尝试又失败了，奇怪。看来好像只能随缘？</p>
-<p>成功一部分</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/BanBri/article/details/122634545#_7">(12条消息) tmm-jellyfin转移演员照片（解决jellyfin演员照片不显示问题）_BanBri的博客-CSDN博客_jellyfin 演员头像</a></p>
-<p>tmm转jellyfin</p>
-<h2 id="clash"><a href="#clash" class="headerlink" title="clash"></a>clash</h2><p><a target="_blank" rel="noopener" href="https://uzbox.com/tech/clash-atp.html">Clash for Windows教程：配置TUN&#x2F;TAP虚拟网卡，订阅持续更新 - 技术宅 - 优质盒子 (uzbox.com)</a></p>
+<h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><p>在config.ini中按照以下配置</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### Emby / Jellyfin 服务器地址 ###</span></span><br><span class="line"><span class="string">Host_Url=http://192.168.0.10:8096/</span></span><br><span class="line">	</span><br><span class="line"><span class="comment">### Emby / Jellyfin API 密钥 ###</span></span><br><span class="line"><span class="string">Host_API=38xxxxxxxxxx</span></span><br><span class="line"></span><br><span class="line"><span class="string">Proxy_Range</span> <span class="string">=</span> <span class="string">ALL</span></span><br><span class="line"><span class="string">Proxy_Link</span> <span class="string">=</span> </span><br></pre></td></tr></table></figure>
+
+<p>关闭所有代理，使用软件自带的通道，能够正常刮削</p>
+<p>实验环境：重庆大学教育网ipv6</p>
+<h3 id="普通演员照片"><a href="#普通演员照片" class="headerlink" title="普通演员照片"></a>普通演员照片</h3><p>一个tmm转jellyfin的小程序：<a target="_blank" rel="noopener" href="https://blog.csdn.net/BanBri/article/details/122634545#_7">(12条消息) tmm-jellyfin转移演员照片（解决jellyfin演员照片不显示问题）_BanBri的博客-CSDN博客_jellyfin 演员头像</a></p>
+<h4 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h4><p>在tmm中开启头像刮削后，使用该软件将头像搬运至jellyfin目录下</p>
+<h2 id="美化jellyfin"><a href="#美化jellyfin" class="headerlink" title="美化jellyfin"></a>美化jellyfin</h2><p>使用以下项目即可</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/danieladov/jellyfin-plugin-skin-manager">danieladov&#x2F;jellyfin-plugin-skin-manager: Jellyfin Skin Manager is a plugin that helps you to download and install skins (github.com)</a></p>
+<h3 id="背景虚化问题"><a href="#背景虚化问题" class="headerlink" title="背景虚化问题"></a>背景虚化问题</h3><p><img src="https://pic.imgdb.cn/item/623f538927f86abb2a42f5ed.png" alt="image-20220318140439937"></p>
+<p>效果是这样</p>
+<p>但我的是</p>
+<p><img src="https://pic.imgdb.cn/item/623f538927f86abb2a42f635.png" alt="image-20220318140824531"></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/prayag17/JellySkin">prayag17&#x2F;JellySkin: Vibrante&#x2F;minimal Jellyfin CSS using custom Icons and more!!, created for Jellyfin web, can be used by just one line. (github.com)</a></p>
+<p>再次尝试新项目</p>
+<p><strong>背景问题解决，需要在用户设置中自行开启</strong></p>
+<h3 id="logo问题"><a href="#logo问题" class="headerlink" title="logo问题"></a>logo问题</h3><p>开启logo后，没有达到预想的效果</p>
+<p>logo与封面没有对齐</p>
+<p>也不知道是哪里的设置问题，目前没有解决</p>
+<p><img src="https://pic.imgdb.cn/item/623ff9c427f86abb2aa0657a.jpg"></p>
+<h2 id="clash（废弃）"><a href="#clash（废弃）" class="headerlink" title="clash（废弃）"></a>clash（废弃）</h2><p><a target="_blank" rel="noopener" href="https://uzbox.com/tech/clash-atp.html">Clash for Windows教程：配置TUN&#x2F;TAP虚拟网卡，订阅持续更新 - 技术宅 - 优质盒子 (uzbox.com)</a></p>
 <p>开启clash的tun mode为了让gfriend运行，最后失败。</p>
 <p>目前不知道TUN和TAP有什么作用</p>
-<h2 id="硬链接"><a href="#硬链接" class="headerlink" title="硬链接"></a>硬链接</h2><p>因为刮削的缘故，应该有更好的名字以及更好的文件层次分类</p>
-<p>但因为PT，所以不能更改源地址</p>
-<p>好在Linux支持硬链接</p>
-<p>简单点说，就是复制，但复制和原本的文件，都是主体，两个文件只占一个存储，但可分别管理</p>
-<p>两个必须同时删除，源文件才会被删除</p>
-<h2 id="rename重命名"><a href="#rename重命名" class="headerlink" title="rename重命名"></a>rename重命名</h2><p>统一管理movies更为有用</p>
-<h2 id="movie-data-capture刮削"><a href="#movie-data-capture刮削" class="headerlink" title="movie data capture刮削"></a>movie data capture刮削</h2><p><a target="_blank" rel="noopener" href="https://github.com/yoshiko2/Movie_Data_Capture/wiki">Home · yoshiko2&#x2F;Movie_Data_Capture Wiki (github.com)</a></p>
-<p>用的这个项目</p>
-<p>具体操作看wiki</p>
-<p>能够正常使用，能够刮削到大部分的AV,但国产还需要加强</p>
 <h2 id="外网访问"><a href="#外网访问" class="headerlink" title="外网访问"></a>外网访问</h2><p>这个真的折磨</p>
 <p>本来以为简单的开放端口就行了</p>
 <p>结果docker的host有大问题，一直搞不定v6，docker的v6被锁了的</p>
 <p>然后找了好久，终于才找到一种方法可以实现</p>
-<p>反向代理</p>
-<p><a target="_blank" rel="noopener" href="https://post.smzdm.com/p/anx0r742/">群晖反向代理设置教程_NAS存储_什么值得买 (smzdm.com)</a></p>
-<p>参考这个做的</p>
+<p>反向代理：<a target="_blank" rel="noopener" href="https://post.smzdm.com/p/anx0r742/">群晖反向代理设置教程_NAS存储_什么值得买 (smzdm.com)</a></p>
+<p>完美实现群晖所有端口的映射</p>
+<p>且顺便加上一把小锁改为https，并改变端口映射，使得群晖的安全性得到提高</p>
 <h2 id="用kodi做播放器"><a href="#用kodi做播放器" class="headerlink" title="用kodi做播放器"></a>用kodi做播放器</h2><p>jellyfin这个播放器感觉解码能力还是有点差</p>
 <p>试试用kodi来播放，jelly来管理</p>
 <p><a target="_blank" rel="noopener" href="https://jellyfin.org/docs/general/clients/kodi.html">Kodi | Documentation - Jellyfin Project</a></p>
@@ -355,12 +358,15 @@
 <p>jellfin install the </p>
 <p>放弃</p>
 <p>kodi太难使用，连接也非常困难！</p>
-<p>建议使用本地smb</p>
-<h2 id="issue"><a href="#issue" class="headerlink" title="issue"></a>issue</h2><p>会自动死机</p>
+<p>需要更高解码能力的时候建议使用本地smb</p>
+<h2 id="建立全自动化刮削"><a href="#建立全自动化刮削" class="headerlink" title="建立全自动化刮削"></a>建立全自动化刮削</h2><p>看到一位大佬的终极自动化搭建文章，很是厉害</p>
+<p>一篇全自动化刮削的文章：<a target="_blank" rel="noopener" href="https://leishi.io/blog/posts/2021-12/home-nas-media-center/">https://leishi.io/blog/posts/2021-12/home-nas-media-center/</a></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>网上什么都有</p>
 <p>但是因为各种因素的干扰</p>
 <p>能找到一个真正用上的还是比较困难的</p>
 <p>需要大量的资料搜寻和大量的尝试</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>本篇文章是搭建过程的随手笔记，经过后期整理后形成</p>
+<p>不算真正的教程，应该算搭建实录、踩坑、<a href="">成功展示</a></p>
 
     </div>
 

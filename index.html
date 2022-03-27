@@ -218,7 +218,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-03-27 01:53:00 / 修改时间：02:05:12" itemprop="dateCreated datePublished" datetime="2022-03-27T01:53:00+08:00">2022-03-27</time>
+      <time title="创建时间：2022-03-27 01:53:00 / 修改时间：14:11:20" itemprop="dateCreated datePublished" datetime="2022-03-27T01:53:00+08:00">2022-03-27</time>
     </span>
 
   
@@ -250,7 +250,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.1k</span>
+      <span>2.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -271,89 +271,14 @@
           <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>折腾了大概一天，东拼西凑终于还是搞定了</p>
 <p>外网访问那里花费的时间最多</p>
 <p>感慨颇多，前前后后还是做了很久的，必须要好好总结一下</p>
-<h2 id="jellyfin安装"><a href="#jellyfin安装" class="headerlink" title="jellyfin安装"></a>jellyfin安装</h2><p>参考的这篇文章</p>
-<p><a target="_blank" rel="noopener" href="https://post.smzdm.com/p/a4dm5z2k/">群晖NAS安装Jellyfin+TMM影片刮削器入门教程，完美硬解，轻松打造家庭影音中心！不敲一行命令轻松部署_NAS存储_什么值得买 (smzdm.com)</a></p>
-<p>安装较为简单</p>
-<p>且jellyfin使用也比较简单，简单的设置，主要就是添加媒体库就行</p>
-<p>一步步来就行</p>
-<p>因为不需要改造版的硬解码，故重新安装原版jellyfin</p>
-<h2 id="美化jellyfin"><a href="#美化jellyfin" class="headerlink" title="美化jellyfin"></a>美化jellyfin</h2><p><a target="_blank" rel="noopener" href="https://github.com/danieladov/jellyfin-plugin-skin-manager">danieladov&#x2F;jellyfin-plugin-skin-manager: Jellyfin Skin Manager is a plugin that helps you to download and install skins (github.com)</a></p>
-<p>这里有人提供了一个成熟的版本，稍微简单一些</p>
-<h2 id="tmm刮削-Y"><a href="#tmm刮削-Y" class="headerlink" title="tmm刮削 Y"></a>tmm刮削 Y</h2><p>直接百度下载tmm的v3版本，v4版本收费</p>
-<p>使用过程简单，按照自己的需求设置，摸索一下就行</p>
-<p>部分没有成功，不知道是不是因为命名的问题</p>
-<p><a target="_blank" rel="noopener" href="https://codeantenna.com/a/S3ZLUBM910">群晖Nas通过jellyfin搭建本地影音库详细全过程（二）：jellyfin影音库信息手动刮削和相关设置（100%扫库成功） - CodeAntenna</a></p>
-<p>该文章提到了申请TMDB的api</p>
-<h2 id="建立全自动化刮削"><a href="#建立全自动化刮削" class="headerlink" title="建立全自动化刮削"></a>建立全自动化刮削</h2><p><a target="_blank" rel="noopener" href="https://post.smzdm.com/p/aox8wp36/">Emby正传 篇二：万剑归宗之刮削大法！史上最全从Emby命名规则到刮削设置一条龙图文教程！_NAS存储_什么值得买 (smzdm.com)</a></p>
-<p><a target="_blank" rel="noopener" href="https://leishi.io/blog/posts/2021-12/home-nas-media-center/">https://leishi.io/blog/posts/2021-12/home-nas-media-center/</a></p>
-<p>硬链接加重命名管理</p>
-<p>可能会有必要去学习bash，shell语言了</p>
-<p><img src="https://pic.imgdb.cn/item/623f538927f86abb2a42f5ed.png" alt="image-20220318140439937"></p>
-<p>效果是这样</p>
-<p>但我的是</p>
-<p><img src="https://pic.imgdb.cn/item/623f538927f86abb2a42f635.png" alt="image-20220318140824531"></p>
-<p>商标没有，背景blur也没有</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/prayag17/JellySkin">prayag17&#x2F;JellySkin: Vibrante&#x2F;minimal Jellyfin CSS using custom Icons and more!!, created for Jellyfin web, can be used by just one line. (github.com)</a></p>
-<p>再次尝试新项目</p>
-<p>背景问题解决，需要在设置中自行开启</p>
-<p>还有其他不对称问题，应该是因为dpi</p>
-<p>将欧美导入了</p>
-<p>但是，欧美封面太丑，想筛选掉</p>
-<p>开始新添片源</p>
-<p>以后应该是不会添加欧美的了</p>
-<p>准备重新整理</p>
-<p>学习renamer</p>
-<p>不用renamer，直接tmm自动改名字</p>
-<p>目前放弃了iv的图像管理，过于卡顿</p>
-<h2 id="演员头像管理"><a href="#演员头像管理" class="headerlink" title="演员头像管理"></a>演员头像管理</h2><p><a target="_blank" rel="noopener" href="https://github.com/xinxin8816/gfriends">xinxin8816&#x2F;gfriends: 媒体服务器演员头像仓库 (github.com)</a></p>
-<p>该项目会出现黑裙jellyfin连接失败，故放弃</p>
-<p>安装原版jellyfin后可以使用</p>
-<p>不行，原版主放弃了jellyfin的更新</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/JavScraper/Emby.Plugins.JavScraper">JavScraper&#x2F;Emby.Plugins.JavScraper: Emby&#x2F;Jellyfin 的一个日本电影刮削器插件，可以从某些网站抓取影片信息。 (github.com)</a></p>
-<p>更换此项目继续尝试</p>
-<p>该项目不能被识别，放弃</p>
-<p><img src="https://pic.imgdb.cn/item/623f538927f86abb2a42f603.png" alt="image-20220317154654811"></p>
-<p>准备摆烂</p>
-<p>最后关闭了代理</p>
-<p>竟然成功了</p>
-<p>后面再次尝试又失败了，奇怪。看来好像只能随缘？</p>
-<p>成功一部分</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/BanBri/article/details/122634545#_7">(12条消息) tmm-jellyfin转移演员照片（解决jellyfin演员照片不显示问题）_BanBri的博客-CSDN博客_jellyfin 演员头像</a></p>
-<p>tmm转jellyfin</p>
-<h2 id="clash"><a href="#clash" class="headerlink" title="clash"></a>clash</h2><p><a target="_blank" rel="noopener" href="https://uzbox.com/tech/clash-atp.html">Clash for Windows教程：配置TUN&#x2F;TAP虚拟网卡，订阅持续更新 - 技术宅 - 优质盒子 (uzbox.com)</a></p>
-<p>开启clash的tun mode为了让gfriend运行，最后失败。</p>
-<p>目前不知道TUN和TAP有什么作用</p>
-<h2 id="硬链接"><a href="#硬链接" class="headerlink" title="硬链接"></a>硬链接</h2><p>因为刮削的缘故，应该有更好的名字以及更好的文件层次分类</p>
-<p>但因为PT，所以不能更改源地址</p>
-<p>好在Linux支持硬链接</p>
-<p>简单点说，就是复制，但复制和原本的文件，都是主体，两个文件只占一个存储，但可分别管理</p>
-<p>两个必须同时删除，源文件才会被删除</p>
-<h2 id="rename重命名"><a href="#rename重命名" class="headerlink" title="rename重命名"></a>rename重命名</h2><p>统一管理movies更为有用</p>
-<h2 id="movie-data-capture刮削"><a href="#movie-data-capture刮削" class="headerlink" title="movie data capture刮削"></a>movie data capture刮削</h2><p><a target="_blank" rel="noopener" href="https://github.com/yoshiko2/Movie_Data_Capture/wiki">Home · yoshiko2&#x2F;Movie_Data_Capture Wiki (github.com)</a></p>
-<p>用的这个项目</p>
-<p>具体操作看wiki</p>
-<p>能够正常使用，能够刮削到大部分的AV,但国产还需要加强</p>
-<h2 id="外网访问"><a href="#外网访问" class="headerlink" title="外网访问"></a>外网访问</h2><p>这个真的折磨</p>
-<p>本来以为简单的开放端口就行了</p>
-<p>结果docker的host有大问题，一直搞不定v6，docker的v6被锁了的</p>
-<p>然后找了好久，终于才找到一种方法可以实现</p>
-<p>反向代理</p>
-<p><a target="_blank" rel="noopener" href="https://post.smzdm.com/p/anx0r742/">群晖反向代理设置教程_NAS存储_什么值得买 (smzdm.com)</a></p>
-<p>参考这个做的</p>
-<h2 id="用kodi做播放器"><a href="#用kodi做播放器" class="headerlink" title="用kodi做播放器"></a>用kodi做播放器</h2><p>jellyfin这个播放器感觉解码能力还是有点差</p>
-<p>试试用kodi来播放，jelly来管理</p>
-<p><a target="_blank" rel="noopener" href="https://jellyfin.org/docs/general/clients/kodi.html">Kodi | Documentation - Jellyfin Project</a></p>
-<p>kodi install the jellyfin for kodi</p>
-<p>jellfin install the </p>
-<p>放弃</p>
-<p>kodi太难使用，连接也非常困难！</p>
-<p>建议使用本地smb</p>
-<h2 id="issue"><a href="#issue" class="headerlink" title="issue"></a>issue</h2><p>会自动死机</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>网上什么都有</p>
-<p>但是因为各种因素的干扰</p>
-<p>能找到一个真正用上的还是比较困难的</p>
-<p>需要大量的资料搜寻和大量的尝试</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/27/jellyfin/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
