@@ -2673,3 +2673,12 @@ body {
 a {
   color: #61a4bc;
 }
+/* ������������ */
+.headband {
+  background: var(--theme-color);
+  height: 0px;
+}
+h2 {
+  border-left: 6px solid #b16630;
+  padding-left: 6px;
+}
