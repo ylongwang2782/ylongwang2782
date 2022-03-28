@@ -6,10 +6,10 @@
 <meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.1.0">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/%E6%A3%92%E5%86%B0128.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/%E6%A3%92%E5%86%B032.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/%E6%A3%92%E5%86%B016.png">
+  <link rel="mask-icon" href="/images/%E6%A3%92%E5%86%B0.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -20,12 +20,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"ylongwang2782.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="网络环境已经写完了。 下面写一下自己捣鼓软路由的工程。  虽然当初懵懵懂懂的我，甚至还没有一丁点的网络基础知识，就直接接触到了软路由，一脸懵逼的照搬网上的教程，把这个软路由给搞定了，但其中，当真是吃了不少亏，纠结了一个又一个下午与晚上。 现在当初的那套系统，基本都被我拆的拆，换的换，这么多坏与修之间，再无数次放弃与挣扎中，我在一年内，大概是终于，最后，完成了这套系统。 那一个个慢慢摸索的夜晚，哎，">
+    <meta name="description" content="虽然当初懵懵懂懂的我，甚至还没有一丁点的网络基础知识，就直接接触到了软路由，一脸懵逼的照搬网上的教程，把这个软路由给搞定了，但其中，当真是吃了不少亏，纠结了一个又一个下午与晚上。 现在当初的那套系统，基本都被我拆的拆，换的换，这么多坏与修之间，再无数次放弃与挣扎中，我在一年内，大概是终于，最后，完成了这套系统。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="完成openwrt软路由">
 <meta property="og:url" content="https://ylongwang2782.github.io/2021/02/22/%E5%AE%8C%E6%88%90openwrt%E8%BD%AF%E8%B7%AF%E7%94%B1/">
 <meta property="og:site_name" content="来日方长">
-<meta property="og:description" content="网络环境已经写完了。 下面写一下自己捣鼓软路由的工程。  虽然当初懵懵懂懂的我，甚至还没有一丁点的网络基础知识，就直接接触到了软路由，一脸懵逼的照搬网上的教程，把这个软路由给搞定了，但其中，当真是吃了不少亏，纠结了一个又一个下午与晚上。 现在当初的那套系统，基本都被我拆的拆，换的换，这么多坏与修之间，再无数次放弃与挣扎中，我在一年内，大概是终于，最后，完成了这套系统。 那一个个慢慢摸索的夜晚，哎，">
+<meta property="og:description" content="虽然当初懵懵懂懂的我，甚至还没有一丁点的网络基础知识，就直接接触到了软路由，一脸懵逼的照搬网上的教程，把这个软路由给搞定了，但其中，当真是吃了不少亏，纠结了一个又一个下午与晚上。 现在当初的那套系统，基本都被我拆的拆，换的换，这么多坏与修之间，再无数次放弃与挣扎中，我在一年内，大概是终于，最后，完成了这套系统。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://pic.imgdb.cn/item/62418d0a27f86abb2a68f5e0.png">
 <meta property="og:image" content="https://pic.imgdb.cn/item/62418d2627f86abb2a693239.png">
@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://pic.imgdb.cn/item/62418d6927f86abb2a6a6d1b.png">
 <meta property="og:image" content="https://pic.imgdb.cn/item/62418d6e27f86abb2a6a8dac.png">
 <meta property="article:published_time" content="2021-02-22T09:13:02.000Z">
-<meta property="article:modified_time" content="2022-03-28T10:27:22.759Z">
+<meta property="article:modified_time" content="2022-03-28T14:55:21.189Z">
 <meta property="article:author" content="Rainlong">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
@@ -144,7 +144,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -232,7 +232,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-28 18:27:22" itemprop="dateModified" datetime="2022-03-28T18:27:22+08:00">2022-03-28</time>
+      <time title="修改时间：2022-03-28 22:55:21" itemprop="dateModified" datetime="2022-03-28T22:55:21+08:00">2022-03-28</time>
     </span>
 
   
@@ -282,11 +282,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>网络环境已经写完了。</p>
-<p>下面写一下自己捣鼓软路由的工程。</p>
-<blockquote>
+        <blockquote>
 <p>虽然当初懵懵懂懂的我，甚至还没有一丁点的网络基础知识，就直接接触到了软路由，一脸懵逼的照搬网上的教程，把这个软路由给搞定了，但其中，当真是吃了不少亏，纠结了一个又一个下午与晚上。</p>
 <p>现在当初的那套系统，基本都被我拆的拆，换的换，这么多坏与修之间，再无数次放弃与挣扎中，我在一年内，大概是终于，最后，完成了这套系统。</p>
+<span id="more"></span>
+
 <p>那一个个慢慢摸索的夜晚，哎，当真是一言难尽。机器是死的，它出任何问题，它不会说话，不会告诉你它哪里不舒服，哪里不行了，哪里坏了。只会突然间，就开不了机了！突然间，就未相应了！突然间，按照原来的教程已经继续不了了，只能换一个教程，从头再来。还有可能，一次重启，可能就是永别。重启完后，你这套系统就再也运作不了了。真的惨淡。</p>
 <p>吐槽就到这。下面开始正文。</p>
 </blockquote>
@@ -377,14 +377,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">33k</span>
+    <span title="站点总字数">36k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">30 分钟</span>
+    <span title="站点阅读时长">33 分钟</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动

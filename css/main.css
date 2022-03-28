@@ -2679,6 +2679,14 @@ a {
   height: 0px;
 }
 h2 {
-  border-left: 6px solid #b16630;
+  border-left: 6px solid #fd5d5d;
   padding-left: 6px;
+}
+/* --- ����������ߵ�СԲ�� --- */
+h3 {
+  line-height: 1.43;
+  vertical-align: middle;
+  content: '';
+  background-color: FD5D5D;
+  border-radius: 50%;
 }
