@@ -133,7 +133,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -175,6 +175,267 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/2022/03/28/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rainlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="来日方长">
+      <meta itemprop="description" content="这是王同学的博客">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 来日方长">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/03/28/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98/" class="post-title-link" itemprop="url">PVE黑群晖直通硬盘</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-03-28 17:40:20 / 修改时间：17:43:07" itemprop="dateCreated datePublished" datetime="2022-03-28T17:40:20+08:00">2022-03-28</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2022/03/28/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/2022/03/28/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98/" data-xid="/2022/03/28/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/2022/03/28/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98/" class="post-meta-item leancloud_visitors" data-flag-title="PVE黑群晖直通硬盘" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>770</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>目前的b站还不支持markdown语言，所以不准备写很多</p>
+<p>写这些的目的主要是把自己以后可能用得上的东西自己重新整理一下，免得找不着了，很多收藏的东西，总是找不到，还是得自己总结的东西逻辑清楚</p>
+<p>黑群晖因为特殊性，加装硬盘需要特殊方法。</p>
+<hr>
+<p>本文仅用于PVE下安装的群晖，不过估计其他的虚拟机装的群晖也能适用。</p>
+<h2 id="首先准备一块硬盘"><a href="#首先准备一块硬盘" class="headerlink" title="首先准备一块硬盘"></a>首先准备一块硬盘</h2><p><img src="https://pic.imgdb.cn/item/624182c527f86abb2a3b39dc.png"></p>
+<p>PDD买的一块海康威视的监控盘，支持7x24就行，其他的便宜就行，反正只准备用他跑PT，烂了就烂了。重要的资料还是用PC的机械硬盘单独拷贝。</p>
+<h2 id="安装相关环境"><a href="#安装相关环境" class="headerlink" title="安装相关环境"></a>安装相关环境</h2><p>在PVE的SHELL里输入以下指令</p>
+<p>1、apt-get update  更新环境</p>
+<p>2、apt-get install lshw  安装lshw</p>
+<p>3、ls -l &#x2F;dev&#x2F;disk&#x2F;by-id&#x2F;  查看已插入硬盘信息</p>
+<p><img src="https://pic.imgdb.cn/item/624182d427f86abb2a3b8cca.png"></p>
+<p>得到一大串神秘代码</p>
+<p>只看ata开头的硬盘ID</p>
+<p>可以看出，我插入的四块磁盘，每个型号都能简单的辨识</p>
+<p>第一块是我的启动盘，也就是安装的PVE和NAS只有16G的一个msata</p>
+<p>第二块是我插入一快垃圾500G硬盘</p>
+<p>第三块是我之前插入的一块西数WDC4T紫盘，</p>
+<p>第四块就是我最新的一块盘，可以看出和前面的那块紫盘基本相似。</p>
+<p>选取不带part的那行语句</p>
+<p><img src="https://pic.imgdb.cn/item/624182dd27f86abb2a3bc350.png"></p>
+<p>把他单独拎出来</p>
+<p>然后根据下面我的格式填充即可</p>
+<p>qm set 101 –sata4 &#x2F;dev&#x2F;disk&#x2F;by-id&#x2F;ata-WDC_WD40PURX-78AKYY0_WD-WX32DA1LTP3S</p>
+<p>其中，101为NAS在PVE中的标号</p>
+<p><img src="https://pic.imgdb.cn/item/624182f027f86abb2a3c0391.png"></p>
+<p>sata4则为NAS中第几块硬盘，从01234挨着排下去就行，别填错了就ok</p>
+<p><img src="https://pic.imgdb.cn/item/624182f827f86abb2a3c160b.png"></p>
+<p>结束，此时硬盘已经直通到nas里了</p>
+<p>后面在群晖里只要设置一下就行了</p>
+<h2 id="NAS里设置"><a href="#NAS里设置" class="headerlink" title="NAS里设置"></a>NAS里设置</h2><p><img src="https://pic.imgdb.cn/item/6241830027f86abb2a3c2c9e.png"></p>
+<p>在存储空间管理员里，新增</p>
+<p><img src="https://pic.imgdb.cn/item/6241830827f86abb2a3c52ed.png"></p>
+<p>选择灵活性提高</p>
+<p><img src="https://pic.imgdb.cn/item/6241831327f86abb2a3c8fde.png"></p>
+<p>raid类型选择basic，PT盘差不多得了</p>
+<p><img src="https://pic.imgdb.cn/item/6241831a27f86abb2a3cbc11.png"></p>
+<p>把要用的硬盘拖过来下一步就完成</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/2022/03/28/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rainlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="来日方长">
+      <meta itemprop="description" content="这是王同学的博客">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 来日方长">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/03/28/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/" class="post-title-link" itemprop="url">黑群晖+ddns+阿里云=免费的最快的外网访问</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-03-28 17:32:45 / 修改时间：17:39:41" itemprop="dateCreated datePublished" datetime="2022-03-28T17:32:45+08:00">2022-03-28</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2022/03/28/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/2022/03/28/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/" data-xid="/2022/03/28/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/2022/03/28/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/" class="post-meta-item leancloud_visitors" data-flag-title="黑群晖+ddns+阿里云=免费的最快的外网访问" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="前言（废话）"><a href="#前言（废话）" class="headerlink" title="前言（废话）"></a>前言（废话）</h2><p>群晖的外网访问一直是一个问题</p>
+<p>白群晖还好说，有自带的，不过也是网速感人</p>
+<p>黑群晖就更不用说了，只能自己搞</p>
+<p>之前用的ddns，还没有大佬些docker的script，只能用计划任务配合阿里云的ddns半自动刷新</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/28/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -576,7 +837,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-27 01:54:01" itemprop="dateModified" datetime="2022-03-27T01:54:01+08:00">2022-03-27</time>
+      <time title="修改时间：2022-03-28 01:47:47" itemprop="dateModified" datetime="2022-03-28T01:47:47+08:00">2022-03-28</time>
     </span>
 
   
@@ -779,6 +1040,451 @@
 
 
 
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/2021/06/23/2021%E5%B9%B4%E6%98%A5%EF%BC%8C%E6%88%91%E5%8D%96%E6%8E%89%E4%BA%86iPad%EF%BC%8C%E4%B9%B0%E4%BA%86MacBook/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rainlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="来日方长">
+      <meta itemprop="description" content="这是王同学的博客">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 来日方长">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/06/23/2021%E5%B9%B4%E6%98%A5%EF%BC%8C%E6%88%91%E5%8D%96%E6%8E%89%E4%BA%86iPad%EF%BC%8C%E4%B9%B0%E4%BA%86MacBook/" class="post-title-link" itemprop="url">2021年春，我卖掉了iPad，买了MacBook</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-06-23 22:24:00" itemprop="dateCreated datePublished" datetime="2021-06-23T22:24:00+08:00">2021-06-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-28 17:50:34" itemprop="dateModified" datetime="2022-03-28T17:50:34+08:00">2022-03-28</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2021/06/23/2021%E5%B9%B4%E6%98%A5%EF%BC%8C%E6%88%91%E5%8D%96%E6%8E%89%E4%BA%86iPad%EF%BC%8C%E4%B9%B0%E4%BA%86MacBook/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/2021/06/23/2021%E5%B9%B4%E6%98%A5%EF%BC%8C%E6%88%91%E5%8D%96%E6%8E%89%E4%BA%86iPad%EF%BC%8C%E4%B9%B0%E4%BA%86MacBook/" data-xid="/2021/06/23/2021%E5%B9%B4%E6%98%A5%EF%BC%8C%E6%88%91%E5%8D%96%E6%8E%89%E4%BA%86iPad%EF%BC%8C%E4%B9%B0%E4%BA%86MacBook/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/2021/06/23/2021%E5%B9%B4%E6%98%A5%EF%BC%8C%E6%88%91%E5%8D%96%E6%8E%89%E4%BA%86iPad%EF%BC%8C%E4%B9%B0%E4%BA%86MacBook/" class="post-meta-item leancloud_visitors" data-flag-title="2021年春，我卖掉了iPad，买了MacBook" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="卖掉了原来的iPad-air3"><a href="#卖掉了原来的iPad-air3" class="headerlink" title="卖掉了原来的iPad air3"></a>卖掉了原来的iPad air3</h2><blockquote>
+<p>写在前面：ipad air3是2019年暑假买的，2021年春卖了。</p>
+<p>为什么呢？</p>
+<p>东西不好用，一直吃灰，在图书馆的日子，总觉得ipad不顺手，很多时候也就看看网课，pdf。更多的时候是放在书架上凑数。很多时候的功能好像用手机也行？虽然手机没有平板大，但是</p>
+<ul>
+<li>手机便携，随时带在身上，要看ppt，pdf的时候只要马上掏出来就可以了。</li>
+<li>手机自带网络。校园网并没有家里的Wi-Fi那么好使，很多地方覆盖不了，并且认证麻烦，除非提前把文件下到平板里，不然也没有手机方便。</li>
+<li>手机打字方便。随便遇到什么文档马上修改，或者有什么idea要马上记录，手机可以马上记录，同是触摸输入，手机要比平板顺手多了。如果想要超过手机，平板得配上一个超重的键盘。</li>
+</ul>
+<p>综上，平板只有在<strong>固定位置</strong>，<strong>长时间不移动</strong>，作为一个固定工具使用，这样才会比手机好使</p>
+<p><strong>嗯？</strong>平板的定义不是便携式电脑，更轻便版的笔记本电脑吗？？</p>
+<p>哦？但是我丝毫没有感受到我使用的是一个笔记本电脑！大概只是一个带tvOS的显示器吧</p>
+</blockquote>
+<p>于是</p>
+<p><strong>卖了</strong></p>
+<p>2019年6月买成3300，21年4月卖成2600.一年半多，交了600的租金</p>
+<p>所以，我更需要的是一台真正的笔记本电脑来帮助我的工作，用手机辅助电脑。</p>
+<p><strong>而不是出门在外用平板辅助手机。</strong></p>
+<p>当然，我也把我的游戏本也卖了</p>
+<p>买了MacBook pro</p>
+<h2 id="为什么买macOS？"><a href="#为什么买macOS？" class="headerlink" title="为什么买macOS？"></a>为什么买macOS？</h2><p>思来想去，想着既然是要换电脑，无非就是macOS和win两种。</p>
+<p>我选择了MacBook</p>
+<ol>
+<li>我的需求。能够看网课，看pdf，看ppt，并且能够方便记笔记（指有键盘，个人认为pencil并不能很高效记录笔记）</li>
+<li>寝室里已经有一台win系的台式电脑，重型任务，以及win的工作可以交给台式来做。可以用作mac没有适配的一些软件</li>
+<li>win系的二手市场看得我眼花缭乱，各种配置各种群魔乱舞，反观mac的市场就比较简单了，仅仅是MacBook12寸，mba和mbp的选择而已，每年的机型，加上每年的配置（当然是最低配）</li>
+<li>生态绑定。向来是喜欢iOS的设计，所以一直是使用的iPhone，并且购买的watch作为辅助工具。如果平时在外，要用电脑为主手机为辅，这个时候选择同一个生态系统的硬件应该会更加方便。后来的事实证明我是对的。</li>
+</ol>
+<h2 id="选择哪一款MacBook？"><a href="#选择哪一款MacBook？" class="headerlink" title="选择哪一款MacBook？"></a>选择哪一款MacBook？</h2><p>虽然mac的系列比较少，但是也需要做一些的功课</p>
+<p><img src="https://pic.imgdb.cn/item/6241845627f86abb2a42873e.png"></p>
+<p>首先第一步就是了解各大机型和配置。</p>
+<p>我选择了Microsoft edge浏览器中的集锦功能作为我的工具。</p>
+<blockquote>
+<p>Microsoft edge的集锦功能</p>
+<p>借助新的 Microsoft Edge 浏览器中的<strong>”集锦“</strong>功能，可以帮助你记录和跟踪浏览网页时的想法。无论是购物，计划旅行，收集研究笔记或课程计划的笔记，还是只是想在上次浏览的地方继续浏览，集锦功能都能提供帮助。</p>
+<p>集锦会在你登录的设备之间同步，因此，如果你使用多台设备，则所有集锦上的收藏都将始终是最新的。</p>
+<p>引用自官方介绍</p>
+<p>集锦支持插入文本，插入URL，插入截图</p>
+</blockquote>
+<p>集锦是一个强大的浏览器信息收集帮手。</p>
+<p><img src="https://pic.imgdb.cn/item/6241846227f86abb2a42a357.png" alt="img"></p>
+<p>我在集锦中收集三种MacBook的参数配置，并加以自己的文字总结，<code>以挑选最适合自己的MacBook。</code></p>
+<p>这样可以帮助我迅速找准目标</p>
+<p>我找出来了以下要点</p>
+<ol>
+<li>屏幕。总体分为视网膜屏和非视网膜屏，也就是Retina屏，也称R屏。视网膜屏意味着更好的分辨率，更好的ppi，更好的色彩，更好的亮度。</li>
+<li>屏幕边框。较宽的变宽，例如早期的mab系列和MacBook12寸系列。</li>
+<li>键盘虽然有蝶式和剪刀，不过对于我来说则是无所谓。</li>
+<li>处理器。至少得满足Office和视频播放功能</li>
+<li>硬盘。对于我的需求，128G足矣</li>
+<li>内存。8G足矣</li>
+</ol>
+<p>作为颜值党，R屏的选择，让我几乎排除了早期的MacBook，以及加上性能上的要求。</p>
+<p>我的目标主要定在<code>17年的MacBook12寸、18年以后的mba、15年后的mbp。</code></p>
+<p>锁定目标后，下面的功夫就全部在闲鱼了。</p>
+<p>毕竟东西再合适，得先符合荷包。</p>
+<h2 id="上闲鱼"><a href="#上闲鱼" class="headerlink" title="上闲鱼"></a>上闲鱼</h2><p>本着并没想在闲鱼上捡漏，只是找一个信得过合适的卖家就行。</p>
+<p>于是蹲了大概四五天，遇见一个4000元的mbp17丐版。东西是19年3月购于京东，使用时间较短。</p>
+<p>为什么排除了MacBook和mba？答：闲鱼上都是卖传家宝的。</p>
+<h2 id="开箱"><a href="#开箱" class="headerlink" title="开箱"></a>开箱</h2><p>卖家连原包装都保留着，让我还能有机会体验到一点原开箱的感觉</p>
+<p><img src="https://pic.imgdb.cn/item/6241847927f86abb2a42fe5b.png" alt="img"></p>
+<p><img src="https://pic.imgdb.cn/item/6241847f27f86abb2a431bf4.png" alt="img"></p>
+<p><img src="https://pic.imgdb.cn/item/6241848627f86abb2a4344a7.png" alt="img"></p>
+<blockquote>
+<p>东西还是不错的，17年丐版的mbp配置依然超群。</p>
+<p>13.3寸的R屏，搭配2560*1600的分辨率，ppi高达227，同时亮度支持到500nit！也支持P3色域。</p>
+<p>8G+128G的内存和硬盘配置也是完全够用。</p>
+<p>当然，捡二手，必然还是会有一些成色问题。</p>
+<p>我这一天就是两处外观问题</p>
+<p>\1. command键掉漆</p>
+<p>\2. 右下角有磕碰</p>
+</blockquote>
+<p><img src="https://pic.imgdb.cn/item/6241848e27f86abb2a436a68.png" alt="img"></p>
+<p><img src="https://pic.imgdb.cn/item/6241849427f86abb2a4387e9.png" alt="img"></p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>东西到手已经使用了三周了。目前感觉良好，心里还有点小赚</p>
+<p>从实际体验上来说，这次的接盘是完全正确的。因为自从有了mbp后，我的大部分的文字操作基本都可以在mbp上完成了，日常的刷张大妈，刷刷b站，看看qq完全都放在了mbp上完成。</p>
+<ul>
+<li>mbp休眠使用的逻辑更像一台手机，因为你基本不会将它关机，不用时只需要轻轻合盖就可以了。使得mbp的使用门槛降低很多，不会再有像我去打开台式一样有那么的流程，那么多的思想负担。</li>
+<li>同时，mbp的软件，特别是浏览器，则是电脑版的使用逻辑，这使得我用起来得心应手，丝毫没有感觉到很不方便。这一点大概也是和平板最大的区别吧</li>
+</ul>
+<blockquote>
+<p><strong>MacBook和平板差距大吗？</strong></p>
+<p>很大，MacBook才是生产力的代表</p>
+<p><strong>平板不是同样可以web和刷视频吗？</strong></p>
+<p>不，他没有键盘</p>
+<p><strong>平板不是可以配备键盘吗？</strong></p>
+<p>不，配备键盘比MacBook还贵，并且更重</p>
+<p><strong>平板不是看视频很舒服吗？</strong></p>
+<p>不，平板看视频很累，要调整到合适的角度，我必须要双手将平板抱起来，特别是在床上的时候</p>
+<p><strong>平板不是可以用来打游戏吗？</strong></p>
+<p>抱歉，我并不玩手游</p>
+<p><strong>平板不是可以手写记笔记吗？</strong></p>
+<p>不，手写记笔记的速度完全比不过键盘。况且为什么我不用纸质的记笔记呢？</p>
+<p><strong>平板不是也有文件管理器吗？</strong></p>
+<p>不，和mac比那个简直是稀烂，更别说win了</p>
+<p><strong>平板不是也可以接鼠标吗？</strong></p>
+<p>哈哈，笑话</p>
+<p><strong>平板不是可以画画吗？</strong></p>
+<p>不，我的专业并不需要画画</p>
+<p><strong>平板不是有超强的摄像头吗？</strong></p>
+<p>iPad Air3的摄像头我用的次数屈指可数</p>
+<p><strong>平板不是有超强的续航吗？</strong></p>
+<p>MacBook续航也不差，一天使用完全没问题</p>
+</blockquote>
+<p>上面的灵魂发问仅仅是我的个人看法。</p>
+<p>我的真实体验是</p>
+<p>手机+笔记本电脑是刚需套餐</p>
+<p>ipad仅仅是一个大号iPhone，ipad能做的iPhone都能做，MacBook能做的iPad都做不了</p>
+<p>iPad能提供的，是一个更大的屏幕，你可以用它在大屏上畅玩手游，愉快地刷爱奇艺。</p>
+<p><strong>想提高生产力，老老实实上MacBook</strong></p>
+<p>当然，有钱就全都要啦，全家桶谁不想要呢，呜呜呜</p>
+<p><img src="https://pic.imgdb.cn/item/624184a127f86abb2a43d8d4.png" alt="img"></p>
+<p>另，本文就是在mbp上码出来的。</p>
+<p>最后，写一下，使用了两个月的体验</p>
+<p>东西很好用，比平板功能强大太多了哈哈哈哈，每天的使用率都非常高。不亏</p>
+<p>价格上的话，虽然现在mba m1的好价已经到了6500了，唔，可能是有点小亏吧。</p>
+<p>不过，东西只要用得上，就不亏啦，比如前两周买的vr现在已经吃灰一周了，就算买得再便宜，也亏得不行。得找个时间把他处理了</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/2021/03/28/2021%E5%B9%B4%EF%BC%8Capple%20watch%20s3%E8%BF%98%E6%9C%89%E4%B8%80%E6%88%98%E4%B9%8B%E5%8A%9B%E5%90%97%EF%BC%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rainlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="来日方长">
+      <meta itemprop="description" content="这是王同学的博客">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 来日方长">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/28/2021%E5%B9%B4%EF%BC%8Capple%20watch%20s3%E8%BF%98%E6%9C%89%E4%B8%80%E6%88%98%E4%B9%8B%E5%8A%9B%E5%90%97%EF%BC%9F/" class="post-title-link" itemprop="url">2021年，apple watch s3还有一战之力吗？</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-28 20:31:00" itemprop="dateCreated datePublished" datetime="2021-03-28T20:31:00+08:00">2021-03-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-28 18:00:16" itemprop="dateModified" datetime="2022-03-28T18:00:16+08:00">2022-03-28</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2021/03/28/2021%E5%B9%B4%EF%BC%8Capple%20watch%20s3%E8%BF%98%E6%9C%89%E4%B8%80%E6%88%98%E4%B9%8B%E5%8A%9B%E5%90%97%EF%BC%9F/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/2021/03/28/2021%E5%B9%B4%EF%BC%8Capple%20watch%20s3%E8%BF%98%E6%9C%89%E4%B8%80%E6%88%98%E4%B9%8B%E5%8A%9B%E5%90%97%EF%BC%9F/" data-xid="/2021/03/28/2021%E5%B9%B4%EF%BC%8Capple%20watch%20s3%E8%BF%98%E6%9C%89%E4%B8%80%E6%88%98%E4%B9%8B%E5%8A%9B%E5%90%97%EF%BC%9F/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/2021/03/28/2021%E5%B9%B4%EF%BC%8Capple%20watch%20s3%E8%BF%98%E6%9C%89%E4%B8%80%E6%88%98%E4%B9%8B%E5%8A%9B%E5%90%97%EF%BC%9F/" class="post-meta-item leancloud_visitors" data-flag-title="2021年，apple watch s3还有一战之力吗？" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>为什么到了2021年我买了一块apple watch？又为什么是apple watch s3？</p>
+<p>首先就是作为使用了iPhone8三年的用户，我还会继续坚持ios系统手机的。继续坚持ios生态。</p>
+<p><img src="https://pic.imgdb.cn/item/624185a727f86abb2a480c6a.png" alt="img"></p>
+<p>原因如下</p>
+<ol>
+<li>虽然现在小8变得日常卡顿，两三个app就开始杀后台，但是对于我也远远够了，日常的qq微信加音乐还有zdm使用还是挺流畅的。证明一台iPhone手机对于我来说，寿命基本大于等于3年。在这个使用寿命的基础上，入手ios生态圈真的不亏。</li>
+<li>另外，在软件和系统上，我还特别喜欢apple的设计，真的是超级喜欢，简洁，线性，丝滑，干净。虽然不能有更多的骚操作，但手机对于我来说就是单纯的获得信息的一个工具。不玩手游，性能就没有那么吃紧，一个更简单的单纯的手机就更适合我。</li>
+<li>还有一个特别的原因，线性马达，用过iPhone的人就知道，apple家的这个线性马达是真的上瘾，曾经一直以为我的home键是可以按下去的，直到我关机了再尝试了一下才发现， 原来home键是硬的！按动的感觉全靠震动模拟的！太神奇了。</li>
+<li>苹果家的东西配件是真的好买啊。从电池，屏幕到主板背板，基本上都能很便宜的更换！这一点我相信其他手机一定做不到iPhone这一点。秉承着能修就修，能用就用的原理，一个广阔的配件市场是能增加我的使用体验的。</li>
+<li>及其活跃的二手市场。iphone、mac、ipad、airpods、watch在二手市场的流通太广了，数量的提升带来了更多的捡漏机会，嘿嘿。不论是在学校跳蚤市场，还是闲鱼上，苹果产品都多如牛毛，经常蹲一蹲，捡捡漏。并且就算不用了，出二手也十分快捷。不得不说apple pencil真的太保值了，19年暑假600买的一根pencil，用了一年550卖给了别人。相当于花50租了一年，几乎等于零成本体验pencil。就是基于此特点，一块昂贵的4位数apple watch，经常能以三位数体验。</li>
+</ol>
+<p><img src="https://pic.imgdb.cn/item/6241861f27f86abb2a4abe91.png" alt="img"></p>
+<p>综合以上原因，我购买了 <strong>苹果手表</strong>而不是其他家的智能手表。</p>
+<p><img src="https://pic.imgdb.cn/item/6241862627f86abb2a4ae5e7.png" alt="img"></p>
+<p><strong>至于为什么又是s3呢？</strong></p>
+<ul>
+<li>功能要求。作为三种仅售的watch，s3被苹果官方定义为低端体验机。其具备的锻炼跟踪，游泳防水，手表通话，睡眠，心率，地图基本涵盖一个apple watch最基本的功能。对于一个最初入手watch的我来说，是一个低成本体验watch的最合适选择。</li>
+<li>价格要求。虽然全新的s3最低也要千位数起步，但是因其广泛的更替和闲置原因，导致在闲鱼上有很多的交易机会。经过长时间的观察最终确定s3的价格基本在500-1000。非常符合我的预算。并且就算是不适合，二手买来再三手卖出去，损失也不会很大。因为市场很大，所以不用考虑二手交易会消耗很大的精力。同样不考虑一手的原因包括一手到二手的折价太大了！学生党承受不起。</li>
+</ul>
+<p>基于以上两点要求，<strong>s3就是最适合我的一款watch</strong>。</p>
+<h2 id="购买过程"><a href="#购买过程" class="headerlink" title="购买过程"></a>购买过程</h2><p>既然是准备在闲鱼上购买了，那么这个购买过程一定还是要记录一下的。</p>
+<p>以前就有过闲鱼买卖的经历，有赚有亏。不得不说，在闲鱼上冲浪，真的看一个胆子大，手速快。</p>
+<h3 id="为了这次交易，我特别学习到了一些小技巧。"><a href="#为了这次交易，我特别学习到了一些小技巧。" class="headerlink" title="为了这次交易，我特别学习到了一些小技巧。"></a>为了这次交易，我特别学习到了一些小技巧。</h3><ol>
+<li><p>时间。发布时间越早越好，只看1天内或者7天内的。发布时间越久的，不是价格太高就是东西有问题，买了不用说肯定是你亏。</p>
+</li>
+<li><p>购买方。不要购买闲鱼商家的，不要购买闲鱼商家的。既然是捡漏了，肯定是想要在二手交易过程中赚到，都不想亏到。如果去买商家的，不用说，肯定是他赚你亏，不论东西多便宜还是照片多精致，他绝对不会亏，不然他还搞什么生意？所以，想要赚到，就只买个人卖家的。区别方法，看动态和上架东西数目。几百上千的直接pass。</p>
+</li>
+<li><p>信誉。信誉仅作为参考，只能说高的可能好，低的也不一定坏。最重要的分辨方法，就是分析卖家的动态，分析他为什么要卖？分析他的心理价格。</p>
+</li>
+<li><p><strong>评定标准。</strong>这个最重要，为什么同样一个东西，有的人卖得很贵？有的卖得很便宜？这其中关乎着一个<strong>时间</strong>。卖家越急他就卖得越便宜，买家越急，就买得越贵。所以，收二手一定<strong>不要急</strong>。记住，只要你肯等，一定是你赚。耐心是唯一的优点。</p>
+</li>
+</ol>
+<p><img src="https://pic.imgdb.cn/item/6241865f27f86abb2a4c3714.png" alt="img"></p>
+<p>就像上面那个例子，这位老哥一直想让我买他的。在这个过程，明显就是他着急了。谈到这里，我大概就知道了，买他的肯定是血亏，所以一直使用缓兵之计。</p>
+<h3 id="下面就说说我买的这块"><a href="#下面就说说我买的这块" class="headerlink" title="下面就说说我买的这块"></a>下面就说说我买的这块</h3><p><img src="https://pic.imgdb.cn/item/6241866927f86abb2a4c7121.png" alt="img"></p>
+<p>950顺丰包邮，还有三个月保修，42mm加蜂窝。蜂窝版的是16G存储。</p>
+<p>至于<strong>值不值</strong></p>
+<p>大家看看我在某酷上调查出来的表格就知道了。</p>
+<p><strong>apple watch二手市场价格参考表</strong></p>
+<p><img src="https://pic.imgdb.cn/item/6241867127f86abb2a4ca005.png" alt="img"></p>
+<blockquote>
+<p>表格说明：表头是每个型号表的jd售价。成色定义比较玄学，我大概估计的。最后尺寸和蜂窝是一个参考系数，越高相对来说就越值。除了se产品，其余产品的蜂窝版本均比gps高700，毕竟不仅仅是多了蜂窝，还多了8G存储。</p>
+</blockquote>
+<p>准备好心里价格， 看到合适的直接拍。</p>
+<p>卖家是个上班族，和她每次聊，基本都在上班中。囧</p>
+<p>因此，卖家出这块表的意思，应该就是实在是闲置了，以后估摸着也不打算用了，所以出了。但是由于怕麻烦，所以就把价格定得比较低，然后售出不退。</p>
+<p>既然知道了卖家的需求，就不慌了。这块表多半是没什么问题，不会有诈。</p>
+<p>顺便提一下，卖家人很好！交易过程真的很顺心。</p>
+<p>于是在等了三天的快递，我11点拿到手12点就收货了。</p>
+<p><strong>胆大心细！</strong></p>
+<p><img src="https://pic.imgdb.cn/item/6241867927f86abb2a4cca07.png" alt="img"></p>
+<p>个人认为很<strong>值</strong>！</p>
+<h2 id="开箱过程"><a href="#开箱过程" class="headerlink" title="开箱过程"></a>开箱过程</h2><p>开箱过程就直接上图了</p>
+<p><img src="https://pic.imgdb.cn/item/6241868127f86abb2a4cf762.png" alt="img"></p>
+<p>拿到快递，超级开心，顺丰这个包装也是一如既往的浮夸。</p>
+<p><img src="https://pic.imgdb.cn/item/6241868827f86abb2a4d26d8.png" alt="img"></p>
+<p><img src="https://pic.imgdb.cn/item/6241869027f86abb2a4d5059.png" alt="img"></p>
+<blockquote>
+<p>因为卖家在南方，所以盒子生霉了， 卖家因为这个原因还退了我10元，所以我到手是940包邮，嘿嘿。</p>
+</blockquote>
+<p><img src="https://pic.imgdb.cn/item/6241869827f86abb2a4d7e37.png" alt="img"></p>
+<p><img src="https://pic.imgdb.cn/item/6241869f27f86abb2a4dac81.png" alt="img"></p>
+<p><img src="https://pic.imgdb.cn/item/624186ae27f86abb2a4dfcb1.png" alt="img"></p>
+<p>生霉确实挺严重的，我上手就用酒精先擦了擦。</p>
+<p><strong>接下来就是激动人心的开箱环节。</strong></p>
+<p><img src="https://pic.imgdb.cn/item/624186b827f86abb2a4e1c62.png" alt="img"></p>
+<p><img src="https://pic.imgdb.cn/item/624186c027f86abb2a4e49b2.png" alt="img"></p>
+<p><img src="https://pic.imgdb.cn/item/624186c927f86abb2a4e79d2.png" alt="img"></p>
+<p><img src="https://pic.imgdb.cn/item/624186cf27f86abb2a4e9e24.png" alt="img"></p>
+<p>还是一如既往的苹果风。</p>
+<p><img src="https://pic.imgdb.cn/item/624186d627f86abb2a4eb6fd.png" alt="img"></p>
+<p>表特别新！完全没有使用痕迹！</p>
+<p>电池容量也是100%，真是赚发了！</p>
+<h2 id="上手体验"><a href="#上手体验" class="headerlink" title="上手体验"></a>上手体验</h2><h3 id="佩戴上"><a href="#佩戴上" class="headerlink" title="佩戴上"></a>佩戴上</h3><p><img src="https://pic.imgdb.cn/item/624186dd27f86abb2a4ec792.png" alt="img"></p>
+<p>原装表带就能适应大多数情况</p>
+<p>似乎是戴得太紧了，所以都被压红了。以后还是考虑换个编制表带。</p>
+<h3 id="软件上"><a href="#软件上" class="headerlink" title="软件上"></a>软件上</h3><p>s3虽然很早的产品了，但是watch os7完全没问题</p>
+<p><img src="https://pic.imgdb.cn/item/624186e527f86abb2a4edd29.png" alt="img">建立在os7系统上的watch，功能十分强大。</p>
+<p><img src="https://pic.imgdb.cn/item/624186ec27f86abb2a4eece2.png" alt="img">超多的app，轻松完成日常需要</p>
+<p><img src="https://pic.imgdb.cn/item/624186f227f86abb2a4efe63.png" alt="img"><br>多种多样炫酷的表盘，满足各类心情需要</p>
+<h3 id="健身功能"><a href="#健身功能" class="headerlink" title="健身功能"></a>健身功能</h3><p><img src="https://pic.imgdb.cn/item/624186f827f86abb2a4f20ed.png" alt="img"></p>
+<p>健身三件套</p>
+<p><img src="https://pic.imgdb.cn/item/624186fe27f86abb2a4f2d94.png" alt="img"></p>
+<p>轻松简单的运动记录，和朋友一起竞赛，动态的目标完成使得watch的健身无与伦比。</p>
+<p>是融入生活的体验，是健康理念的具体。</p>
+<p>对于喜欢享受科技改善生活的朋友，apple watch这一款可穿戴设备，真的是不可或缺。</p>
+<p>对于喜欢健身运动的朋友，轻松记录自己的成就，是一种全方向的满足。、</p>
+<p>实时检测的心率，保证运动的健康性</p>
+<p>很多人说坚持不住，嘿嘿。我以前没手表的时候就天天坚持运动，所以这点就不要担心我了。</p>
+<p><img src="https://pic.imgdb.cn/item/6241870527f86abb2a4f4eaf.png" alt="img"></p>
+<p>配合<strong>健康</strong>，所有数据一目了然。</p>
+<p>身体是革命的本钱，只要三位数，就能提高自己对身体的检测水平，不亏！</p>
+<h2 id="最后总结"><a href="#最后总结" class="headerlink" title="最后总结"></a>最后总结</h2><p>apple watch作为ios生态系统的一份子，他的功能不容小觑</p>
+<p><strong>个人认为，watch是比airpods更香的真香机</strong></p>
+<p><img src="https://pic.imgdb.cn/item/6241870c27f86abb2a4f7566.png" alt="img"></p>
+<p>airpods完成了耳机的功能，是普遍的需求</p>
+<p>watch则完成了对ios系统的功能拓展，是硬件上的拓展</p>
+<p><strong>这是ios系统带来的福利，是ios系统独有的魅力</strong></p>
+<p><img src="https://pic.imgdb.cn/item/6241871327f86abb2a4f9c8e.png" alt="img"></p>
+<p>另外，apple watch价格很<strong>贵</strong>吗？其实<strong>不贵</strong>！这世界上，能365*24小时除了充电一直在身上的电子产品目前只有智能手表！连手机都不能比拟！</p>
+<p><strong>2000元除以每年8000个小时</strong></p>
+<p><strong>apple watch真的有那么贵吗？</strong></p>
+<hr>
+<p>至少，我950收一个s3 42 蜂窝血赚，嘿嘿</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 </div>
   </main>
@@ -801,14 +1507,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">10k</span>
+    <span title="站点总字数">17k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">9 分钟</span>
+    <span title="站点阅读时长">16 分钟</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
