@@ -20,38 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"ylongwang2782.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="目前的b站还不支持markdown语言，所以不准备写很多 写这些的目的主要是把自己以后可能用得上的东西自己重新整理一下，免得找不着了，很多收藏的东西，总是找不到，还是得自己总结的东西逻辑清楚 黑群晖因为特殊性，加装硬盘需要特殊方法。  本文仅用于PVE下安装的群晖，不过估计其他的虚拟机装的群晖也能适用。 首先准备一块硬盘 PDD买的一块海康威视的监控盘，支持7x24就行，其他的便宜就行，反正只准备">
+    <meta name="description" content="局域网，这个早在几十年前就创造出来的成品，随着互联网的普及，局域网似乎并没有被人们所认识和密切接触。 人们大部分则是直接与互联网接触。无论是电脑的联网，手机的联网，这里的“网”几乎都是特指互联网，即与外面的网络相连接，这样使用网络的人才能与外部交互，查百度，刷b站，全部都是建立在互联网的基础上。 而今天要说的则是互联网的前辈：局域网。局域网，顾名思义是局部上的网路，它虽然不为人知，但却深入人们的生">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PVE黑群晖直通硬盘">
-<meta property="og:url" content="https://ylongwang2782.github.io/2022/03/28/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98/">
+<meta property="og:title" content="认识局域网">
+<meta property="og:url" content="https://ylongwang2782.github.io/2021/02/22/%E8%AE%A4%E8%AF%86%E5%B1%80%E5%9F%9F%E7%BD%91/">
 <meta property="og:site_name" content="来日方长">
-<meta property="og:description" content="目前的b站还不支持markdown语言，所以不准备写很多 写这些的目的主要是把自己以后可能用得上的东西自己重新整理一下，免得找不着了，很多收藏的东西，总是找不到，还是得自己总结的东西逻辑清楚 黑群晖因为特殊性，加装硬盘需要特殊方法。  本文仅用于PVE下安装的群晖，不过估计其他的虚拟机装的群晖也能适用。 首先准备一块硬盘 PDD买的一块海康威视的监控盘，支持7x24就行，其他的便宜就行，反正只准备">
+<meta property="og:description" content="局域网，这个早在几十年前就创造出来的成品，随着互联网的普及，局域网似乎并没有被人们所认识和密切接触。 人们大部分则是直接与互联网接触。无论是电脑的联网，手机的联网，这里的“网”几乎都是特指互联网，即与外面的网络相连接，这样使用网络的人才能与外部交互，查百度，刷b站，全部都是建立在互联网的基础上。 而今天要说的则是互联网的前辈：局域网。局域网，顾名思义是局部上的网路，它虽然不为人知，但却深入人们的生">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pic.imgdb.cn/item/624182c527f86abb2a3b39dc.png">
-<meta property="og:image" content="https://pic.imgdb.cn/item/624182d427f86abb2a3b8cca.png">
-<meta property="og:image" content="https://pic.imgdb.cn/item/624182dd27f86abb2a3bc350.png">
-<meta property="og:image" content="https://pic.imgdb.cn/item/624182f027f86abb2a3c0391.png">
-<meta property="og:image" content="https://pic.imgdb.cn/item/624182f827f86abb2a3c160b.png">
-<meta property="og:image" content="https://pic.imgdb.cn/item/6241830027f86abb2a3c2c9e.png">
-<meta property="og:image" content="https://pic.imgdb.cn/item/6241830827f86abb2a3c52ed.png">
-<meta property="og:image" content="https://pic.imgdb.cn/item/6241831327f86abb2a3c8fde.png">
-<meta property="og:image" content="https://pic.imgdb.cn/item/6241831a27f86abb2a3cbc11.png">
-<meta property="article:published_time" content="2022-03-28T09:40:20.000Z">
-<meta property="article:modified_time" content="2022-03-28T09:43:07.906Z">
+<meta property="article:published_time" content="2021-02-22T05:30:15.000Z">
+<meta property="article:modified_time" content="2022-03-28T10:32:03.296Z">
 <meta property="article:author" content="Rainlong">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pic.imgdb.cn/item/624182c527f86abb2a3b39dc.png">
 
 
-<link rel="canonical" href="https://ylongwang2782.github.io/2022/03/28/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98/">
+<link rel="canonical" href="https://ylongwang2782.github.io/2021/02/22/%E8%AE%A4%E8%AF%86%E5%B1%80%E5%9F%9F%E7%BD%91/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://ylongwang2782.github.io/2022/03/28/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98/","path":"2022/03/28/PVE黑群晖直通硬盘/","title":"PVE黑群晖直通硬盘"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://ylongwang2782.github.io/2021/02/22/%E8%AE%A4%E8%AF%86%E5%B1%80%E5%9F%9F%E7%BD%91/","path":"2021/02/22/认识局域网/","title":"认识局域网"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>PVE黑群晖直通硬盘 | 来日方长</title>
+<title>认识局域网 | 来日方长</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ058Y2LKZ"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-VQ058Y2LKZ","only_pageview":false}</script>
@@ -118,7 +108,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -131,7 +121,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A6%96%E5%85%88%E5%87%86%E5%A4%87%E4%B8%80%E5%9D%97%E7%A1%AC%E7%9B%98"><span class="nav-number">1.</span> <span class="nav-text">首先准备一块硬盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%9B%B8%E5%85%B3%E7%8E%AF%E5%A2%83"><span class="nav-number">2.</span> <span class="nav-text">安装相关环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NAS%E9%87%8C%E8%AE%BE%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">NAS里设置</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -198,7 +187,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/2022/03/28/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98/">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/2021/02/22/%E8%AE%A4%E8%AF%86%E5%B1%80%E5%9F%9F%E7%BD%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -211,12 +200,12 @@
     </span>
     
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="PVE黑群晖直通硬盘 | 来日方长">
+      <meta itemprop="name" content="认识局域网 | 来日方长">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          PVE黑群晖直通硬盘
+          认识局域网
         </h1>
 
         <div class="post-meta-container">
@@ -226,9 +215,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-03-28 17:40:20 / 修改时间：17:43:07" itemprop="dateCreated datePublished" datetime="2022-03-28T17:40:20+08:00">2022-03-28</time>
+      <time title="创建时间：2021-02-22 13:30:15" itemprop="dateCreated datePublished" datetime="2021-02-22T13:30:15+08:00">2021-02-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-28 18:32:03" itemprop="dateModified" datetime="2022-03-28T18:32:03+08:00">2022-03-28</time>
     </span>
 
   
@@ -240,13 +235,13 @@
     </span>
     <span class="post-meta-item-text">Waline：</span>
   
-    <a title="waline" href="/2022/03/28/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98/#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/2022/03/28/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98/" data-xid="/2022/03/28/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98/" itemprop="commentCount"></span>
+    <a title="waline" href="/2021/02/22/%E8%AE%A4%E8%AF%86%E5%B1%80%E5%9F%9F%E7%BD%91/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/2021/02/22/%E8%AE%A4%E8%AF%86%E5%B1%80%E5%9F%9F%E7%BD%91/" data-xid="/2021/02/22/%E8%AE%A4%E8%AF%86%E5%B1%80%E5%9F%9F%E7%BD%91/" itemprop="commentCount"></span>
     </a>
   </span>
   
   
-    <span id="/2022/03/28/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98/" class="post-meta-item leancloud_visitors" data-flag-title="PVE黑群晖直通硬盘" title="阅读次数">
+    <span id="/2021/02/22/%E8%AE%A4%E8%AF%86%E5%B1%80%E5%9F%9F%E7%BD%91/" class="post-meta-item leancloud_visitors" data-flag-title="认识局域网" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -260,7 +255,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>770</span>
+      <span>874</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -278,44 +273,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>目前的b站还不支持markdown语言，所以不准备写很多</p>
-<p>写这些的目的主要是把自己以后可能用得上的东西自己重新整理一下，免得找不着了，很多收藏的东西，总是找不到，还是得自己总结的东西逻辑清楚</p>
-<p>黑群晖因为特殊性，加装硬盘需要特殊方法。</p>
-<hr>
-<p>本文仅用于PVE下安装的群晖，不过估计其他的虚拟机装的群晖也能适用。</p>
-<h2 id="首先准备一块硬盘"><a href="#首先准备一块硬盘" class="headerlink" title="首先准备一块硬盘"></a>首先准备一块硬盘</h2><p><img src="https://pic.imgdb.cn/item/624182c527f86abb2a3b39dc.png"></p>
-<p>PDD买的一块海康威视的监控盘，支持7x24就行，其他的便宜就行，反正只准备用他跑PT，烂了就烂了。重要的资料还是用PC的机械硬盘单独拷贝。</p>
-<h2 id="安装相关环境"><a href="#安装相关环境" class="headerlink" title="安装相关环境"></a>安装相关环境</h2><p>在PVE的SHELL里输入以下指令</p>
-<p>1、apt-get update  更新环境</p>
-<p>2、apt-get install lshw  安装lshw</p>
-<p>3、ls -l &#x2F;dev&#x2F;disk&#x2F;by-id&#x2F;  查看已插入硬盘信息</p>
-<p><img src="https://pic.imgdb.cn/item/624182d427f86abb2a3b8cca.png"></p>
-<p>得到一大串神秘代码</p>
-<p>只看ata开头的硬盘ID</p>
-<p>可以看出，我插入的四块磁盘，每个型号都能简单的辨识</p>
-<p>第一块是我的启动盘，也就是安装的PVE和NAS只有16G的一个msata</p>
-<p>第二块是我插入一快垃圾500G硬盘</p>
-<p>第三块是我之前插入的一块西数WDC4T紫盘，</p>
-<p>第四块就是我最新的一块盘，可以看出和前面的那块紫盘基本相似。</p>
-<p>选取不带part的那行语句</p>
-<p><img src="https://pic.imgdb.cn/item/624182dd27f86abb2a3bc350.png"></p>
-<p>把他单独拎出来</p>
-<p>然后根据下面我的格式填充即可</p>
-<p>qm set 101 –sata4 &#x2F;dev&#x2F;disk&#x2F;by-id&#x2F;ata-WDC_WD40PURX-78AKYY0_WD-WX32DA1LTP3S</p>
-<p>其中，101为NAS在PVE中的标号</p>
-<p><img src="https://pic.imgdb.cn/item/624182f027f86abb2a3c0391.png"></p>
-<p>sata4则为NAS中第几块硬盘，从01234挨着排下去就行，别填错了就ok</p>
-<p><img src="https://pic.imgdb.cn/item/624182f827f86abb2a3c160b.png"></p>
-<p>结束，此时硬盘已经直通到nas里了</p>
-<p>后面在群晖里只要设置一下就行了</p>
-<h2 id="NAS里设置"><a href="#NAS里设置" class="headerlink" title="NAS里设置"></a>NAS里设置</h2><p><img src="https://pic.imgdb.cn/item/6241830027f86abb2a3c2c9e.png"></p>
-<p>在存储空间管理员里，新增</p>
-<p><img src="https://pic.imgdb.cn/item/6241830827f86abb2a3c52ed.png"></p>
-<p>选择灵活性提高</p>
-<p><img src="https://pic.imgdb.cn/item/6241831327f86abb2a3c8fde.png"></p>
-<p>raid类型选择basic，PT盘差不多得了</p>
-<p><img src="https://pic.imgdb.cn/item/6241831a27f86abb2a3cbc11.png"></p>
-<p>把要用的硬盘拖过来下一步就完成</p>
+        <p><strong>局域网</strong>，这个早在几十年前就创造出来的成品，随着互联网的普及，局域网似乎并没有被人们所认识和密切接触。</p>
+<p>人们大部分则是直接与互联网接触。无论是电脑的联网，手机的联网，这里的“网”几乎都是特指互联网，即与外面的网络相连接，这样使用网络的人才能与外部交互，查百度，刷b站，全部都是建立在互联网的基础上。</p>
+<p>而今天要说的则是互联网的前辈：局域网。局域网，顾名思义是局部上的网路，它虽然不为人知，但却深入人们的生活之中。局域网不需要外部网络，只需要一台只能设备即可。现在随处可见的路由器就是局域网的一个体现。路由器将接收到的网络信号通过编码，通过有线或者无线的方式将网络信号传输给另一端的用户。</p>
+<p>路由器产生WiFi，手机连接WiFi继而连接到互联网，俗称“有网”。而在这其中，局域网就悄悄的产生其作用。路由器作为一个终端，发挥它的路由功能，给每一个“设备”都分配一个ip地址。注意，这是局域意义上的ip地址，只有每一个设备被分配到ip地址后，其才能从路由器那里接受到网络，从而连接到互联网，可以说路由器是一个中转站，手机与互联网之间的中转站。</p>
+<p>而作为分配ip地址，发送网络的“老大”，路由器自然成了这个局域网的核心。所有常见的局域网均由这个路由器分配产生。就像开宗立派的开山鼻祖，所有这个“局域网”宗派内的“弟子”都由这个路由器产生和管理。</p>
+<p>一个分配ip地址，发送接收网络信息的路由器，就是一个最简单的局域网。就算是光杆司令，这个路由器只插了一个电源，没有插其他网线，没有任何其他设备连接，它也是自成一体，称为一个独立的局域网。当然这样一个最简单的局域网是没有连接互联网功能的，也就是说，它“没网”。</p>
+<p>而更常见的，在每个家庭几乎都有的局域网情况是，一个“光猫”连接到路由器上，然后所有需要网络的设备全部连接到路由器上。这样就“有网”可用了。</p>
+<p>另一个现在越来越常见的东西，热点。其实也是一个小型局域网，不论是手机热点还是电脑热点，和路由器基本都是大同小异，都是其他设备连接到这个终端上，并且“有网”。执行热点功能的手机\电脑其实就是一个路由器。他们同时执行着一个功能“路由”。</p>
 
     </div>
 
@@ -329,11 +294,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2022/03/27/jellyfin/" rel="prev" title="jellyfin建立自己的媒体库">
-                  <i class="fa fa-chevron-left"></i> jellyfin建立自己的媒体库
-                </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2021/02/22/%E8%A7%A3%E5%86%B3%E5%A4%A7%E6%88%B7%E5%9E%8B%E7%9A%84%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%EF%BC%8C%E9%99%84%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C%E5%9B%BE/" rel="next" title="解决大户型的网络问题，附实际操作图">
+                  解决大户型的网络问题，附实际操作图 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
@@ -398,7 +363,7 @@
 
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline-server-seven.vercel.app","placeholder":"畅所欲言。","avatar":"retro","pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/2022/03/28/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline-server-seven.vercel.app","placeholder":"畅所欲言。","avatar":"retro","pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/2021/02/22/%E8%AE%A4%E8%AF%86%E5%B1%80%E5%9F%9F%E7%BD%91/"}</script>
 <script>
 document.addEventListener('page:loaded', () => {
   NexT.utils.loadComments(CONFIG.waline.el).then(() => 

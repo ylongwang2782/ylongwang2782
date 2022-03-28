@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ylongwang2782.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="这篇文章，记录一下更换开关所需要的一些简单电学知识和走进开关内部结构。 以及自己的一些实际更换操作 开关的内部结构要进行开关的更换，特别是用智能开关和旧机械开关构造完全不一，所以了解开关的内部结构，了解电路的基础结构尤为重要。 废话不多说，直接上图。由我实际的总结，可能不全，但包括了最难的三开双控解析，应付大部分的情况都没问题。 双开单控 首先拿到一个老式开关面板 ，进行一步步拆解      现在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="了解家里的开关结构，智能开关面板更换老式开关超详细操作">
+<meta property="og:url" content="https://ylongwang2782.github.io/2021/02/24/%E4%BA%86%E8%A7%A3%E5%AE%B6%E9%87%8C%E7%9A%84%E5%BC%80%E5%85%B3%E7%BB%93%E6%9E%84%EF%BC%8C%E6%99%BA%E8%83%BD%E5%BC%80%E5%85%B3%E9%9D%A2%E6%9D%BF%E6%9B%B4%E6%8D%A2%E8%80%81%E5%BC%8F%E5%BC%80%E5%85%B3%E8%B6%85%E8%AF%A6%E7%BB%86%E6%93%8D%E4%BD%9C/">
+<meta property="og:site_name" content="来日方长">
+<meta property="og:description" content="这篇文章，记录一下更换开关所需要的一些简单电学知识和走进开关内部结构。 以及自己的一些实际更换操作 开关的内部结构要进行开关的更换，特别是用智能开关和旧机械开关构造完全不一，所以了解开关的内部结构，了解电路的基础结构尤为重要。 废话不多说，直接上图。由我实际的总结，可能不全，但包括了最难的三开双控解析，应付大部分的情况都没问题。 双开单控 首先拿到一个老式开关面板 ，进行一步步拆解      现在">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418b1427f86abb2a5f0bd1.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418b1c27f86abb2a5f1b3d.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418b2327f86abb2a5f3bba.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418b2a27f86abb2a5f6224.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418b3127f86abb2a5f8d27.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418b3727f86abb2a5fb0dd.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418b3f27f86abb2a5fdf16.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418b4727f86abb2a60013e.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418b4e27f86abb2a6012e9.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418b5527f86abb2a603ad1.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418b5a27f86abb2a6058c3.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418b6127f86abb2a608310.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418b6827f86abb2a60aced.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418b6d27f86abb2a60c9b6.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418b7427f86abb2a60f86f.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418b7b27f86abb2a61225c.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418b8127f86abb2a6143d1.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418b8727f86abb2a616ac0.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418b8e27f86abb2a618e73.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418b9427f86abb2a61b0e3.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418b9a27f86abb2a61d7a5.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418ba027f86abb2a61f747.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418ba727f86abb2a62225c.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418bad27f86abb2a6249de.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/62418bb427f86abb2a6273e9.png">
+<meta property="article:published_time" content="2021-02-24T09:43:00.000Z">
+<meta property="article:modified_time" content="2022-03-28T10:21:01.390Z">
+<meta property="article:author" content="Rainlong">
+<meta property="article:tag" content="笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/62418b1427f86abb2a5f0bd1.png">
+
+
+<link rel="canonical" href="https://ylongwang2782.github.io/2021/02/24/%E4%BA%86%E8%A7%A3%E5%AE%B6%E9%87%8C%E7%9A%84%E5%BC%80%E5%85%B3%E7%BB%93%E6%9E%84%EF%BC%8C%E6%99%BA%E8%83%BD%E5%BC%80%E5%85%B3%E9%9D%A2%E6%9D%BF%E6%9B%B4%E6%8D%A2%E8%80%81%E5%BC%8F%E5%BC%80%E5%85%B3%E8%B6%85%E8%AF%A6%E7%BB%86%E6%93%8D%E4%BD%9C/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://ylongwang2782.github.io/2021/02/24/%E4%BA%86%E8%A7%A3%E5%AE%B6%E9%87%8C%E7%9A%84%E5%BC%80%E5%85%B3%E7%BB%93%E6%9E%84%EF%BC%8C%E6%99%BA%E8%83%BD%E5%BC%80%E5%85%B3%E9%9D%A2%E6%9D%BF%E6%9B%B4%E6%8D%A2%E8%80%81%E5%BC%8F%E5%BC%80%E5%85%B3%E8%B6%85%E8%AF%A6%E7%BB%86%E6%93%8D%E4%BD%9C/","path":"2021/02/24/了解家里的开关结构，智能开关面板更换老式开关超详细操作/","title":"了解家里的开关结构，智能开关面板更换老式开关超详细操作"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>了解家里的开关结构，智能开关面板更换老式开关超详细操作 | 来日方长</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ058Y2LKZ"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-VQ058Y2LKZ","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?2aacacbf31837d9a367324e67673a9cc"></script>
+
+
+
+<link rel="dns-prefetch" href="waline-server-seven.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">来日方长</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%85%B3%E7%9A%84%E5%86%85%E9%83%A8%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">开关的内部结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8C%E5%BC%80%E5%8D%95%E6%8E%A7"><span class="nav-number">1.1.</span> <span class="nav-text">双开单控</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8C%E5%BC%80%E5%8F%8C%E6%8E%A7"><span class="nav-number">1.2.</span> <span class="nav-text">双开双控</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E5%BC%80%E5%8F%8C%E6%8E%A7"><span class="nav-number">1.3.</span> <span class="nav-text">三开双控</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B%E6%93%8D%E4%BD%9C%E5%9B%BE%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text">实例操作图解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%99%85%E8%BF%9E%E7%BA%BF%E5%9B%BE"><span class="nav-number">2.1.</span> <span class="nav-text">实际连线图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%99%BA%E8%83%BD%E5%BC%80%E5%85%B3%E6%9B%B4%E6%8D%A2"><span class="nav-number">3.</span> <span class="nav-text">智能开关更换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E5%90%8E%E7%BB%93%E6%9E%9C%E5%9B%BE"><span class="nav-number">4.</span> <span class="nav-text">更换后结果图</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Rainlong"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Rainlong</p>
+  <div class="site-description" itemprop="description">这是王同学的博客</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ylongwang2782" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ylongwang2782" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/87307916" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;87307916" rel="noopener" target="_blank"><i class="fab fa-bilibili fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/2021/02/24/%E4%BA%86%E8%A7%A3%E5%AE%B6%E9%87%8C%E7%9A%84%E5%BC%80%E5%85%B3%E7%BB%93%E6%9E%84%EF%BC%8C%E6%99%BA%E8%83%BD%E5%BC%80%E5%85%B3%E9%9D%A2%E6%9D%BF%E6%9B%B4%E6%8D%A2%E8%80%81%E5%BC%8F%E5%BC%80%E5%85%B3%E8%B6%85%E8%AF%A6%E7%BB%86%E6%93%8D%E4%BD%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rainlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="来日方长">
+      <meta itemprop="description" content="这是王同学的博客">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="了解家里的开关结构，智能开关面板更换老式开关超详细操作 | 来日方长">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          了解家里的开关结构，智能开关面板更换老式开关超详细操作
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-02-24 17:43:00" itemprop="dateCreated datePublished" datetime="2021-02-24T17:43:00+08:00">2021-02-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-28 18:21:01" itemprop="dateModified" datetime="2022-03-28T18:21:01+08:00">2022-03-28</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2021/02/24/%E4%BA%86%E8%A7%A3%E5%AE%B6%E9%87%8C%E7%9A%84%E5%BC%80%E5%85%B3%E7%BB%93%E6%9E%84%EF%BC%8C%E6%99%BA%E8%83%BD%E5%BC%80%E5%85%B3%E9%9D%A2%E6%9D%BF%E6%9B%B4%E6%8D%A2%E8%80%81%E5%BC%8F%E5%BC%80%E5%85%B3%E8%B6%85%E8%AF%A6%E7%BB%86%E6%93%8D%E4%BD%9C/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/2021/02/24/%E4%BA%86%E8%A7%A3%E5%AE%B6%E9%87%8C%E7%9A%84%E5%BC%80%E5%85%B3%E7%BB%93%E6%9E%84%EF%BC%8C%E6%99%BA%E8%83%BD%E5%BC%80%E5%85%B3%E9%9D%A2%E6%9D%BF%E6%9B%B4%E6%8D%A2%E8%80%81%E5%BC%8F%E5%BC%80%E5%85%B3%E8%B6%85%E8%AF%A6%E7%BB%86%E6%93%8D%E4%BD%9C/" data-xid="/2021/02/24/%E4%BA%86%E8%A7%A3%E5%AE%B6%E9%87%8C%E7%9A%84%E5%BC%80%E5%85%B3%E7%BB%93%E6%9E%84%EF%BC%8C%E6%99%BA%E8%83%BD%E5%BC%80%E5%85%B3%E9%9D%A2%E6%9D%BF%E6%9B%B4%E6%8D%A2%E8%80%81%E5%BC%8F%E5%BC%80%E5%85%B3%E8%B6%85%E8%AF%A6%E7%BB%86%E6%93%8D%E4%BD%9C/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/2021/02/24/%E4%BA%86%E8%A7%A3%E5%AE%B6%E9%87%8C%E7%9A%84%E5%BC%80%E5%85%B3%E7%BB%93%E6%9E%84%EF%BC%8C%E6%99%BA%E8%83%BD%E5%BC%80%E5%85%B3%E9%9D%A2%E6%9D%BF%E6%9B%B4%E6%8D%A2%E8%80%81%E5%BC%8F%E5%BC%80%E5%85%B3%E8%B6%85%E8%AF%A6%E7%BB%86%E6%93%8D%E4%BD%9C/" class="post-meta-item leancloud_visitors" data-flag-title="了解家里的开关结构，智能开关面板更换老式开关超详细操作" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>这篇文章，记录一下更换开关所需要的一些简单电学知识和走进开关内部结构。</p>
+<p>以及自己的一些实际更换操作</p>
+<h2 id="开关的内部结构"><a href="#开关的内部结构" class="headerlink" title="开关的内部结构"></a>开关的内部结构</h2><p>要进行开关的更换，特别是用智能开关和旧机械开关构造完全不一，所以了解开关的内部结构，了解电路的基础结构尤为重要。</p>
+<p>废话不多说，直接上图。由我实际的总结，可能不全，但包括了最难的三开双控解析，应付大部分的情况都没问题。</p>
+<h3 id="双开单控"><a href="#双开单控" class="headerlink" title="双开单控"></a>双开单控</h3><p><img src="https://pic.imgdb.cn/item/62418b1427f86abb2a5f0bd1.png" alt="img"></p>
+<p>首先拿到一个老式开关面板 ，进行一步步拆解</p>
+<p><img src="https://pic.imgdb.cn/item/62418b1c27f86abb2a5f1b3d.png" alt="img"></p>
+<p><img src="https://pic.imgdb.cn/item/62418b2327f86abb2a5f3bba.png" alt="img"></p>
+<p><img src="https://pic.imgdb.cn/item/62418b2a27f86abb2a5f6224.png" alt="img"></p>
+<p><img src="https://pic.imgdb.cn/item/62418b3127f86abb2a5f8d27.png" alt="img"></p>
+<p><img src="https://pic.imgdb.cn/item/62418b3727f86abb2a5fb0dd.png" alt="img"></p>
+<p>现在拆解的，就是最简单的双开单控开关。</p>
+<blockquote>
+<p>（所谓的<strong>几开几控</strong>，几开指这个开关一共有几个开关~~</p>
+<p>几控，单控，即单个灯只有一个开关控制，而双控则是单个灯由两个开关共同控制，两个开关同时控制灯的打开和关闭。）</p>
+</blockquote>
+<p><strong>下面开始仔细分析开关的结构，它到底是怎么执行开关这个功能的呢？</strong></p>
+<p><img src="https://pic.imgdb.cn/item/62418b3f27f86abb2a5fdf16.png" alt="img"></p>
+<p>由这个简单的解析可以看到，火线由下面的柱头进入，通过铜传导至两个弹片，由弹片控制与上面两个柱头的接触。上面两个柱头则分别接两个灯泡。</p>
+<p>弹片开闭两种状态如下</p>
+<p><img src="https://pic.imgdb.cn/item/62418b4727f86abb2a60013e.png" alt="img">开关合上，灯亮</p>
+<p>开关与上部铜柱接触，则回路导通，灯亮</p>
+<p><img src="https://pic.imgdb.cn/item/62418b4e27f86abb2a6012e9.png" alt="img"></p>
+<p>弹片翘起来，即回路断开，灯不亮。</p>
+<h3 id="双开双控"><a href="#双开双控" class="headerlink" title="双开双控"></a>双开双控</h3><p>先了解一下双控的基本连线</p>
+<p><img src="https://pic.imgdb.cn/item/62418b5527f86abb2a603ad1.png" alt="img"></p>
+<p>可以看到，只要是双控开光，则必须由三个柱头构成。中间由两根火线L1L2连接，由单根火线接入接出。</p>
+<p>双控开关AB，必须同时连接L1或者L2才能使得回路导通，让灯通电。</p>
+<p>所以不难解释生活中的情况。</p>
+<p>当双控灯亮着的时候，不论将开关A还是开关B拨动，都会使得回路断开然后使得灯泡断电。</p>
+<p>当双控灯灭着的时候，不论将开关A还是开关B拨动，都会使得回路变为导通。</p>
+<p>（这其实就是与或非中的与，参考最简单的01真值表就可以得到结果）</p>
+<p>继续拆解一个双控开关</p>
+<p><img src="https://pic.imgdb.cn/item/62418b5a27f86abb2a6058c3.png" alt="img"></p>
+<p><img src="https://pic.imgdb.cn/item/62418b6127f86abb2a608310.png" alt="img"></p>
+<p>一个双开双控开关的正反两面。</p>
+<p>由背面的标识和内部的结构对应不难得出以下结论：</p>
+<ol>
+<li><p>L1&#x2F;L11&#x2F;L12和L2&#x2F;L21&#x2F;L22分别为两套独立的双控开关。三个柱头为一组。和上面的电路图刚好对应。</p>
+</li>
+<li><p>L1和L2分别是两组中的火线进入或者火线出柱头。</p>
+</li>
+<li><p>L11&#x2F;L12和L21&#x2F;L22则是两个中间柱头</p>
+<p>对应电路图如下</p>
+</li>
+</ol>
+<p><img src="https://pic.imgdb.cn/item/62418b6827f86abb2a60aced.png" alt="img"></p>
+<p>另，如若将双控开光用于单控用，也是可以的。只需将一个铜柱不接就可以了。</p>
+<h3 id="三开双控"><a href="#三开双控" class="headerlink" title="三开双控"></a>三开双控</h3><p><img src="https://pic.imgdb.cn/item/62418b6d27f86abb2a60c9b6.png" alt="img"></p>
+<p>三开双控的开关应该是最难的开关了。但实际上内部结构也十分简单。</p>
+<p>一共9个开关，每三个一组，不难看出三开双控开关和双开双控开关书本同源。</p>
+<p><img src="https://pic.imgdb.cn/item/62418b7427f86abb2a60f86f.png" alt="img"></p>
+<p>三开双控开关，是最复杂的开关，但也是适用面最广的开关，它基本适用于家庭的任何场景，所以在实际操作的时候一定要注意它的变形。</p>
+<h2 id="实例操作图解"><a href="#实例操作图解" class="headerlink" title="实例操作图解"></a>实例操作图解</h2><p>实际操作中，注意安全，断电和电笔测电很重要。</p>
+<p>断电保护基本安全。电笔则可以通过排除法，了解电路结构。实际生活中，因为电工的技术水准参差不齐，家庭电路的实际安装有可能令人瞠目结舌，并不一定就是书本上最简单的。所以了解实际结构很重要。</p>
+<p>用我实际更换家里的一套：三开双控开关为例</p>
+<p>家里的楼梯灯共有三个，一楼负一楼负二楼各一个。</p>
+<p>使用情况则是，负一楼是三开双控开关，一楼负一楼都是单开双控开关。所以，负一楼的可以控制三层楼梯的开关，而一楼负二楼的则只能控制各自楼层的灯泡。</p>
+<h3 id="实际连线图"><a href="#实际连线图" class="headerlink" title="实际连线图"></a>实际连线图</h3><p><img src="https://pic.imgdb.cn/item/62418b7b27f86abb2a61225c.png" alt="img"></p>
+<p><img src="https://pic.imgdb.cn/item/62418b8127f86abb2a6143d1.png" alt="img"></p>
+<p><img src="https://pic.imgdb.cn/item/62418b8727f86abb2a616ac0.png" alt="img"></p>
+<p>负一楼的三开双控开关，接线的复杂程度，令人头昏眼花。</p>
+<p><img src="https://pic.imgdb.cn/item/62418b8e27f86abb2a618e73.png" alt="img">一楼的双控单开开关</p>
+<p><img src="https://pic.imgdb.cn/item/62418b9427f86abb2a61b0e3.png" alt="img">负二楼的双控单开开关</p>
+<p>看了三个开关，我第一时间就有所疑问，为什么负二楼的开关是被短接了的？和理论上的双控连线图出了差误。</p>
+<p>而后通过电笔的仔细测量和排除，最后得出结论</p>
+<p><img src="https://pic.imgdb.cn/item/62418b9a27f86abb2a61d7a5.png" alt="img"></p>
+<p>其中，绿色的六根铜柱为负二楼的灯</p>
+<p>黄色的六根铜柱是一楼的铜柱</p>
+<p>蓝色圈则是负一楼的单控灯，嘿嘿</p>
+<p>因为实际操作中包括了短接，串接，空接的情况，所以会导致对于模型的建立产生极大的困难。不过只要电笔玩得好，猜想加证明，不难得出最后模型。</p>
+<p>难点：1.一楼灯和负一楼灯都是由一根火线供电，一楼的电更是由火线串接而来。</p>
+<p>2.负二楼的火线并不是由负一楼的开关提供！而是由负二楼接入，再由负一楼接出。这点真的把我难住了很久。果然实际和理想差别很大┭┮﹏┭┮</p>
+<h2 id="智能开关更换"><a href="#智能开关更换" class="headerlink" title="智能开关更换"></a>智能开关更换</h2><p>智能开关共有两种，单火线版本，和零火线版本，这点网上大佬们就解释得很清楚啦。</p>
+<p>而我这一个</p>
+<p><img src="https://pic.imgdb.cn/item/62418ba027f86abb2a61f747.png" alt="img"></p>
+<p>则是一个单火线的版本。</p>
+<p>值得注意的是：</p>
+<ol>
+<li>智能开关只需要接入一个火线，然后其他柱头依次接灯泡即可</li>
+<li>智能开关不能适用于机械式的双控开关，要实现多控则需要配合遥控开关使用。虽然不能实现机械式双控，但智能开关可以更加简单的实现N控，这点是传统开关做不到的。</li>
+<li>单火版的智能开关因其特殊性，必须串接一个电容在灯具两端，这是一个难点</li>
+<li>新一代的房屋大多是零火版，零火版的智能开关不仅安装简单，而且价格上也更加实惠。</li>
+</ol>
+<p>知道目前情况和目标要求后，将一楼和负一楼的双控开关拆下，并直接串接火线。使得三个灯的开关全由负一楼开关负责。</p>
+<h2 id="更换后结果图"><a href="#更换后结果图" class="headerlink" title="更换后结果图"></a>更换后结果图</h2><p><img src="https://pic.imgdb.cn/item/62418ba727f86abb2a62225c.png" alt="img">一楼的遥控开关，是三开的</p>
+<p>遥控开关用电池，所以想贴哪里就贴哪里，超级方便。我这里直接贴楼梯柱子上，嘿嘿</p>
+<p><img src="https://pic.imgdb.cn/item/62418bad27f86abb2a6249de.png" alt="img">负一楼的总开关</p>
+<p><img src="https://pic.imgdb.cn/item/62418bb427f86abb2a6273e9.png" alt="img">负二楼的遥控开关</p>
+<p>这样就完成了一个三开双控开关的智能更换。</p>
+<p>只要弄明白这种的开关更换，其余的开关更换还不是手到擒来？</p>
+<hr>
+<p>全文终</p>
+<p>工科生，文笔较差，不过都是写的干货啦，谢谢各位浏览</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/02/22/%E5%AE%8C%E6%88%90%E9%BB%91%E7%BE%A4%E6%99%96NAS%E7%B3%BB%E7%BB%9F/" rel="prev" title="完成黑群晖NAS系统">
+                  <i class="fa fa-chevron-left"></i> 完成黑群晖NAS系统
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/02/24/%E8%B6%85%E4%BD%8E%E6%88%90%E6%9C%AC%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85%EF%BC%8C%E5%AE%89%E5%8D%93%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91%E9%83%BD%E8%83%BD%E4%BD%BF%E7%94%A8%EF%BC%8Cdocker%E5%AE%89%E8%A3%85HA%E9%85%8D%E5%90%88%E6%98%93%E5%BE%AE%E8%81%94%E5%AE%9E%E4%BE%8B/" rel="next" title="超低成本智能家居，安卓苹果电脑都能使用，docker安装HA配合易微联实例">
+                  超低成本智能家居，安卓苹果电脑都能使用，docker安装HA配合易微联实例 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Rainlong</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">33k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">30 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline-server-seven.vercel.app","placeholder":"畅所欲言。","avatar":"retro","pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/2021/02/24/%E4%BA%86%E8%A7%A3%E5%AE%B6%E9%87%8C%E7%9A%84%E5%BC%80%E5%85%B3%E7%BB%93%E6%9E%84%EF%BC%8C%E6%99%BA%E8%83%BD%E5%BC%80%E5%85%B3%E9%9D%A2%E6%9D%BF%E6%9B%B4%E6%8D%A2%E8%80%81%E5%BC%8F%E5%BC%80%E5%85%B3%E8%B6%85%E8%AF%A6%E7%BB%86%E6%93%8D%E4%BD%9C/"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() => 
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => {
+    new Waline(CONFIG.waline);
+  });
+});
+</script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right"},"mobile":{"show":true},"react":{"opacityDefault":0.9,"opacityOnHover":0.5},"log":false});</script></body>
+</html>

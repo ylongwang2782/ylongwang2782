@@ -23,7 +23,7 @@
     <meta name="description" content="前言（废话）群晖的外网访问一直是一个问题 白群晖还好说，有自带的，不过也是网速感人 黑群晖就更不用说了，只能自己搞 之前用的ddns，还没有大佬些docker的script，只能用计划任务配合阿里云的ddns半自动刷新">
 <meta property="og:type" content="article">
 <meta property="og:title" content="黑群晖+ddns+阿里云&#x3D;免费的最快的外网访问">
-<meta property="og:url" content="https://ylongwang2782.github.io/2022/03/28/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/">
+<meta property="og:url" content="https://ylongwang2782.github.io/2022/02/07/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/">
 <meta property="og:site_name" content="来日方长">
 <meta property="og:description" content="前言（废话）群晖的外网访问一直是一个问题 白群晖还好说，有自带的，不过也是网速感人 黑群晖就更不用说了，只能自己搞 之前用的ddns，还没有大佬些docker的script，只能用计划任务配合阿里云的ddns半自动刷新">
 <meta property="og:locale" content="zh_CN">
@@ -35,19 +35,19 @@
 <meta property="og:image" content="https://pic.imgdb.cn/item/624181e727f86abb2a36a945.png">
 <meta property="og:image" content="https://pic.imgdb.cn/item/624181f927f86abb2a371f48.png">
 <meta property="og:image" content="https://pic.imgdb.cn/item/6241820327f86abb2a37622f.png">
-<meta property="article:published_time" content="2022-03-28T09:32:45.000Z">
-<meta property="article:modified_time" content="2022-03-28T09:39:41.180Z">
+<meta property="article:published_time" content="2022-02-07T10:29:00.000Z">
+<meta property="article:modified_time" content="2022-03-28T10:01:53.602Z">
 <meta property="article:author" content="Rainlong">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://pic.imgdb.cn/item/6241816a27f86abb2a33f083.png">
 
 
-<link rel="canonical" href="https://ylongwang2782.github.io/2022/03/28/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/">
+<link rel="canonical" href="https://ylongwang2782.github.io/2022/02/07/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://ylongwang2782.github.io/2022/03/28/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/","path":"2022/03/28/黑群晖+ddns+阿里云=免费的最快的外网访问/","title":"黑群晖+ddns+阿里云=免费的最快的外网访问"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://ylongwang2782.github.io/2022/02/07/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/","path":"2022/02/07/黑群晖+ddns+阿里云=免费的最快的外网访问/","title":"黑群晖+ddns+阿里云=免费的最快的外网访问"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>黑群晖+ddns+阿里云=免费的最快的外网访问 | 来日方长</title>
@@ -145,7 +145,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -197,7 +197,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/2022/03/28/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/2022/02/07/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -225,9 +225,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-03-28 17:32:45 / 修改时间：17:39:41" itemprop="dateCreated datePublished" datetime="2022-03-28T17:32:45+08:00">2022-03-28</time>
+      <time title="创建时间：2022-02-07 18:29:00" itemprop="dateCreated datePublished" datetime="2022-02-07T18:29:00+08:00">2022-02-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-28 18:01:53" itemprop="dateModified" datetime="2022-03-28T18:01:53+08:00">2022-03-28</time>
     </span>
 
   
@@ -239,13 +245,13 @@
     </span>
     <span class="post-meta-item-text">Waline：</span>
   
-    <a title="waline" href="/2022/03/28/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/2022/03/28/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/" data-xid="/2022/03/28/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/" itemprop="commentCount"></span>
+    <a title="waline" href="/2022/02/07/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/2022/02/07/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/" data-xid="/2022/02/07/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/" itemprop="commentCount"></span>
     </a>
   </span>
   
   
-    <span id="/2022/03/28/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/" class="post-meta-item leancloud_visitors" data-flag-title="黑群晖+ddns+阿里云=免费的最快的外网访问" title="阅读次数">
+    <span id="/2022/02/07/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/" class="post-meta-item leancloud_visitors" data-flag-title="黑群晖+ddns+阿里云=免费的最快的外网访问" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -352,13 +358,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2022/03/27/%E6%B5%85%E8%B0%88pt/" rel="prev" title="浅谈pt">
-                  <i class="fa fa-chevron-left"></i> 浅谈pt
+                <a href="/2021/06/23/2021%E5%B9%B4%E6%98%A5%EF%BC%8C%E6%88%91%E5%8D%96%E6%8E%89%E4%BA%86iPad%EF%BC%8C%E4%B9%B0%E4%BA%86MacBook/" rel="prev" title="2021年春，我卖掉了iPad，买了MacBook">
+                  <i class="fa fa-chevron-left"></i> 2021年春，我卖掉了iPad，买了MacBook
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/03/28/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98/" rel="next" title="PVE黑群晖直通硬盘">
-                  PVE黑群晖直通硬盘 <i class="fa fa-chevron-right"></i>
+                <a href="/2022/02/07/%E6%B5%85%E8%B0%88pt/" rel="next" title="浅谈pt">
+                  浅谈pt <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -393,14 +399,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">17k</span>
+    <span title="站点总字数">33k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">16 分钟</span>
+    <span title="站点阅读时长">30 分钟</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
@@ -424,7 +430,7 @@
 
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline-server-seven.vercel.app","placeholder":"畅所欲言。","avatar":"retro","pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/2022/03/28/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline-server-seven.vercel.app","placeholder":"畅所欲言。","avatar":"retro","pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/2022/02/07/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/"}</script>
 <script>
 document.addEventListener('page:loaded', () => {
   NexT.utils.loadComments(CONFIG.waline.el).then(() => 
