@@ -2666,6 +2666,7 @@ body {
 /* the container color for the whole page */
 .main-inner {
   background: #faffea;
+  padding: 90px;
 }
 /* change the link color */
 a {
