@@ -11,6 +11,24 @@
   </url>
   
   <url>
+    <loc>https://ylongwang2782.github.io/hello-world</loc>
+    
+    <lastmod>2022-03-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ylongwang2782.github.io/message/</loc>
+    
+    <lastmod>2022-03-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ylongwang2782.github.io/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98</loc>
     
     <lastmod>2022-03-29</lastmod>
@@ -185,15 +203,6 @@
     <loc>https://ylongwang2782.github.io/jellyfin</loc>
     
     <lastmod>2022-03-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ylongwang2782.github.io/hello-world</loc>
-    
-    <lastmod>2022-03-26</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

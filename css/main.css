@@ -1082,12 +1082,12 @@ pre code {
 }
 @media (min-width: 1200px) {
   .header-inner {
-    width: 1160px;
+    width: 800px;
   }
 }
 @media (min-width: 1600px) {
   .header-inner {
-    width: 73%;
+    width: 1200px;
   }
 }
 .site-brand-container {
@@ -1525,12 +1525,12 @@ pre code {
 }
 @media (min-width: 1200px) {
   .footer-inner {
-    width: 1160px;
+    width: 800px;
   }
 }
 @media (min-width: 1600px) {
   .footer-inner {
-    width: 73%;
+    width: 1200px;
   }
 }
 .use-motion .footer {
@@ -2409,12 +2409,12 @@ ul.breadcrumb li:last-child {
 }
 @media (min-width: 1200px) {
   .main {
-    width: 1160px;
+    width: 800px;
   }
 }
 @media (min-width: 1600px) {
   .main {
-    width: 73%;
+    width: 1200px;
   }
 }
 @media (max-width: 991px) {
@@ -2666,8 +2666,6 @@ body {
 /* the container color for the whole page */
 .main-inner {
   background: #faffea;
-  padding: 90px;
-  margin: 50px 80px 50px 80px;
   box-shadow: 0 0 3px #d2ffb1;
 }
 /* change the link color */
@@ -2712,4 +2710,10 @@ h4::before {
   overflow: auto;
   border: 4px solid #faffea;
   border-radius: 8px;
+}
+#days {
+  display: block;
+  color: #61a4bc;
+  font-size: 14px;
+  margin: 15px;
 }

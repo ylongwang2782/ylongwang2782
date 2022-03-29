@@ -88,7 +88,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-message"><a href="/message/" rel="section"><i class="fa fa-book fa-fw"></i>留言板</a></li>
   </ul>
 </nav>
 
@@ -154,7 +154,32 @@
   </div>
 
 
-
+<div id="days"></div>
+    <script>
+    function show_date_time(){
+        window.setTimeout("show_date_time()", 1000);
+        BirthDay=new Date("03/26/2022 21:54:00");
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=setzero(Math.floor(e_hrsold));
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+        seconds=setzero(Math.floor((e_minsold-minsold)*60));
+        document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+    }
+function setzero(i){
+    if (i<10)
+    {i="0" + i};
+    return i;
+}
+show_date_time();
+</script>
         </div>
       </div>
     </div>
@@ -445,9 +470,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-03-29 00:56:43 / 修改时间：23:52:23" itemprop="dateCreated datePublished" datetime="2022-03-29T00:56:43+08:00">2022-03-29</time>
+      <time title="创建时间：2022-03-29 00:56:43" itemprop="dateCreated datePublished" datetime="2022-03-29T00:56:43+08:00">2022-03-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-30 01:36:27" itemprop="dateModified" datetime="2022-03-30T01:36:27+08:00">2022-03-30</time>
     </span>
 
   
@@ -479,14 +510,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.4k</span>
+      <span>1.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -651,6 +682,129 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/hello-world">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rainlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="来日方长">
+      <meta itemprop="description" content="这是王同学的博客">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 来日方长">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/hello-world" class="post-title-link" itemprop="url">hello-world</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-03-26 21:54:00" itemprop="dateCreated datePublished" datetime="2022-03-26T21:54:00+08:00">2022-03-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-30 00:55:08" itemprop="dateModified" datetime="2022-03-30T00:55:08+08:00">2022-03-30</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/hello-world#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/hello-world" data-xid="/hello-world" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/hello-world" class="post-meta-item leancloud_visitors" data-flag-title="hello-world" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h2><h3 id="Reason-for-creating-a-blog"><a href="#Reason-for-creating-a-blog" class="headerlink" title="Reason for creating a blog"></a>Reason for creating a blog</h3><p>For I really love to recording my thoughts and experiences.</p>
+<p>By the way, record and summarize makes everything clear and power.</p>
+<h3 id="Reason-for-choosing-the-github"><a href="#Reason-for-choosing-the-github" class="headerlink" title="Reason for choosing the github"></a>Reason for choosing the github</h3><p>我有一台windows，一个Linux的群晖，一个mbp2017.</p>
+<p>我最终选择了在windows上面通过hexo建立我的第一个blog。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/hello-world#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -745,129 +899,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/hello-world">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Rainlong">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="来日方长">
-      <meta itemprop="description" content="这是王同学的博客">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 来日方长">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/hello-world" class="post-title-link" itemprop="url">hello-world</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-03-25 09:30:25" itemprop="dateCreated datePublished" datetime="2022-03-25T09:30:25+08:00">2022-03-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-26 21:54:36" itemprop="dateModified" datetime="2022-03-26T21:54:36+08:00">2022-03-26</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline：</span>
-  
-    <a title="waline" href="/hello-world#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/hello-world" data-xid="/hello-world" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span id="/hello-world" class="post-meta-item leancloud_visitors" data-flag-title="hello-world" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.3k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h2><h3 id="Reason-for-creating-a-blog"><a href="#Reason-for-creating-a-blog" class="headerlink" title="Reason for creating a blog"></a>Reason for creating a blog</h3><p>For I really love to recording my thoughts and experiences.</p>
-<p>By the way, record and summarize makes everything clear and power.</p>
-<h3 id="Reason-for-choosing-the-github"><a href="#Reason-for-choosing-the-github" class="headerlink" title="Reason for choosing the github"></a>Reason for choosing the github</h3><p>我有一台windows，一个Linux的群晖，一个mbp2017.</p>
-<p>我最终选择了在windows上面通过hexo建立我的第一个blog。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/hello-world#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1381,6 +1412,611 @@
 
 
 
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/2021%E5%B9%B4%E6%98%A5%EF%BC%8C%E6%88%91%E5%8D%96%E6%8E%89%E4%BA%86iPad%EF%BC%8C%E4%B9%B0%E4%BA%86MacBook">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rainlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="来日方长">
+      <meta itemprop="description" content="这是王同学的博客">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 来日方长">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021%E5%B9%B4%E6%98%A5%EF%BC%8C%E6%88%91%E5%8D%96%E6%8E%89%E4%BA%86iPad%EF%BC%8C%E4%B9%B0%E4%BA%86MacBook" class="post-title-link" itemprop="url">2021年春，我卖掉了iPad，买了MacBook</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-06-23 22:24:00" itemprop="dateCreated datePublished" datetime="2021-06-23T22:24:00+08:00">2021-06-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-28 22:56:16" itemprop="dateModified" datetime="2022-03-28T22:56:16+08:00">2022-03-28</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2021%E5%B9%B4%E6%98%A5%EF%BC%8C%E6%88%91%E5%8D%96%E6%8E%89%E4%BA%86iPad%EF%BC%8C%E4%B9%B0%E4%BA%86MacBook#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/2021%E5%B9%B4%E6%98%A5%EF%BC%8C%E6%88%91%E5%8D%96%E6%8E%89%E4%BA%86iPad%EF%BC%8C%E4%B9%B0%E4%BA%86MacBook" data-xid="/2021%E5%B9%B4%E6%98%A5%EF%BC%8C%E6%88%91%E5%8D%96%E6%8E%89%E4%BA%86iPad%EF%BC%8C%E4%B9%B0%E4%BA%86MacBook" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/2021%E5%B9%B4%E6%98%A5%EF%BC%8C%E6%88%91%E5%8D%96%E6%8E%89%E4%BA%86iPad%EF%BC%8C%E4%B9%B0%E4%BA%86MacBook" class="post-meta-item leancloud_visitors" data-flag-title="2021年春，我卖掉了iPad，买了MacBook" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="卖掉了原来的iPad-air3"><a href="#卖掉了原来的iPad-air3" class="headerlink" title="卖掉了原来的iPad air3"></a>卖掉了原来的iPad air3</h2><blockquote>
+<p>写在前面：ipad air3是2019年暑假买的，2021年春卖了。</p>
+<p>为什么呢？</p>
+<p>东西不好用，一直吃灰，在图书馆的日子，总觉得ipad不顺手，很多时候也就看看网课，pdf。更多的时候是放在书架上凑数。很多时候的功能好像用手机也行？虽然手机没有平板大，但是</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021%E5%B9%B4%E6%98%A5%EF%BC%8C%E6%88%91%E5%8D%96%E6%8E%89%E4%BA%86iPad%EF%BC%8C%E4%B9%B0%E4%BA%86MacBook#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/2021%E5%B9%B4%E6%98%A5%E6%88%91%E5%9C%A8%E9%97%B2%E9%B1%BC3700%E6%B7%98%E4%BA%86%E4%B8%80%E4%B8%AAiPhone11">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rainlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="来日方长">
+      <meta itemprop="description" content="这是王同学的博客">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 来日方长">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021%E5%B9%B4%E6%98%A5%E6%88%91%E5%9C%A8%E9%97%B2%E9%B1%BC3700%E6%B7%98%E4%BA%86%E4%B8%80%E4%B8%AAiPhone11" class="post-title-link" itemprop="url">2021年春我在闲鱼3700淘了一个iPhone11</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-06-23 21:41:04" itemprop="dateCreated datePublished" datetime="2021-06-23T21:41:04+08:00">2021-06-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-28 22:54:46" itemprop="dateModified" datetime="2022-03-28T22:54:46+08:00">2022-03-28</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2021%E5%B9%B4%E6%98%A5%E6%88%91%E5%9C%A8%E9%97%B2%E9%B1%BC3700%E6%B7%98%E4%BA%86%E4%B8%80%E4%B8%AAiPhone11#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/2021%E5%B9%B4%E6%98%A5%E6%88%91%E5%9C%A8%E9%97%B2%E9%B1%BC3700%E6%B7%98%E4%BA%86%E4%B8%80%E4%B8%AAiPhone11" data-xid="/2021%E5%B9%B4%E6%98%A5%E6%88%91%E5%9C%A8%E9%97%B2%E9%B1%BC3700%E6%B7%98%E4%BA%86%E4%B8%80%E4%B8%AAiPhone11" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/2021%E5%B9%B4%E6%98%A5%E6%88%91%E5%9C%A8%E9%97%B2%E9%B1%BC3700%E6%B7%98%E4%BA%86%E4%B8%80%E4%B8%AAiPhone11" class="post-meta-item leancloud_visitors" data-flag-title="2021年春我在闲鱼3700淘了一个iPhone11" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="闲聊"><a href="#闲聊" class="headerlink" title="闲聊"></a>闲聊</h2><p>在换手机之前手里是18年上大学买的一个iPhone8红色专版，这个版本当初在重庆北城天街那个旗舰店买成5888，这个价格一直心疼了我很久，毕竟现在它在闲鱼就只能卖1000出头，以至于我心痛到不想把它卖了。当然也要排除我这两年的裸奔导致的伊拉克成色导致他这么不好卖。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021%E5%B9%B4%E6%98%A5%E6%88%91%E5%9C%A8%E9%97%B2%E9%B1%BC3700%E6%B7%98%E4%BA%86%E4%B8%80%E4%B8%AAiPhone11#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/2021%E5%B9%B4%EF%BC%8Capple%20watch%20s3%E8%BF%98%E6%9C%89%E4%B8%80%E6%88%98%E4%B9%8B%E5%8A%9B%E5%90%97%EF%BC%9F">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rainlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="来日方长">
+      <meta itemprop="description" content="这是王同学的博客">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 来日方长">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021%E5%B9%B4%EF%BC%8Capple%20watch%20s3%E8%BF%98%E6%9C%89%E4%B8%80%E6%88%98%E4%B9%8B%E5%8A%9B%E5%90%97%EF%BC%9F" class="post-title-link" itemprop="url">2021年，apple watch s3还有一战之力吗？</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-28 20:31:00" itemprop="dateCreated datePublished" datetime="2021-03-28T20:31:00+08:00">2021-03-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-28 22:56:05" itemprop="dateModified" datetime="2022-03-28T22:56:05+08:00">2022-03-28</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2021%E5%B9%B4%EF%BC%8Capple%20watch%20s3%E8%BF%98%E6%9C%89%E4%B8%80%E6%88%98%E4%B9%8B%E5%8A%9B%E5%90%97%EF%BC%9F#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/2021%E5%B9%B4%EF%BC%8Capple%20watch%20s3%E8%BF%98%E6%9C%89%E4%B8%80%E6%88%98%E4%B9%8B%E5%8A%9B%E5%90%97%EF%BC%9F" data-xid="/2021%E5%B9%B4%EF%BC%8Capple%20watch%20s3%E8%BF%98%E6%9C%89%E4%B8%80%E6%88%98%E4%B9%8B%E5%8A%9B%E5%90%97%EF%BC%9F" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/2021%E5%B9%B4%EF%BC%8Capple%20watch%20s3%E8%BF%98%E6%9C%89%E4%B8%80%E6%88%98%E4%B9%8B%E5%8A%9B%E5%90%97%EF%BC%9F" class="post-meta-item leancloud_visitors" data-flag-title="2021年，apple watch s3还有一战之力吗？" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>为什么到了2021年我买了一块apple watch？又为什么是apple watch s3？</p>
+<p>首先就是作为使用了iPhone8三年的用户，我还会继续坚持ios系统手机的。继续坚持ios生态。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021%E5%B9%B4%EF%BC%8Capple%20watch%20s3%E8%BF%98%E6%9C%89%E4%B8%80%E6%88%98%E4%B9%8B%E5%8A%9B%E5%90%97%EF%BC%9F#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/theater%E8%AE%B0%E5%BD%95">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rainlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="来日方长">
+      <meta itemprop="description" content="这是王同学的博客">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 来日方长">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/theater%E8%AE%B0%E5%BD%95" class="post-title-link" itemprop="url">一个Home theater记录</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-03 17:32:41" itemprop="dateCreated datePublished" datetime="2021-03-03T17:32:41+08:00">2021-03-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-28 22:54:57" itemprop="dateModified" datetime="2022-03-28T22:54:57+08:00">2022-03-28</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/theater%E8%AE%B0%E5%BD%95#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/theater%E8%AE%B0%E5%BD%95" data-xid="/theater%E8%AE%B0%E5%BD%95" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/theater%E8%AE%B0%E5%BD%95" class="post-meta-item leancloud_visitors" data-flag-title="一个Home theater记录" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a><strong>起因</strong></h2><p>frozen2上映后，第一刷后，就一发不可收拾，连续看了6遍</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/theater%E8%AE%B0%E5%BD%95#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/%E8%B6%85%E4%BD%8E%E6%88%90%E6%9C%AC%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85%EF%BC%8C%E5%AE%89%E5%8D%93%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91%E9%83%BD%E8%83%BD%E4%BD%BF%E7%94%A8%EF%BC%8Cdocker%E5%AE%89%E8%A3%85HA%E9%85%8D%E5%90%88%E6%98%93%E5%BE%AE%E8%81%94%E5%AE%9E%E4%BE%8B">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rainlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="来日方长">
+      <meta itemprop="description" content="这是王同学的博客">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 来日方长">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E8%B6%85%E4%BD%8E%E6%88%90%E6%9C%AC%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85%EF%BC%8C%E5%AE%89%E5%8D%93%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91%E9%83%BD%E8%83%BD%E4%BD%BF%E7%94%A8%EF%BC%8Cdocker%E5%AE%89%E8%A3%85HA%E9%85%8D%E5%90%88%E6%98%93%E5%BE%AE%E8%81%94%E5%AE%9E%E4%BE%8B" class="post-title-link" itemprop="url">超低成本智能家居，安卓苹果电脑都能使用，docker安装HA配合易微联实例</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-02-24 21:42:10" itemprop="dateCreated datePublished" datetime="2021-02-24T21:42:10+08:00">2021-02-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-28 22:54:09" itemprop="dateModified" datetime="2022-03-28T22:54:09+08:00">2022-03-28</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/%E8%B6%85%E4%BD%8E%E6%88%90%E6%9C%AC%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85%EF%BC%8C%E5%AE%89%E5%8D%93%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91%E9%83%BD%E8%83%BD%E4%BD%BF%E7%94%A8%EF%BC%8Cdocker%E5%AE%89%E8%A3%85HA%E9%85%8D%E5%90%88%E6%98%93%E5%BE%AE%E8%81%94%E5%AE%9E%E4%BE%8B#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/%E8%B6%85%E4%BD%8E%E6%88%90%E6%9C%AC%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85%EF%BC%8C%E5%AE%89%E5%8D%93%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91%E9%83%BD%E8%83%BD%E4%BD%BF%E7%94%A8%EF%BC%8Cdocker%E5%AE%89%E8%A3%85HA%E9%85%8D%E5%90%88%E6%98%93%E5%BE%AE%E8%81%94%E5%AE%9E%E4%BE%8B" data-xid="/%E8%B6%85%E4%BD%8E%E6%88%90%E6%9C%AC%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85%EF%BC%8C%E5%AE%89%E5%8D%93%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91%E9%83%BD%E8%83%BD%E4%BD%BF%E7%94%A8%EF%BC%8Cdocker%E5%AE%89%E8%A3%85HA%E9%85%8D%E5%90%88%E6%98%93%E5%BE%AE%E8%81%94%E5%AE%9E%E4%BE%8B" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/%E8%B6%85%E4%BD%8E%E6%88%90%E6%9C%AC%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85%EF%BC%8C%E5%AE%89%E5%8D%93%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91%E9%83%BD%E8%83%BD%E4%BD%BF%E7%94%A8%EF%BC%8Cdocker%E5%AE%89%E8%A3%85HA%E9%85%8D%E5%90%88%E6%98%93%E5%BE%AE%E8%81%94%E5%AE%9E%E4%BE%8B" class="post-meta-item leancloud_visitors" data-flag-title="超低成本智能家居，安卓苹果电脑都能使用，docker安装HA配合易微联实例" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>家里使用易微联的智能开关，替换了大部分常用的开关，例如客厅厨房饭厅楼梯卧室等开关。配合小爱音箱能够实现最简单的语音控制</p>
+<p>日常使用只需要喊出：“小爱同学”——“欸”——“打开客厅灯”即可以完成开灯的操作，即使是躺在沙发上也能完成灯泡的开闭。对于家里的中老年人，也能够实现一教就会，就连我80岁的婆婆都会语音控制灯了。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E8%B6%85%E4%BD%8E%E6%88%90%E6%9C%AC%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85%EF%BC%8C%E5%AE%89%E5%8D%93%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91%E9%83%BD%E8%83%BD%E4%BD%BF%E7%94%A8%EF%BC%8Cdocker%E5%AE%89%E8%A3%85HA%E9%85%8D%E5%90%88%E6%98%93%E5%BE%AE%E8%81%94%E5%AE%9E%E4%BE%8B#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1406,14 +2042,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">38k</span>
+    <span title="站点总字数">39k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">34 分钟</span>
+    <span title="站点阅读时长">35 分钟</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
