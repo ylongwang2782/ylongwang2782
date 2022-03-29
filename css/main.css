@@ -2667,6 +2667,8 @@ body {
 .main-inner {
   background: #faffea;
   padding: 90px;
+  margin: 50px 80px 50px 80px;
+  box-shadow: 0 0 3px #d2ffb1;
 }
 /* change the link color */
 a {

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/%E6%A3%92%E5%86%B0128.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/%E6%A3%92%E5%86%B032.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/%E6%A3%92%E5%86%B016.png">
+  <link rel="mask-icon" href="/images/%E6%A3%92%E5%86%B0.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ylongwang2782.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="目前的b站还不支持markdown语言，所以不准备写很多 写这些的目的主要是把自己以后可能用得上的东西自己重新整理一下，免得找不着了，很多收藏的东西，总是找不到，还是得自己总结的东西逻辑清楚 黑群晖因为特殊性，加装硬盘需要特殊方法。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PVE黑群晖直通硬盘">
+<meta property="og:url" content="https://ylongwang2782.github.io/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98">
+<meta property="og:site_name" content="来日方长">
+<meta property="og:description" content="目前的b站还不支持markdown语言，所以不准备写很多 写这些的目的主要是把自己以后可能用得上的东西自己重新整理一下，免得找不着了，很多收藏的东西，总是找不到，还是得自己总结的东西逻辑清楚 黑群晖因为特殊性，加装硬盘需要特殊方法。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.imgdb.cn/item/624182c527f86abb2a3b39dc.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/624182d427f86abb2a3b8cca.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/624182dd27f86abb2a3bc350.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/624182f027f86abb2a3c0391.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/624182f827f86abb2a3c160b.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6241830027f86abb2a3c2c9e.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6241830827f86abb2a3c52ed.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6241831327f86abb2a3c8fde.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6241831a27f86abb2a3cbc11.png">
+<meta property="article:published_time" content="2022-02-03T12:58:12.000Z">
+<meta property="article:modified_time" content="2022-03-29T08:57:26.785Z">
+<meta property="article:author" content="Rainlong">
+<meta property="article:tag" content="笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/624182c527f86abb2a3b39dc.png">
+
+
+<link rel="canonical" href="https://ylongwang2782.github.io/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://ylongwang2782.github.io/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98","path":"PVE黑群晖直通硬盘.html","title":"PVE黑群晖直通硬盘"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>PVE黑群晖直通硬盘 | 来日方长</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ058Y2LKZ"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-VQ058Y2LKZ","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?2aacacbf31837d9a367324e67673a9cc"></script>
+
+
+
+<link rel="dns-prefetch" href="waline-server-seven.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">来日方长</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A6%96%E5%85%88%E5%87%86%E5%A4%87%E4%B8%80%E5%9D%97%E7%A1%AC%E7%9B%98"><span class="nav-number">1.</span> <span class="nav-text">首先准备一块硬盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%9B%B8%E5%85%B3%E7%8E%AF%E5%A2%83"><span class="nav-number">2.</span> <span class="nav-text">安装相关环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NAS%E9%87%8C%E8%AE%BE%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">NAS里设置</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Rainlong"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Rainlong</p>
+  <div class="site-description" itemprop="description">这是王同学的博客</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ylongwang2782" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ylongwang2782" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/87307916" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;87307916" rel="noopener" target="_blank"><i class="fab fa-bilibili fa-fw"></i>Bilibili</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rainlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="来日方长">
+      <meta itemprop="description" content="这是王同学的博客">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="PVE黑群晖直通硬盘 | 来日方长">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          PVE黑群晖直通硬盘
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-02-03 20:58:12" itemprop="dateCreated datePublished" datetime="2022-02-03T20:58:12+08:00">2022-02-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-29 16:57:26" itemprop="dateModified" datetime="2022-03-29T16:57:26+08:00">2022-03-29</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98" data-xid="/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98" class="post-meta-item leancloud_visitors" data-flag-title="PVE黑群晖直通硬盘" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>770</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>目前的b站还不支持markdown语言，所以不准备写很多</p>
+<p>写这些的目的主要是把自己以后可能用得上的东西自己重新整理一下，免得找不着了，很多收藏的东西，总是找不到，还是得自己总结的东西逻辑清楚</p>
+<p>黑群晖因为特殊性，加装硬盘需要特殊方法。</p>
+<span id="more"></span>
+
+<hr>
+<p>本文仅用于PVE下安装的群晖，不过估计其他的虚拟机装的群晖也能适用。</p>
+<h2 id="首先准备一块硬盘"><a href="#首先准备一块硬盘" class="headerlink" title="首先准备一块硬盘"></a>首先准备一块硬盘</h2><p><img src="https://pic.imgdb.cn/item/624182c527f86abb2a3b39dc.png"></p>
+<p>PDD买的一块海康威视的监控盘，支持7x24就行，其他的便宜就行，反正只准备用他跑PT，烂了就烂了。重要的资料还是用PC的机械硬盘单独拷贝。</p>
+<h2 id="安装相关环境"><a href="#安装相关环境" class="headerlink" title="安装相关环境"></a>安装相关环境</h2><p>在PVE的SHELL里输入以下指令</p>
+<p>1、apt-get update  更新环境</p>
+<p>2、apt-get install lshw  安装lshw</p>
+<p>3、ls -l &#x2F;dev&#x2F;disk&#x2F;by-id&#x2F;  查看已插入硬盘信息</p>
+<p><img src="https://pic.imgdb.cn/item/624182d427f86abb2a3b8cca.png"></p>
+<p>得到一大串神秘代码</p>
+<p>只看ata开头的硬盘ID</p>
+<p>可以看出，我插入的四块磁盘，每个型号都能简单的辨识</p>
+<p>第一块是我的启动盘，也就是安装的PVE和NAS只有16G的一个msata</p>
+<p>第二块是我插入一快垃圾500G硬盘</p>
+<p>第三块是我之前插入的一块西数WDC4T紫盘，</p>
+<p>第四块就是我最新的一块盘，可以看出和前面的那块紫盘基本相似。</p>
+<p>选取不带part的那行语句</p>
+<p><img src="https://pic.imgdb.cn/item/624182dd27f86abb2a3bc350.png"></p>
+<p>把他单独拎出来</p>
+<p>然后根据下面我的格式填充即可</p>
+<p>qm set 101 –sata4 &#x2F;dev&#x2F;disk&#x2F;by-id&#x2F;ata-WDC_WD40PURX-78AKYY0_WD-WX32DA1LTP3S</p>
+<p>其中，101为NAS在PVE中的标号</p>
+<p><img src="https://pic.imgdb.cn/item/624182f027f86abb2a3c0391.png"></p>
+<p>sata4则为NAS中第几块硬盘，从01234挨着排下去就行，别填错了就ok</p>
+<p><img src="https://pic.imgdb.cn/item/624182f827f86abb2a3c160b.png"></p>
+<p>结束，此时硬盘已经直通到nas里了</p>
+<p>后面在群晖里只要设置一下就行了</p>
+<h2 id="NAS里设置"><a href="#NAS里设置" class="headerlink" title="NAS里设置"></a>NAS里设置</h2><p><img src="https://pic.imgdb.cn/item/6241830027f86abb2a3c2c9e.png"></p>
+<p>在存储空间管理员里，新增</p>
+<p><img src="https://pic.imgdb.cn/item/6241830827f86abb2a3c52ed.png"></p>
+<p>选择灵活性提高</p>
+<p><img src="https://pic.imgdb.cn/item/6241831327f86abb2a3c8fde.png"></p>
+<p>raid类型选择basic，PT盘差不多得了</p>
+<p><img src="https://pic.imgdb.cn/item/6241831a27f86abb2a3cbc11.png"></p>
+<p>把要用的硬盘拖过来下一步就完成</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021%E5%B9%B4%E6%98%A5%EF%BC%8C%E6%88%91%E5%8D%96%E6%8E%89%E4%BA%86iPad%EF%BC%8C%E4%B9%B0%E4%BA%86MacBook" rel="prev" title="2021年春，我卖掉了iPad，买了MacBook">
+                  <i class="fa fa-chevron-left"></i> 2021年春，我卖掉了iPad，买了MacBook
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE" rel="next" title="黑群晖+ddns+阿里云=免费的最快的外网访问">
+                  黑群晖+ddns+阿里云=免费的最快的外网访问 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Rainlong</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">38k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">34 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline-server-seven.vercel.app","placeholder":"畅所欲言。","avatar":"retro","pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() => 
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => {
+    new Waline(CONFIG.waline);
+  });
+});
+</script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right"},"mobile":{"show":true},"react":{"opacityDefault":0.9,"opacityOnHover":0.5},"log":false});</script></body>
+</html>
