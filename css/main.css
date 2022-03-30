@@ -2641,10 +2641,6 @@ ul.breadcrumb li:last-child {
   background-image: url("/images/bilibili.svg");
   background-size: 1em 1em;
 }
-.QQ {
-  background-image: url("/images/QQ.svg");
-  background-size: 1em 1em;
-}
 /* brand background color */
 .site-brand-container {
   background: #c5d8a4;
