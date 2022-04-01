@@ -2,9 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ylongwang2782.github.io/%E6%AF%95%E8%AE%BE%E7%AC%94%E8%AE%B0</loc>
+    
+    <lastmod>2022-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ylongwang2782.github.io/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0</loc>
+    
+    <lastmod>2022-04-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ylongwang2782.github.io/blog%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97</loc>
     
-    <lastmod>2022-03-30</lastmod>
+    <lastmod>2022-03-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ylongwang2782.github.io/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96</loc>
+    
+    <lastmod>2022-03-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ylongwang2782.github.io/message/</loc>
+    
+    <lastmod>2022-03-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ylongwang2782.github.io/meme/</loc>
+    
+    <lastmod>2022-03-31</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -20,25 +65,7 @@
   </url>
   
   <url>
-    <loc>https://ylongwang2782.github.io/message/</loc>
-    
-    <lastmod>2022-03-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ylongwang2782.github.io/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98</loc>
-    
-    <lastmod>2022-03-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ylongwang2782.github.io/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96</loc>
     
     <lastmod>2022-03-29</lastmod>
     
@@ -220,7 +247,7 @@
 
   <url>
     <loc>https://ylongwang2782.github.io/</loc>
-    <lastmod>2022-03-30</lastmod>
+    <lastmod>2022-04-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -228,25 +255,32 @@
   
   <url>
     <loc>https://ylongwang2782.github.io/tags/VScode/</loc>
-    <lastmod>2022-03-30</lastmod>
+    <lastmod>2022-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ylongwang2782.github.io/tags/software/</loc>
-    <lastmod>2022-03-30</lastmod>
+    <lastmod>2022-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ylongwang2782.github.io/tags/blog/</loc>
-    <lastmod>2022-03-30</lastmod>
+    <lastmod>2022-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
 
+  
+  <url>
+    <loc>https://ylongwang2782.github.io/categories/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</loc>
+    <lastmod>2022-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>
