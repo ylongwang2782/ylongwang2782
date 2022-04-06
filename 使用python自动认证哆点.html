@@ -20,37 +20,32 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"ylongwang2782.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="前言（废话）群晖的外网访问一直是一个问题 白群晖还好说，有自带的，不过也是网速感人 黑群晖就更不用说了，只能自己搞 之前用的ddns，还没有大佬些docker的script，只能用计划任务配合阿里云的ddns半自动刷新">
+    <meta name="description" content="需要的软件为wireshark、putty、winscp 登录信息抓包1.wireshark 将网线连接电脑 打开客户端，输入账号和密码 打开wireshark，点击以太网，点击start 登录哆点 大概十几秒后，点击左上角红色按钮停止 File-Save As 保存为dr.pcapng  2.生成配置文件 登录在线配置生成器https:&#x2F;&#x2F;drcoms.github.io&#x2F;drcom-gener">
 <meta property="og:type" content="article">
-<meta property="og:title" content="黑群晖+ddns+阿里云&#x3D;免费的最快的外网访问">
-<meta property="og:url" content="https://ylongwang2782.github.io/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE">
+<meta property="og:title" content="使用python自动认证哆点">
+<meta property="og:url" content="https://ylongwang2782.github.io/%E4%BD%BF%E7%94%A8python%E8%87%AA%E5%8A%A8%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9">
 <meta property="og:site_name" content="来日方长">
-<meta property="og:description" content="前言（废话）群晖的外网访问一直是一个问题 白群晖还好说，有自带的，不过也是网速感人 黑群晖就更不用说了，只能自己搞 之前用的ddns，还没有大佬些docker的script，只能用计划任务配合阿里云的ddns半自动刷新">
+<meta property="og:description" content="需要的软件为wireshark、putty、winscp 登录信息抓包1.wireshark 将网线连接电脑 打开客户端，输入账号和密码 打开wireshark，点击以太网，点击start 登录哆点 大概十几秒后，点击左上角红色按钮停止 File-Save As 保存为dr.pcapng  2.生成配置文件 登录在线配置生成器https:&#x2F;&#x2F;drcoms.github.io&#x2F;drcom-gener">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pic.imgdb.cn/item/6241816a27f86abb2a33f083.png">
-<meta property="og:image" content="https://pic.imgdb.cn/item/6241819627f86abb2a34efff.png">
-<meta property="og:image" content="https://pic.imgdb.cn/item/624181a827f86abb2a3558e1.png">
-<meta property="og:image" content="https://pic.imgdb.cn/item/624181b627f86abb2a359807.png">
-<meta property="og:image" content="https://pic.imgdb.cn/item/624181c327f86abb2a35db26.png">
-<meta property="og:image" content="https://pic.imgdb.cn/item/624181e727f86abb2a36a945.png">
-<meta property="og:image" content="https://pic.imgdb.cn/item/624181f927f86abb2a371f48.png">
-<meta property="og:image" content="https://pic.imgdb.cn/item/6241820327f86abb2a37622f.png">
-<meta property="article:published_time" content="2022-02-07T10:29:00.000Z">
-<meta property="article:modified_time" content="2022-03-28T10:01:53.602Z">
+<meta property="og:image" content="https://pic.imgdb.cn/item/624d529d239250f7c59b8507.jpg">
+<meta property="og:image" content="https://pic.imgdb.cn/item/624d52ac239250f7c59ba43b.jpg">
+<meta property="article:published_time" content="2022-04-06T08:42:39.000Z">
+<meta property="article:modified_time" content="2022-04-06T08:49:23.667Z">
 <meta property="article:author" content="Rainlong">
-<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="pandora">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pic.imgdb.cn/item/6241816a27f86abb2a33f083.png">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/624d529d239250f7c59b8507.jpg">
 
 
-<link rel="canonical" href="https://ylongwang2782.github.io/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE.html">
+<link rel="canonical" href="https://ylongwang2782.github.io/%E4%BD%BF%E7%94%A8python%E8%87%AA%E5%8A%A8%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://ylongwang2782.github.io/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE","path":"黑群晖+ddns+阿里云=免费的最快的外网访问.html","title":"黑群晖+ddns+阿里云=免费的最快的外网访问"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://ylongwang2782.github.io/%E4%BD%BF%E7%94%A8python%E8%87%AA%E5%8A%A8%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9","path":"使用python自动认证哆点.html","title":"使用python自动认证哆点"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>黑群晖+ddns+阿里云=免费的最快的外网访问 | 来日方长</title>
+<title>使用python自动认证哆点 | 来日方长</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ058Y2LKZ"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-VQ058Y2LKZ","only_pageview":false}</script>
@@ -130,7 +125,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">前言（废话）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AC%E7%BD%91IP%EF%BC%81"><span class="nav-number">2.</span> <span class="nav-text">公网IP！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BE%A4%E6%99%96ddns%E8%AE%BE%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">群晖ddns设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1%E5%99%A8%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E8%AE%BE%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">路由器端口转发设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91"><span class="nav-number">5.</span> <span class="nav-text">阿里云</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%99%BB%E5%BD%95%E4%BF%A1%E6%81%AF%E6%8A%93%E5%8C%85"><span class="nav-number">1.</span> <span class="nav-text">登录信息抓包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-wireshark"><span class="nav-number">1.1.</span> <span class="nav-text">1.wireshark</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%94%9F%E6%88%90%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">1.2.</span> <span class="nav-text">2.生成配置文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8PC%E4%B8%8A%E6%B5%8B%E8%AF%95%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">在PC上测试（可选）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEPC%E7%AB%AFpython2%E7%9A%84ide%E7%8E%AF%E5%A2%83"><span class="nav-number">2.1.</span> <span class="nav-text">配置PC端python2的ide环境</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD"><span class="nav-number">2.1.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">2.1.2.</span> <span class="nav-text">配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%BE%97%E5%AD%A6%E6%A0%A1%E5%AF%B9%E5%BA%94%E7%9A%84py%E7%A8%8B%E5%BA%8F"><span class="nav-number">3.</span> <span class="nav-text">获得学校对应的py程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pandora%E5%AE%89%E8%A3%85python2"><span class="nav-number">4.</span> <span class="nav-text">pandora安装python2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pandora%E8%BF%90%E8%A1%8Cdrcom-py"><span class="nav-number">5.</span> <span class="nav-text">pandora运行drcom.py</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E8%AE%A1%E5%88%92%E4%BB%BB%E5%8A%A1%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8py"><span class="nav-number">5.1.</span> <span class="nav-text">添加计划任务自动启动py</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -234,7 +229,7 @@ show_date_time();
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/%E4%BD%BF%E7%94%A8python%E8%87%AA%E5%8A%A8%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -247,12 +242,12 @@ show_date_time();
     </span>
     
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="黑群晖+ddns+阿里云=免费的最快的外网访问 | 来日方长">
+      <meta itemprop="name" content="使用python自动认证哆点 | 来日方长">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          黑群晖+ddns+阿里云=免费的最快的外网访问
+          使用python自动认证哆点
         </h1>
 
         <div class="post-meta-container">
@@ -262,15 +257,18 @@ show_date_time();
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2022-02-07 18:29:00" itemprop="dateCreated datePublished" datetime="2022-02-07T18:29:00+08:00">2022-02-07</time>
+      <time title="创建时间：2022-04-06 16:42:39 / 修改时间：16:49:23" itemprop="dateCreated datePublished" datetime="2022-04-06T16:42:39+08:00">2022-04-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
+        <i class="far fa-folder"></i>
       </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-28 18:01:53" itemprop="dateModified" datetime="2022-03-28T18:01:53+08:00">2022-03-28</time>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%B7%AF%E7%94%B1%E5%99%A8/" itemprop="url" rel="index"><span itemprop="name">路由器</span></a>
+        </span>
     </span>
 
   
@@ -282,13 +280,13 @@ show_date_time();
     </span>
     <span class="post-meta-item-text">Waline：</span>
   
-    <a title="waline" href="/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE" data-xid="/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE" itemprop="commentCount"></span>
+    <a title="waline" href="/%E4%BD%BF%E7%94%A8python%E8%87%AA%E5%8A%A8%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/%E4%BD%BF%E7%94%A8python%E8%87%AA%E5%8A%A8%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9" data-xid="/%E4%BD%BF%E7%94%A8python%E8%87%AA%E5%8A%A8%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9" itemprop="commentCount"></span>
     </a>
   </span>
   
   
-    <span id="/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE" class="post-meta-item leancloud_visitors" data-flag-title="黑群晖+ddns+阿里云=免费的最快的外网访问" title="阅读次数">
+    <span id="/%E4%BD%BF%E7%94%A8python%E8%87%AA%E5%8A%A8%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9" class="post-meta-item leancloud_visitors" data-flag-title="使用python自动认证哆点" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -320,68 +318,61 @@ show_date_time();
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="前言（废话）"><a href="#前言（废话）" class="headerlink" title="前言（废话）"></a>前言（废话）</h2><p>群晖的外网访问一直是一个问题</p>
-<p>白群晖还好说，有自带的，不过也是网速感人</p>
-<p>黑群晖就更不用说了，只能自己搞</p>
-<p>之前用的ddns，还没有大佬些docker的script，只能用计划任务配合阿里云的ddns半自动刷新</p>
-<span id="more"></span>
+        <p>需要的软件为wireshark、putty、winscp</p>
+<h2 id="登录信息抓包"><a href="#登录信息抓包" class="headerlink" title="登录信息抓包"></a>登录信息抓包</h2><h3 id="1-wireshark"><a href="#1-wireshark" class="headerlink" title="1.wireshark"></a>1.wireshark</h3><ol>
+<li>将网线连接电脑</li>
+<li>打开客户端，输入账号和密码</li>
+<li>打开wireshark，点击以太网，点击start</li>
+<li>登录哆点</li>
+<li>大概十几秒后，点击左上角红色按钮停止</li>
+<li><code>File-Save As</code> 保存为<code>dr.pcapng</code></li>
+</ol>
+<h3 id="2-生成配置文件"><a href="#2-生成配置文件" class="headerlink" title="2.生成配置文件"></a>2.生成配置文件</h3><ol>
+<li>登录在线配置生成器<a target="_blank" rel="noopener" href="https://drcoms.github.io/drcom-generic/">https://drcoms.github.io/drcom-generic/</a></li>
+<li>选择对应的哆点版本</li>
+<li>将之前获得的<code>dr.pcapng</code>上传</li>
+<li>获得新的配置文件，点击SAVE保存配置文件<code>drcom.conf</code></li>
+<li>用记事本打开配置文件<code>drcom.conf</code>，再对应的password处填入密码并保存</li>
+</ol>
+<h2 id="在PC上测试（可选）"><a href="#在PC上测试（可选）" class="headerlink" title="在PC上测试（可选）"></a>在PC上测试（可选）</h2><h3 id="配置PC端python2的ide环境"><a href="#配置PC端python2的ide环境" class="headerlink" title="配置PC端python2的ide环境"></a>配置PC端python2的ide环境</h3><p>我使用的是pycharm</p>
+<p>配置PC端的python目的是为了方便测速</p>
+<h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><ol>
+<li>登录到python官网<a target="_blank" rel="noopener" href="https://www.python.org/downloads/release/python-2718/">Python Release Python 2.7.18 | Python.org</a></li>
+<li>选择<a target="_blank" rel="noopener" href="https://www.python.org/ftp/python/2.7.18/python-2.7.18.amd64.msi">Windows x86-64 MSI installer</a>下载</li>
+<li>使用默认安装</li>
+<li>在<a target="_blank" rel="noopener" href="https://www.jetbrains.com/pycharm/">PyCharm: the Python IDE for Professional Developers by JetBrains</a>下载pycharm</li>
+</ol>
+<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><ol>
+<li>在pycharm中<code>file-setting-python interpreter</code></li>
+<li>点击齿轮，选择<code>Existing Environment</code> 选择python2的exe文件<img src="https://pic.imgdb.cn/item/624d529d239250f7c59b8507.jpg" alt="image-20220405230434168"></li>
+</ol>
+<h2 id="获得学校对应的py程序"><a href="#获得学校对应的py程序" class="headerlink" title="获得学校对应的py程序"></a>获得学校对应的py程序</h2><p><a target="_blank" rel="noopener" href="https://github.com/drcoms/drcom-generic/tree/master/custom">drcom-generic&#x2F;custom at master · drcoms&#x2F;drcom-generic (github.com)</a></p>
+<ol>
+<li>在GitHub项目上查找自己对应的学校并下载，我是CQU-huxi</li>
+<li>下载后pycharm添加项目打开py文件</li>
+<li>将之前生成的配置文件<code>drcom.conf</code>填入<code># CONFIG</code>与<code># CONFIG_END</code></li>
+<li>将哆点注销并推出，直接<code>run</code>查看是否成功联网</li>
+</ol>
+<h2 id="pandora安装python2"><a href="#pandora安装python2" class="headerlink" title="pandora安装python2"></a>pandora安装python2</h2><ol>
+<li>download <code>zlib_1.2.8-1_ralink.ipk</code> and <code>python-mini_2.7.3-2_ramips_24kec.ipk</code></li>
+<li>将以上两个文件放置到<code>/tmp</code>目录下</li>
+<li>putty中<code>cd /tmp</code>然后<code>opkg install zlib_1.2.8-1_ralink.ipk</code>短暂时间后，将提示两个ipk都安装成功</li>
+</ol>
+<p>以上的使用情况是我的小米路由器mini的安装情况，其余设备可能会有所不同</p>
+<h2 id="pandora运行drcom-py"><a href="#pandora运行drcom-py" class="headerlink" title="pandora运行drcom.py"></a>pandora运行drcom.py</h2><ol>
+<li>将之前的<code>drcom.py</code>重命名为<code>drcom</code>，将其放置在路由器<code>/usr/bin/</code>地址下</li>
+<li>在putty中运行drcom</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python /usr/bin/drcom</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://pic.imgdb.cn/item/6241816a27f86abb2a33f083.png"></p>
-<p>而且相当不稳定，也不知道是我的设置问题还是因为什么，时常ddns更新不上。</p>
-<p>后来就搁置了几年</p>
-<p>直到今年又准备把外网访问重新搞上。</p>
-<p>下面开始正经说</p>
-<hr>
-<h2 id="公网IP！"><a href="#公网IP！" class="headerlink" title="公网IP！"></a>公网IP！</h2><p>必须要有ipv6或者ipv4的公网地址！动态静态都可以</p>
-<p>ipv4重庆这边必须要配合套餐199+50元，或者299一个月，或者企业199套餐可以搞到公网v4</p>
-<p>ipv6就很简单了，拿到光猫的管理员密码，打开光猫的v6，打开路由器的v6分配就可以了。</p>
-<p>值得注意的是，路由器的v6分配，几乎都要开启路由的拨号模式才可以启动。所以设置光猫的时候，更改为ipv4+ipv6,并且将光猫的模式更改的桥接模式，由路由器拨号和分配地址。</p>
-<p>设置完后，建议重启一下，就能获得ipv6地址，检查是否获得v6地址，可以访问<a target="_blank" rel="noopener" href="http://www.test-**ipv6**.com/%E5%9C%B0%E5%9D%80%E6%9F%A5%E7%9C%8B%EF%BC%8C%E4%BA%A6%E6%88%96%E6%98%AF%E9%80%9A%E8%BF%87%E6%9F%A5%E7%9C%8B%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E5%88%A4%E6%96%AD%E2%80%94%E2%80%94ipv6">www.test-**ipv6**.com/地址查看，亦或是通过查看网络连接判断——ipv6</a> internet——即有v6地址</p>
-<p><img src="https://pic.imgdb.cn/item/6241819627f86abb2a34efff.png"></p>
-<hr>
-<h2 id="群晖ddns设置"><a href="#群晖ddns设置" class="headerlink" title="群晖ddns设置"></a>群晖ddns设置</h2><p><img src="https://pic.imgdb.cn/item/624181a827f86abb2a3558e1.png"></p>
-<p>docker里面注册表里搜索ddns</p>
-<p>因为一直有大佬再更新ddns</p>
-<p>所以一般选择收藏量最大的那个就可以了</p>
-<p>我下载的就是jeessy&#x2F;ddns-go</p>
-<p>这个相比其他的ddns，拥有单独的webUI管理界面， 更加的方便。</p>
-<p>安装过程记得勾选与本机IP地址相同，不然访问不了！</p>
-<p>附上大佬的dockerhub网页</p>
-<p><a target="_blank" rel="noopener" href="https://registry.hub.docker.com/r/jeessy/ddns-go/">https://registry.hub.docker.com/r/jeessy/ddns-go/</a></p>
-<hr>
-<p>jeessy&#x2F;ddns-go</p>
-<p>安装完成后</p>
-<p>输入群晖IP：9876，9876是这个ddns的端口</p>
-<p><img src="https://pic.imgdb.cn/item/624181b627f86abb2a359807.png"></p>
-<p>在ipv6这一行，勾选上，选择通过网卡获取</p>
-<p>这里我的domains是我在阿里云申请的域名，可以先忽略</p>
-<hr>
-<h2 id="路由器端口转发设置"><a href="#路由器端口转发设置" class="headerlink" title="路由器端口转发设置"></a>路由器端口转发设置</h2><p><img src="https://pic.imgdb.cn/item/624181c327f86abb2a35db26.png"></p>
-<p>我是小米路由器，其他路由器同理，和我一样设置就可以了</p>
-<hr>
-<p>到这里其实已经可以外网访问了，</p>
-<p>输入群晖里的IPV6地址，加上中括号，再加上端口5000</p>
-<p>就可以正常访问了。</p>
-<p>后面是ddns设置</p>
-<hr>
-<h2 id="阿里云"><a href="#阿里云" class="headerlink" title="阿里云"></a>阿里云</h2><p>在阿里云里申请一个域名，大多数域名非常便宜</p>
-<p>选择一个自己喜欢的便宜的域名就行</p>
-<p><img src="https://pic.imgdb.cn/item/624181e727f86abb2a36a945.png"></p>
-<p>注册完后就跟着阿里云的步骤走就可以了</p>
-<p>因为有各种实名认证问题 ，估计这里会耽搁半天审核的时间。</p>
-<p>注册完后就</p>
-<p><img src="https://pic.imgdb.cn/item/624181f927f86abb2a371f48.png"></p>
-<p>在accesskey里创建一个accesskey</p>
-<p>创建成功后就可以得到ID and secret</p>
-<p>把相应的ID和secret输入到ddns网页里</p>
-<p><img src="https://pic.imgdb.cn/item/6241820327f86abb2a37622f.png"></p>
-<p>记得把domain也敲上</p>
-<p>最后点击save就搞定了</p>
-<p>右侧栏也可以正常看到程序运行日志</p>
-<p>这个时候就可以正常使用域名访问nas了</p>
-<hr>
-<p>本文的目的旨在帮助自己的同时，给大家指路，非手把手教学，见谅！</p>
-<p>复制阿里云的ID和secret的时候，记得检查不要有任何空格！我因此耽搁了很久</p>
+<p><img src="https://pic.imgdb.cn/item/624d52ac239250f7c59ba43b.jpg" alt="image-20220406130526793"></p>
+<p>ssh中显示一片空白</p>
+<p>此时检查网络</p>
+<p>如果能够上网，则算成功</p>
+<h3 id="添加计划任务自动启动py"><a href="#添加计划任务自动启动py" class="headerlink" title="添加计划任务自动启动py"></a>添加计划任务自动启动py</h3><p>在WinSCP下打开&#x2F;etc&#x2F;rc.local，如果没有则自行创建一个</p>
+<p>添加以下内容，该命令的作用是开机自动运行脚本</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sleep</span> 10 &amp;&amp; python /usr/bin/drcom</span><br><span class="line"><span class="built_in">exit</span> 0</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -390,18 +381,22 @@ show_date_time();
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"># python</a>
+              <a href="/tags/pandora/" rel="tag"># pandora</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98" rel="prev" title="PVE黑群晖直通硬盘">
-                  <i class="fa fa-chevron-left"></i> PVE黑群晖直通硬盘
+                <a href="/%E6%AF%95%E8%AE%BE%E7%AC%94%E8%AE%B0" rel="prev" title="毕设笔记">
+                  <i class="fa fa-chevron-left"></i> 毕设笔记
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/%E6%B5%85%E8%B0%88pt" rel="next" title="浅谈pt">
-                  浅谈pt <i class="fa fa-chevron-right"></i>
+                <a href="/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8mini%E5%88%B7pandora" rel="next" title="小米路由器mini刷Pandora">
+                  小米路由器mini刷Pandora <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -467,7 +462,7 @@ show_date_time();
 
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline-server-seven.vercel.app","placeholder":"畅所欲言。","avatar":"retro","pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline-server-seven.vercel.app","placeholder":"畅所欲言。","avatar":"retro","pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/%E4%BD%BF%E7%94%A8python%E8%87%AA%E5%8A%A8%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9"}</script>
 <script>
 document.addEventListener('page:loaded', () => {
   NexT.utils.loadComments(CONFIG.waline.el).then(() => 
