@@ -133,18 +133,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -221,6 +221,1083 @@ show_date_time();
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/openwrt%E5%88%B7%E5%85%A5dogcom-ipk%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rainlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="来日方长">
+      <meta itemprop="description" content="You can't wait until life isn't hard before you decide to be happy">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 来日方长">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/openwrt%E5%88%B7%E5%85%A5dogcom-ipk%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9" class="post-title-link" itemprop="url">openwrt刷入dogcom.ipk认证哆点</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-04-19 00:49:17 / 修改时间：13:41:12" itemprop="dateCreated datePublished" datetime="2022-04-19T00:49:17+08:00">2022-04-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%A0%A1%E5%9B%AD%E7%BD%91%E6%8A%98%E8%85%BE/" itemprop="url" rel="index"><span itemprop="name">校园网折腾</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/openwrt%E5%88%B7%E5%85%A5dogcom-ipk%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/openwrt%E5%88%B7%E5%85%A5dogcom-ipk%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9" data-xid="/openwrt%E5%88%B7%E5%85%A5dogcom-ipk%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/openwrt%E5%88%B7%E5%85%A5dogcom-ipk%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9" class="post-meta-item leancloud_visitors" data-flag-title="openwrt刷入dogcom.ipk认证哆点" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="登录信息抓包"><a href="#登录信息抓包" class="headerlink" title="登录信息抓包"></a>登录信息抓包</h2><p>需要的软件为</p>
+<h3 id="1-wireshark"><a href="#1-wireshark" class="headerlink" title="1.wireshark"></a>1.wireshark</h3><ol>
+<li>将网线连接电脑</li>
+<li>打开客户端，输入账号和密码</li>
+<li>打开wireshark，点击以太网，点击start</li>
+<li>登录哆点</li>
+<li>大概十几秒后，点击左上角红色按钮停止</li>
+<li><code>File-Save As</code> 保存为<code>dr.pcapng</code></li>
+</ol>
+<h3 id="2-生成配置文件"><a href="#2-生成配置文件" class="headerlink" title="2.生成配置文件"></a>2.生成配置文件</h3><ol>
+<li>登录在线配置生成器<a target="_blank" rel="noopener" href="https://drcoms.github.io/drcom-generic/">https://drcoms.github.io/drcom-generic/</a></li>
+<li>选择对应的哆点版本</li>
+<li>将之前获得的<code>dr.pcapng</code>上传</li>
+<li>获得新的配置文件，点击SAVE保存配置文件<code>drcom.conf</code></li>
+<li>用记事本打开配置文件<code>drcom.conf</code>，再对应的password处填入密码并保存</li>
+</ol>
+<h2 id="openwrt安装dogcom插件"><a href="#openwrt安装dogcom插件" class="headerlink" title="openwrt安装dogcom插件"></a>openwrt安装dogcom插件</h2><p>将电脑连接到路由器的lan口，路由器的wan口连接到学校光猫</p>
+<p>重启网卡，为了重新分配ip地址</p>
+<ol>
+<li>打开<code>winscp</code>软件，文件协议选择<code>SCP</code>，地址输入路由器管理地址，账号，密码</li>
+<li>将<code>dogcom.ipk</code> and <code>drcom.conf</code>两个文件上传到<code>/usr/</code>目录下</li>
+<li>打开putty，输入地址，账号密码，登录路由器</li>
+<li>输入<code>cd /usr/</code></li>
+<li>输入<code>opkg install dogcom.ipk</code></li>
+</ol>
+<h2 id="配置dogcom"><a href="#配置dogcom" class="headerlink" title="配置dogcom"></a>配置dogcom</h2><p>dogcom插件安装完成后，还没有用户的相关信息，所以还不能上网</p>
+<ol>
+<li>重新打开putty，登录路由器</li>
+<li>输入<code>dogcom -m dhcp -c /usr/drcom.conf</code></li>
+<li>打开浏览器检查是否能够正常上网</li>
+</ol>
+<h2 id="设置dogcom开机自启"><a href="#设置dogcom开机自启" class="headerlink" title="设置dogcom开机自启"></a>设置dogcom开机自启</h2><ol>
+<li>登录winscp</li>
+<li>打开路由器下<code>/etc/rc.local</code>文件</li>
+<li>在<code>exit 0</code> 前加上<code>dogcom -m dhcp -c /usr/drcom.conf</code></li>
+<li>这样路由器每次启动都会自动运行该命令，实现开机自动认证哆点</li>
+</ol>
+<h2 id="相关软件下载地址"><a href="#相关软件下载地址" class="headerlink" title="相关软件下载地址"></a>相关软件下载地址</h2><p>因为相关软件下载速度缓慢，这里提供百度网盘地址</p>
+<p>链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/13Plrsnx9ixPeIZlRERhuYw?pwd=eejn">https://pan.baidu.com/s/13Plrsnx9ixPeIZlRERhuYw?pwd=eejn</a> 提取码: eejn </p>
+<ol>
+<li>wireshark：<a target="_blank" rel="noopener" href="https://www.wireshark.org/#download">Wireshark · Go Deep.</a></li>
+<li>putty：<a target="_blank" rel="noopener" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY: a free SSH and Telnet client (greenend.org.uk)</a></li>
+<li>docom：c文件版本恩山论坛 python原版GitHub</li>
+<li>winscp：<a target="_blank" rel="noopener" href="https://winscp.net/eng/download.php">WinSCP :: Official Site :: Download</a></li>
+</ol>
+<h2 id="切换项目进行"><a href="#切换项目进行" class="headerlink" title="切换项目进行"></a>切换项目进行</h2><p><a target="_blank" rel="noopener" href="https://github.com/CQU-drcom/CQU_drcom">CQU-drcom&#x2F;CQU_drcom: 重庆大学路由器drcom懒人脚本 (github.com)</a></p>
+<ol>
+<li>在<a target="_blank" rel="noopener" href="https://github.com/purefkh/CQU_drcom/releases">RELEASE</a>中下载<a target="_blank" rel="noopener" href="https://github.com/purefkh/CQU_drcom/releases/tag/v2.3.2b">此配置包</a>，并解压</li>
+<li>将配置包上传至路由器空间：</li>
+</ol>
+<ul>
+<li>Windows：使用 Winscp 工具登录路由器并将 <code>setup.sh</code> 和 <code>latest-wired.py</code> 拖入文件夹 <code>/root/</code></li>
+</ul>
+<p>一般情况下我们需要执行如下指令：</p>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">scp latest-wired.py setup.sh root<span class="variable">@openwrt</span><span class="symbol">:/root/</span>.</span><br></pre></td></tr></table></figure>
+
+<h2 id="issue"><a href="#issue" class="headerlink" title="issue"></a>issue</h2><figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="string">[Tips]</span> The client version <span class="keyword">is</span> incorrect.</span><br></pre></td></tr></table></figure>
+
+<p>something wrong</p>
+<p>this issue would made that every few hours the connnection would failed and the network shut then.</p>
+<p>the client version is incorrect means the drcom client version is wrong?</p>
+<p>i choose the 5.2D verision for my drcom, is that wrong?</p>
+<p>i will check it tommorrow</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/openwrt%E5%AE%89%E8%A3%85python2%EF%BC%88generic%EF%BC%89">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rainlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="来日方长">
+      <meta itemprop="description" content="You can't wait until life isn't hard before you decide to be happy">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 来日方长">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/openwrt%E5%AE%89%E8%A3%85python2%EF%BC%88generic%EF%BC%89" class="post-title-link" itemprop="url">openwrt安装python2（generic）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-04-18 18:42:15" itemprop="dateCreated datePublished" datetime="2022-04-18T18:42:15+08:00">2022-04-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-04-19 13:43:22" itemprop="dateModified" datetime="2022-04-19T13:43:22+08:00">2022-04-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%A0%A1%E5%9B%AD%E7%BD%91%E6%8A%98%E8%85%BE/" itemprop="url" rel="index"><span itemprop="name">校园网折腾</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/openwrt%E5%AE%89%E8%A3%85python2%EF%BC%88generic%EF%BC%89#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/openwrt%E5%AE%89%E8%A3%85python2%EF%BC%88generic%EF%BC%89" data-xid="/openwrt%E5%AE%89%E8%A3%85python2%EF%BC%88generic%EF%BC%89" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/openwrt%E5%AE%89%E8%A3%85python2%EF%BC%88generic%EF%BC%89" class="post-meta-item leancloud_visitors" data-flag-title="openwrt安装python2（generic）" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>512</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我因为自动认证校园网需要使用到<strong>python的脚本</strong>所以需要安装<strong>python2的环境</strong>。</p>
+<p>而且，python的脚本众多，所以在其他情况下也会遇到需要安装python的情况。</p>
+<p>并且，openwrt安装python并没有看起来那么简单，网上的教程也众说纷纭，很难找到一个准确的答案（反正我没找到）。</p>
+<p>所以，准备记录一个openwrt安装python的步骤记录。</p>
+<h2 id="失败的原因"><a href="#失败的原因" class="headerlink" title="失败的原因"></a>失败的原因</h2><h3 id="1-仓库太旧"><a href="#1-仓库太旧" class="headerlink" title="1 仓库太旧"></a>1 仓库太旧</h3><p>之所以在ssh中<code>opkg install python</code>不能成功安装的原因就是没有一个正确的opkg库。</p>
+<p>openwrt的<strong>官方库文件</strong>在 19.07.8后就再也不支持python2的安装包了。</p>
+<p>所以要安装python2的文件包就需要在19.07.8之前的仓库才能调用到</p>
+<h3 id="2-仓库无法连接"><a href="#2-仓库无法连接" class="headerlink" title="2 仓库无法连接"></a>2 仓库无法连接</h3><p>因为国内的一些原因，所以部分的仓库无法连接到。</p>
+<p>所以需要更改为国内可以访问的仓库地址</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>更换一个可以连接且含有python2的仓库</p>
+<ol>
+<li>登录到<a target="_blank" rel="noopener" href="https://archive.openwrt.org/">Index of &#x2F; (openwrt.org)</a></li>
+<li>找到release</li>
+<li>选择19.07.7</li>
+<li>选择package</li>
+<li>选择自己的芯片类型</li>
+<li>再次选择package</li>
+<li>查看是否包含python2</li>
+<li>将地址添加到openwrt的仓库源中</li>
+<li>ssh中<code>opkg install python</code></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/%E7%9B%98%E7%82%B9%E4%B8%80%E4%B8%8B%E8%B7%AF%E7%94%B1%E5%99%A8%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rainlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="来日方长">
+      <meta itemprop="description" content="You can't wait until life isn't hard before you decide to be happy">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 来日方长">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E7%9B%98%E7%82%B9%E4%B8%80%E4%B8%8B%E8%B7%AF%E7%94%B1%E5%99%A8%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95" class="post-title-link" itemprop="url">盘点一下路由器认证哆点的几种方法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-04-17 22:43:39" itemprop="dateCreated datePublished" datetime="2022-04-17T22:43:39+08:00">2022-04-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-04-19 13:44:42" itemprop="dateModified" datetime="2022-04-19T13:44:42+08:00">2022-04-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%A0%A1%E5%9B%AD%E7%BD%91%E6%8A%98%E8%85%BE/" itemprop="url" rel="index"><span itemprop="name">校园网折腾</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/%E7%9B%98%E7%82%B9%E4%B8%80%E4%B8%8B%E8%B7%AF%E7%94%B1%E5%99%A8%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/%E7%9B%98%E7%82%B9%E4%B8%80%E4%B8%8B%E8%B7%AF%E7%94%B1%E5%99%A8%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95" data-xid="/%E7%9B%98%E7%82%B9%E4%B8%80%E4%B8%8B%E8%B7%AF%E7%94%B1%E5%99%A8%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/%E7%9B%98%E7%82%B9%E4%B8%80%E4%B8%8B%E8%B7%AF%E7%94%B1%E5%99%A8%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95" class="post-meta-item leancloud_visitors" data-flag-title="盘点一下路由器认证哆点的几种方法" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>762</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>全部基于GitHub项目：drcoms&#x2F;drcom-generic: Dr.COM&#x2F;DrCOM 现已覆盖 d p x三版。 (github.com)](<a target="_blank" rel="noopener" href="https://github.com/drcoms/drcom-generic">https://github.com/drcoms/drcom-generic</a>)</p>
+<p>只是项目有不同的实现模式</p>
+<p>所有的前提都是<code>wireshark</code>抓包获取<code>config</code>文件</p>
+<h2 id="1-python认证"><a href="#1-python认证" class="headerlink" title="1 python认证"></a>1 python认证</h2><p>特点：路由器要有python</p>
+<ol>
+<li><p>获得学校对应的py程序<a target="_blank" rel="noopener" href="https://github.com/drcoms/drcom-generic/tree/master/custom">drcom-generic&#x2F;custom at master · drcoms&#x2F;drcom-generic (github.com)</a></p>
+</li>
+<li><p>将程序中对应的用户信息更换为自己的信息</p>
+</li>
+<li><p>将<code>drcom.py</code>重命名为<code>drcom</code>，将其放置在路由器<code>/usr/bin/</code>地址下（防止开机删除）</p>
+</li>
+<li><p>putty直接<code>python /usr/bin/drcom</code></p>
+</li>
+<li><p>成功效果是一篇空白</p>
+</li>
+</ol>
+<h2 id="2-dogcom二进制文件认证"><a href="#2-dogcom二进制文件认证" class="headerlink" title="2 dogcom二进制文件认证"></a>2 dogcom二进制文件认证</h2><p>特点：不需要python环境，直接就能用</p>
+<ol>
+<li><p>去恩山论坛下载对应固件的dogcom二进制文件</p>
+</li>
+<li><p>将<code>dogcom</code>和<code>drcom.conf</code>上传到<code>/usr</code></p>
+</li>
+<li><p>dogcom-右键-属性，将八进制表示更改为0777，赋予dogcom权限</p>
+</li>
+<li><p>putty直接<code>/usr/dogcom -m dhcp -c /usr/drcom.conf -v</code>即可</p>
+</li>
+</ol>
+<p>输入<code>netstat -tunlp</code>可查看目前的端口使用情况</p>
+<p>可输入<code>kill -9 pidnum</code>关闭相关进程</p>
+<h2 id="3-dogcom-ipk认证"><a href="#3-dogcom-ipk认证" class="headerlink" title="3 dogcom.ipk认证"></a>3 dogcom.ipk认证</h2><p>特点：直接ipk安装到路由器认证，独立方便，性能要求高一点</p>
+<ol>
+<li>恩山论坛下载x86的ipk文件</li>
+<li>将<code>dogcom.ipk</code> and <code>drcom.conf</code>两个文件上传到<code>/usr/</code>目录下</li>
+<li>putty <code>opkg install /usr/dogcom.ipk</code>安装ipk</li>
+<li>putty <code>dogcom -m dhcp -c /usr/drcom.conf</code>使用该命令配置dogcom.ipk</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/openwrt%E7%AB%AF%E5%8F%A3%E6%9F%A5%E8%AF%A2">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rainlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="来日方长">
+      <meta itemprop="description" content="You can't wait until life isn't hard before you decide to be happy">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 来日方长">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/openwrt%E7%AB%AF%E5%8F%A3%E6%9F%A5%E8%AF%A2" class="post-title-link" itemprop="url">openwrt端口查询</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-04-17 00:45:00" itemprop="dateCreated datePublished" datetime="2022-04-17T00:45:00+08:00">2022-04-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-04-19 13:46:06" itemprop="dateModified" datetime="2022-04-19T13:46:06+08:00">2022-04-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%B7%AF%E7%94%B1%E5%99%A8/" itemprop="url" rel="index"><span itemprop="name">路由器</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/openwrt%E7%AB%AF%E5%8F%A3%E6%9F%A5%E8%AF%A2#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/openwrt%E7%AB%AF%E5%8F%A3%E6%9F%A5%E8%AF%A2" data-xid="/openwrt%E7%AB%AF%E5%8F%A3%E6%9F%A5%E8%AF%A2" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/openwrt%E7%AB%AF%E5%8F%A3%E6%9F%A5%E8%AF%A2" class="post-meta-item leancloud_visitors" data-flag-title="openwrt端口查询" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>48</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>输入<code>netstat -tunlp</code>可查看目前的端口使用情况</p>
+<p>可输入<code>kill -9 pidnum</code>关闭相关进程</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/openwrt%E5%AE%89%E8%A3%85python2">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rainlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="来日方长">
+      <meta itemprop="description" content="You can't wait until life isn't hard before you decide to be happy">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 来日方长">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/openwrt%E5%AE%89%E8%A3%85python2" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-04-16 01:20:40 / 修改时间：01:27:46" itemprop="dateCreated datePublished" datetime="2022-04-16T01:20:40+08:00">2022-04-16</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/openwrt%E5%AE%89%E8%A3%85python2#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/openwrt%E5%AE%89%E8%A3%85python2" data-xid="/openwrt%E5%AE%89%E8%A3%85python2" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/openwrt%E5%AE%89%E8%A3%85python2" class="post-meta-item leancloud_visitors" data-flag-title="" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>201</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="openwrt安装python2"><a href="#openwrt安装python2" class="headerlink" title="openwrt安装python2"></a>openwrt安装python2</h2><p>更换库</p>
+<p>在软件包配置中更改opkg库为</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">src<span class="regexp">/gz openwrt_packages https:/</span><span class="regexp">/archive.openwrt.org/</span>releases<span class="regexp">/19.07.8/</span>packages<span class="regexp">/x86_64/</span>packages</span><br></pre></td></tr></table></figure>
+
+<p>提交</p>
+<p>安装<code>libbz2-1.0_1.0.8-1_x86_64.ipk</code></p>
+<p>然后ssh中 <code>opkg update</code>然后<code>opkg install python</code>等待安装完成即可</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/X86%E5%AE%89%E8%A3%85openwrt">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rainlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="来日方长">
+      <meta itemprop="description" content="You can't wait until life isn't hard before you decide to be happy">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 来日方长">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/X86%E5%AE%89%E8%A3%85openwrt" class="post-title-link" itemprop="url">X86安装openwrt</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-04-10 12:55:09" itemprop="dateCreated datePublished" datetime="2022-04-10T12:55:09+08:00">2022-04-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-04-19 13:55:40" itemprop="dateModified" datetime="2022-04-19T13:55:40+08:00">2022-04-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%B7%AF%E7%94%B1%E5%99%A8/" itemprop="url" rel="index"><span itemprop="name">路由器</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/X86%E5%AE%89%E8%A3%85openwrt#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/X86%E5%AE%89%E8%A3%85openwrt" data-xid="/X86%E5%AE%89%E8%A3%85openwrt" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/X86%E5%AE%89%E8%A3%85openwrt" class="post-meta-item leancloud_visitors" data-flag-title="X86安装openwrt" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>准备工作</p>
+<ol>
+<li>wepe<a target="_blank" rel="noopener" href="https://www.wepe.com.cn/download.html">微PE工具箱 - 下载 (wepe.com.cn)</a> 根据要刷的固件选择64位还是32位</li>
+<li>openwrt的img文件<a target="_blank" rel="noopener" href="https://openwrt.mpdn.fun:8443/?dir=lede/x86_64/2022-04-08__06-22-01--self-daily">Bleach OpenWrt | lede&#x2F;x86_64&#x2F;2022-04-08__06-22-01–self-daily (mpdn.fun)</a><strong>或者</strong><a target="_blank" rel="noopener" href="https://www.right.com.cn/FORUM/forum.php?mod=viewthread&tid=7667094&highlight=x86">【2022-04-08更新】5.15.32内核x86_64位OpenWrt固件 丰富实用插件加持 6个可选版本 - 软路由,x86系统,openwrt(x86),Router OS 等 - 恩山无线论坛 - Powered by Discuz! (right.com.cn)</a></li>
+<li>physdiskwrite工具<a target="_blank" rel="noopener" href="https://m0n0.ch/wall/physdiskwrite.php">https://m0n0.ch/wall/physdiskwrite.php</a></li>
+</ol>
+<h2 id="第一步：刷PE系统"><a href="#第一步：刷PE系统" class="headerlink" title="第一步：刷PE系统"></a>第一步：刷PE系统</h2><ol>
+<li>插入u盘</li>
+<li>打开wepe</li>
+<li><code>其他安装方式</code>选择u盘安装</li>
+<li>选择u盘安装即可</li>
+</ol>
+<p>注意：如果下载的是64位的镜像则要下载对应的64位pe系统，不然就会安装出错！</p>
+<h2 id="第二步：将相关文件放入u盘中"><a href="#第二步：将相关文件放入u盘中" class="headerlink" title="第二步：将相关文件放入u盘中"></a>第二步：将相关文件放入u盘中</h2><p>包括</p>
+<h3 id="openwrt的镜像"><a href="#openwrt的镜像" class="headerlink" title="openwrt的镜像"></a>openwrt的镜像</h3><p>我这里是使用的恩山论坛大佬们编译的固件。如果有其他需求的朋友可以去论坛找其他固件，当然也可以自己编译啦。</p>
+<p>不过，镜像选择最主要的功能就是看支不支持ipv6，因为其他的大部分插件是可以后期再opkg安装上去的，而ipv6的功能必须在固件编译之前就要集成好。</p>
+<p>下载好的镜像，解压后，大概有几百M</p>
+<p>建议改名为<code>openwrt.img</code>方便后续调用</p>
+<h3 id="physdiskwrite"><a href="#physdiskwrite" class="headerlink" title="physdiskwrite"></a>physdiskwrite</h3><p>   这个直接在官网下好，放在u盘即可</p>
+<h2 id="第三步：软路由上机"><a href="#第三步：软路由上机" class="headerlink" title="第三步：软路由上机"></a>第三步：软路由上机</h2><ol>
+<li>将u盘插入软路由中</li>
+<li>开机后狂按delete，或者其他键，进入bios</li>
+<li>在boot界面设置启动项，将u盘设置第一位</li>
+<li>重启后，进入pe系统即算成功</li>
+</ol>
+<h2 id="第四步：删除分区（可选）"><a href="#第四步：删除分区（可选）" class="headerlink" title="第四步：删除分区（可选）"></a>第四步：删除分区（可选）</h2><p>新硬盘可跳过这一步</p>
+<ol>
+<li>进入wepe后，选择分区工具</li>
+<li>删除全部分区</li>
+<li>新建分区</li>
+</ol>
+<h2 id="第五步：刷入openwrt"><a href="#第五步：刷入openwrt" class="headerlink" title="第五步：刷入openwrt"></a>第五步：刷入openwrt</h2><ol>
+<li>win+R调用运行</li>
+<li>输入cmd，调出cmd界面</li>
+<li>输入<code>u:</code> 进入u盘的根目录下（有可能磁盘名字不一样，建议进入此电脑查看u盘的名称是什么）</li>
+<li>输入<code>physdiskwrite -u openwrt.img</code>（这里img文件的名字就是那个openwrt镜像的名字）</li>
+<li>选择要写入的硬盘，一般来说选择第一个 0（反正不要写到u盘里就行）</li>
+<li>输入y</li>
+<li>等待写入完成</li>
+</ol>
+<h2 id="第六步：检查安装情况"><a href="#第六步：检查安装情况" class="headerlink" title="第六步：检查安装情况"></a>第六步：检查安装情况</h2><ol>
+<li>重启pe系统，然后迅速拔出u盘</li>
+<li>正常情况，则会看到openwrt的加载界面了，一直跳代码，看起来还挺高级</li>
+<li>等代码不动了，按回车，即可看到openwrt的欢迎界面</li>
+<li>成功</li>
+</ol>
+<h2 id="第七步：管理界面检查"><a href="#第七步：管理界面检查" class="headerlink" title="第七步：管理界面检查"></a>第七步：管理界面检查</h2><ol>
+<li>用一根网线将电脑与软路由的lan口连接，注意不要连接到wan口了</li>
+<li>在浏览器中输入<code>192.168.1.1</code>进入管理界面</li>
+<li>一般默认的密码是<code>password</code>（根据下载的固件，编译者可能有不同想法）</li>
+<li>进入到openwrt管理界面，即大功告成</li>
+</ol>
+<h2 id="Extra：其余设置"><a href="#Extra：其余设置" class="headerlink" title="Extra：其余设置"></a>Extra：其余设置</h2><h3 id="密码设置"><a href="#密码设置" class="headerlink" title="密码设置"></a>密码设置</h3><p>在<code>系统-管理权</code>中可以重新设置密码</p>
+<h3 id="上网模式设置"><a href="#上网模式设置" class="headerlink" title="上网模式设置"></a>上网模式设置</h3><p>我才发现，我竟然把上网设置都给删除了，哈哈哈哈</p>
+<p>我是校园网上网，刷入插件后，直接DHCP上网</p>
+<h3 id="管理地址更改"><a href="#管理地址更改" class="headerlink" title="管理地址更改"></a>管理地址更改</h3><p>在<code>网络-接口-lan-修改-ipv4地址</code>中可以更改路由器的网关地址&#x2F;管理地址</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/openwrt%E5%88%B7%E5%85%A5dogcom%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9%E7%AC%94%E8%AE%B0">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rainlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="来日方长">
+      <meta itemprop="description" content="You can't wait until life isn't hard before you decide to be happy">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 来日方长">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/openwrt%E5%88%B7%E5%85%A5dogcom%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9%E7%AC%94%E8%AE%B0" class="post-title-link" itemprop="url">openwrt刷入dogcom认证哆点笔记</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-04-09 22:16:28" itemprop="dateCreated datePublished" datetime="2022-04-09T22:16:28+08:00">2022-04-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-04-19 13:54:27" itemprop="dateModified" datetime="2022-04-19T13:54:27+08:00">2022-04-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%A0%A1%E5%9B%AD%E7%BD%91%E6%8A%98%E8%85%BE/" itemprop="url" rel="index"><span itemprop="name">校园网折腾</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/openwrt%E5%88%B7%E5%85%A5dogcom%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9%E7%AC%94%E8%AE%B0#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/openwrt%E5%88%B7%E5%85%A5dogcom%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9%E7%AC%94%E8%AE%B0" data-xid="/openwrt%E5%88%B7%E5%85%A5dogcom%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9%E7%AC%94%E8%AE%B0" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/openwrt%E5%88%B7%E5%85%A5dogcom%E8%AE%A4%E8%AF%81%E5%93%86%E7%82%B9%E7%AC%94%E8%AE%B0" class="post-meta-item leancloud_visitors" data-flag-title="openwrt刷入dogcom认证哆点笔记" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="登录信息抓包"><a href="#登录信息抓包" class="headerlink" title="登录信息抓包"></a>登录信息抓包</h2><p>需要的软件为</p>
+<h3 id="1-wireshark"><a href="#1-wireshark" class="headerlink" title="1.wireshark"></a>1.wireshark</h3><ol>
+<li>将网线连接电脑</li>
+<li>打开客户端，输入账号和密码</li>
+<li>打开wireshark，点击以太网，点击start</li>
+<li>登录哆点</li>
+<li>大概十几秒后，点击左上角红色按钮停止</li>
+<li><code>File-Save As</code> 保存为<code>dr.pcapng</code></li>
+</ol>
+<h3 id="2-生成配置文件"><a href="#2-生成配置文件" class="headerlink" title="2.生成配置文件"></a>2.生成配置文件</h3><ol>
+<li>登录在线配置生成器<a target="_blank" rel="noopener" href="https://drcoms.github.io/drcom-generic/">https://drcoms.github.io/drcom-generic/</a></li>
+<li>选择对应的哆点版本</li>
+<li>将之前获得的<code>dr.pcapng</code>上传</li>
+<li>获得新的配置文件，点击SAVE保存配置文件<code>drcom.conf</code></li>
+<li>用记事本打开配置文件<code>drcom.conf</code>，再对应的password处填入密码并保存</li>
+</ol>
+<h2 id="脚本上传路由器"><a href="#脚本上传路由器" class="headerlink" title="脚本上传路由器"></a>脚本上传路由器</h2><ol>
+<li>打开<code>winscp</code>软件，地址输入路由器管理地址，账号，密码</li>
+<li>在winscp界面中，进入到<code>/usr</code>地址</li>
+<li>上传<code>dogcom</code>和<code>drcom.conf</code><img src="https://pic.imgdb.cn/item/625e4dda239250f7c51f230a.jpg" alt="image-20220405174430045"></li>
+<li>dogcom-右键-属性，将八进制表示更改为0777，赋予dogcom权限</li>
+</ol>
+<h2 id="运行脚本"><a href="#运行脚本" class="headerlink" title="运行脚本"></a>运行脚本</h2><ol>
+<li>将网线接入到路由器的wan口</li>
+<li>使用putty登录路由器</li>
+<li><code>/usr/dogcom -m dhcp -c /usr/drcom.conf -v</code></li>
+</ol>
+<h2 id="添加开机自启"><a href="#添加开机自启" class="headerlink" title="添加开机自启"></a>添加开机自启</h2><p>在WinSCP下打开&#x2F;etc&#x2F;rc.local</p>
+<p>在exit 0上一行输入下列命令：</p>
+<p>&#x2F;usr&#x2F;dogcom -m pppoe -c &#x2F;usr&#x2F;drcom.conf</p>
+<h2 id="目前出现的问题"><a href="#目前出现的问题" class="headerlink" title="目前出现的问题"></a>目前出现的问题</h2><p>因为Drcom代码有个BUG就是，编译出来的二进制文件也好，ipk也好，最后在高内核Openwrt和pandorabox下运行是会提示not found，无法运行，比如 4.14内核。 3.14内核就没事。想用Drcom在路由上，代价就是无法使用高内核版本固件</p>
+<p>目前来说只有低版本的固件比较合适？？因为确实脚本很老了，我自己有没有编译的能力，所以就只能尝试使用较老的版本</p>
+<p>目前安装的最新的openwrt for mini版本为5.4.185</p>
+<p>所以要寻找一个3.内核的版本进行设置</p>
+<p>不过值得怀疑的事情是，我之前的那个x86的j1900运行的openwrt则可以使用二进制文件正常运行。</p>
+<p>然后楼主给出的文件使用的</p>
+<p>呃，目前，好像只能废弃这个c的方案了，转头使用原来的python版本</p>
+<p>不行，我要冷静一下，总结一下目前的进度</p>
+<p>放弃了c编写的版本，转头尝试python的版本</p>
+<p>并且发现python的脚本实现可能性很大。</p>
+<p>目前遇到的问题是python编译错误</p>
+<p>使用python成功在pc上实现自动认证</p>
+<p>更换padora固件</p>
+<p>成功将python上传到padora</p>
+<p>最开始使用的是openwrt，但是openwrt的python2无论如何都安装不了，一直报错</p>
+<p>后来干脆直接使用教程里的那一套，换成了2017年版本的pandora，然后安装文件中的另一个文件，没想到就行了</p>
+<p>我的天啊，我真的没有想到会这样成功，我真的一点都没有看懂怎么回事。</p>
+<p>出了新的问题，<br>drcom的端口是1204<br>然后路由器应该是有什么插件把哆点的端口给占住了导致我认证不了哆点<br>就连哆点下的pc也无法使用客户端认证<br>netstat -pln|grep 1204<br><code>netstat -tunlp</code></p>
+<p>rplink的端口占用情况</p>
+<p><img src="https://pic.imgdb.cn/item/625e4de7239250f7c51f3dac.jpg" alt="image-20220409131150536"></p>
+<p>下面排查openwrt的端口占用情况</p>
+<p><img src="https://pic.imgdb.cn/item/625e4dee239250f7c51f52bd.jpg" alt="image-20220409131335592"></p>
+<p>输入kill -9 pidnum</p>
+<p>443 https</p>
+<p>将wsdd2删除后出现dogcom 进程</p>
+<p><img src="https://pic.imgdb.cn/item/625e4df6239250f7c51f649e.jpg" alt="image-20220409132314601"></p>
+<p>使用 <code>kill -9 2428</code>将dogcom关闭后</p>
+<p>重新运行<code>/usr/dogcom -m dhcp -c /usr/drcom.conf -v</code></p>
+<p><img src="https://pic.imgdb.cn/item/625e4e02239250f7c51f7d41.jpg" alt="image-20220409132413808"></p>
+<p>恢复正常运行情况</p>
+<p>目前尝试重启路由器，检测是否正常运行</p>
+<p>正常运行</p>
+<p>但是几个小时候dogcom又将端口自我占用</p>
+<p>目前尝试更换使用ipk文件包</p>
+<p>dogcom -m dhcp -c &#x2F;usr&#x2F;drcom.conf</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv16065798">X86软路由安装openwrt - 哔哩哔哩 (bilibili.com)</a><br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1dS4y117nW/">openwrt软路由安装流程_哔哩哔哩_bilibili</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1%E5%99%A8mini%E5%88%B7pandora">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -251,7 +1328,7 @@ show_date_time();
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-04-06 16:57:29 / 修改时间：16:59:15" itemprop="dateCreated datePublished" datetime="2022-04-06T16:57:29+08:00">2022-04-06</time>
+      <time title="创建时间：2022-04-06 16:57:29 / 修改时间：23:30:56" itemprop="dateCreated datePublished" datetime="2022-04-06T16:57:29+08:00">2022-04-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -310,10 +1387,7 @@ show_date_time();
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>参考的视频为</p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1qV411j7P8">小米路由器Mini刷Openwrt教程_哔哩哔哩_bilibili</a></p>
-<p>然后以下的内容是我自己的总结</p>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>一共要提前准备五个文件</p>
+          <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>一共要提前准备五个文件</p>
 <h3 id="mini路由器的开发版固件"><a href="#mini路由器的开发版固件" class="headerlink" title="mini路由器的开发版固件"></a>mini路由器的开发版固件</h3><p><a target="_blank" rel="noopener" href="http://www1.miwifi.com/miwifi_download.html">http://www1.miwifi.com/miwifi_download.html</a></p>
 <p>在支持网站<code>ROM目录</code>下载对应路由器的开发版固件</p>
 <h3 id="小米路由器mini的root密码和miwifi的ssh插件"><a href="#小米路由器mini的root密码和miwifi的ssh插件" class="headerlink" title="小米路由器mini的root密码和miwifi的ssh插件"></a>小米路由器mini的root密码和miwifi的ssh插件</h3><p><a target="_blank" rel="noopener" href="https://d.miwifi.com/rom/ssh">https://d.miwifi.com/rom/ssh</a> </p>
@@ -334,9 +1408,8 @@ show_date_time();
 <li>断电</li>
 <li>然后按住reset键的不要松，同时给路由器上电（插上电源）</li>
 <li>大概7秒左右，路由器开始闪橙灯</li>
-<li>然后</li>
+<li>成功</li>
 </ol>
-<p>断电，先按住reset键，然后上电，等待十秒左右，路由器开始闪红灯</p>
 <h2 id="第三步：使用ssh工具连接路由器"><a href="#第三步：使用ssh工具连接路由器" class="headerlink" title="第三步：使用ssh工具连接路由器"></a>第三步：使用ssh工具连接路由器</h2><p>我使用软件的是putty</p>
 <ol>
 <li>打开putty</li>
@@ -375,7 +1448,13 @@ show_date_time();
 <li>等待几分钟更新完成后，重启电脑的网卡，以获得重新分配的ip地址</li>
 <li>输入<code>192.168.1.1</code>即可到登录界面</li>
 </ol>
-<p>END</p>
+<hr>
+<blockquote>
+<p>参考网页：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1qV411j7P8">小米路由器Mini刷Openwrt教程_哔哩哔哩_bilibili</a></li>
+</ol>
+</blockquote>
 
       
     </div>
@@ -432,7 +1511,7 @@ show_date_time();
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-04-06 16:42:39 / 修改时间：16:49:23" itemprop="dateCreated datePublished" datetime="2022-04-06T16:42:39+08:00">2022-04-06</time>
+      <time title="创建时间：2022-04-06 16:42:39 / 修改时间：17:07:15" itemprop="dateCreated datePublished" datetime="2022-04-06T16:42:39+08:00">2022-04-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -473,7 +1552,7 @@ show_date_time();
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.2k</span>
+      <span>1.4k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -491,7 +1570,7 @@ show_date_time();
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>需要的软件为wireshark、putty、winscp</p>
+          <p>需要的软件为<code>wireshark、putty、winscp</code></p>
 <h2 id="登录信息抓包"><a href="#登录信息抓包" class="headerlink" title="登录信息抓包"></a>登录信息抓包</h2><h3 id="1-wireshark"><a href="#1-wireshark" class="headerlink" title="1.wireshark"></a>1.wireshark</h3><ol>
 <li>将网线连接电脑</li>
 <li>打开客户端，输入账号和密码</li>
@@ -526,7 +1605,8 @@ show_date_time();
 <li>将之前生成的配置文件<code>drcom.conf</code>填入<code># CONFIG</code>与<code># CONFIG_END</code></li>
 <li>将哆点注销并推出，直接<code>run</code>查看是否成功联网</li>
 </ol>
-<h2 id="pandora安装python2"><a href="#pandora安装python2" class="headerlink" title="pandora安装python2"></a>pandora安装python2</h2><ol>
+<h2 id="pandora安装python2（难）"><a href="#pandora安装python2（难）" class="headerlink" title="pandora安装python2（难）"></a>pandora安装python2（难）</h2><p><a target="_blank" rel="noopener" href="https://archive.openwrt.org/barrier_breaker/14.07/ramips/mt7620a/packages/">Index of &#x2F;barrier_breaker&#x2F;14.07&#x2F;ramips&#x2F;mt7620a&#x2F;packages&#x2F; (openwrt.org)</a></p>
+<ol>
 <li>download <code>zlib_1.2.8-1_ralink.ipk</code> and <code>python-mini_2.7.3-2_ramips_24kec.ipk</code></li>
 <li>将以上两个文件放置到<code>/tmp</code>目录下</li>
 <li>putty中<code>cd /tmp</code>然后<code>opkg install zlib_1.2.8-1_ralink.ipk</code>短暂时间后，将提示两个ipk都安装成功</li>
@@ -546,6 +1626,13 @@ show_date_time();
 <p>添加以下内容，该命令的作用是开机自动运行脚本</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sleep</span> 10 &amp;&amp; python /usr/bin/drcom</span><br><span class="line"><span class="built_in">exit</span> 0</span><br></pre></td></tr></table></figure>
 
+<hr>
+<blockquote>
+<p>参考网页：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/adminpd/article/details/77970470">(14条消息) 斐讯k2路由器刷pandorabox认证哆点Drcom_程序猿周周的博客-CSDN博客_哆点多拨</a></li>
+</ol>
+</blockquote>
 
       
     </div>
@@ -1838,869 +2925,8 @@ show_date_time();
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/hello-world">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Rainlong">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="来日方长">
-      <meta itemprop="description" content="You can't wait until life isn't hard before you decide to be happy">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 来日方长">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/hello-world" class="post-title-link" itemprop="url">hello-world</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-03-26 21:54:00" itemprop="dateCreated datePublished" datetime="2022-03-26T21:54:00+08:00">2022-03-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-30 00:55:08" itemprop="dateModified" datetime="2022-03-30T00:55:08+08:00">2022-03-30</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline：</span>
-  
-    <a title="waline" href="/hello-world#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/hello-world" data-xid="/hello-world" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span id="/hello-world" class="post-meta-item leancloud_visitors" data-flag-title="hello-world" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.3k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h2><h3 id="Reason-for-creating-a-blog"><a href="#Reason-for-creating-a-blog" class="headerlink" title="Reason for creating a blog"></a>Reason for creating a blog</h3><p>For I really love to recording my thoughts and experiences.</p>
-<p>By the way, record and summarize makes everything clear and power.</p>
-<h3 id="Reason-for-choosing-the-github"><a href="#Reason-for-choosing-the-github" class="headerlink" title="Reason for choosing the github"></a>Reason for choosing the github</h3><p>我有一台windows，一个Linux的群晖，一个mbp2017.</p>
-<p>我最终选择了在windows上面通过hexo建立我的第一个blog。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/hello-world#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Rainlong">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="来日方长">
-      <meta itemprop="description" content="You can't wait until life isn't hard before you decide to be happy">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 来日方长">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96" class="post-title-link" itemprop="url">hexo+next博客美化</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-03-26 21:03:56" itemprop="dateCreated datePublished" datetime="2022-03-26T21:03:56+08:00">2022-03-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-31 23:59:41" itemprop="dateModified" datetime="2022-03-31T23:59:41+08:00">2022-03-31</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline：</span>
-  
-    <a title="waline" href="/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96" data-xid="/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span id="/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96" class="post-meta-item leancloud_visitors" data-flag-title="hexo+next博客美化" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>3.3k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="添加数据分析与统计"><a href="#添加数据分析与统计" class="headerlink" title="添加数据分析与统计"></a>添加数据分析与统计</h2><p><a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/third-party-services.html#livere">第三方服务集成 - NexT 使用文档 (iissnan.com)</a></p>
-<p>next官方使用文档</p>
-<p>google analytics</p>
-<p>baidu analytics</p>
-<p><em><strong>添加成功</strong></em></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/%E6%A0%A1%E5%9B%AD%E7%BD%91">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Rainlong">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="来日方长">
-      <meta itemprop="description" content="You can't wait until life isn't hard before you decide to be happy">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 来日方长">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/%E6%A0%A1%E5%9B%AD%E7%BD%91" class="post-title-link" itemprop="url">重庆大学校园网ipv6相关发现</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-03-08 16:56:09" itemprop="dateCreated datePublished" datetime="2022-03-08T16:56:09+08:00">2022-03-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-28 18:02:39" itemprop="dateModified" datetime="2022-03-28T18:02:39+08:00">2022-03-28</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline：</span>
-  
-    <a title="waline" href="/%E6%A0%A1%E5%9B%AD%E7%BD%91#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/%E6%A0%A1%E5%9B%AD%E7%BD%91" data-xid="/%E6%A0%A1%E5%9B%AD%E7%BD%91" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span id="/%E6%A0%A1%E5%9B%AD%E7%BD%91" class="post-meta-item leancloud_visitors" data-flag-title="重庆大学校园网ipv6相关发现" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>797</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>重庆大学（虎溪校区）的校园网是使用的哆点客户端认证，使用的版本是5.2B。</p>
-<h3 id="第一个事情，ipv6是免费使用的"><a href="#第一个事情，ipv6是免费使用的" class="headerlink" title="第一个事情，ipv6是免费使用的"></a>第一个事情，ipv6是免费使用的</h3><p>重大的校园网收费标准是40元20M，60元30M</p>
-<p>其实这个标准不是很明确</p>
-<p>应该添加，IPV4的收费标准（关于ipv4，ipv6请自己查明）</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/%E6%A0%A1%E5%9B%AD%E7%BD%91#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/%E6%B5%85%E8%B0%88pt">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Rainlong">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="来日方长">
-      <meta itemprop="description" content="You can't wait until life isn't hard before you decide to be happy">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 来日方长">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/%E6%B5%85%E8%B0%88pt" class="post-title-link" itemprop="url">浅谈pt</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-02-07 19:25:55" itemprop="dateCreated datePublished" datetime="2022-02-07T19:25:55+08:00">2022-02-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-28 18:03:47" itemprop="dateModified" datetime="2022-03-28T18:03:47+08:00">2022-03-28</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline：</span>
-  
-    <a title="waline" href="/%E6%B5%85%E8%B0%88pt#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/%E6%B5%85%E8%B0%88pt" data-xid="/%E6%B5%85%E8%B0%88pt" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span id="/%E6%B5%85%E8%B0%88pt" class="post-meta-item leancloud_visitors" data-flag-title="浅谈pt" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.7k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="相遇"><a href="#相遇" class="headerlink" title="相遇"></a>相遇</h2><p>第一次接触pt是在看完冰雪奇缘2后，想要找电影的资源</p>
-<p>高中的时候常常使用的torrentkitty是我常用的bt资源网站</p>
-<p>但是因为网站经常崩</p>
-<p>并且很多bt种子没有下载速度，就算有，也需要开迅雷会员</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/%E6%B5%85%E8%B0%88pt#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Rainlong">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="来日方长">
-      <meta itemprop="description" content="You can't wait until life isn't hard before you decide to be happy">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 来日方长">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE" class="post-title-link" itemprop="url">黑群晖+ddns+阿里云=免费的最快的外网访问</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-02-07 18:29:00" itemprop="dateCreated datePublished" datetime="2022-02-07T18:29:00+08:00">2022-02-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-28 18:01:53" itemprop="dateModified" datetime="2022-03-28T18:01:53+08:00">2022-03-28</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline：</span>
-  
-    <a title="waline" href="/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE" data-xid="/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span id="/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE" class="post-meta-item leancloud_visitors" data-flag-title="黑群晖+ddns+阿里云=免费的最快的外网访问" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.2k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="前言（废话）"><a href="#前言（废话）" class="headerlink" title="前言（废话）"></a>前言（废话）</h2><p>群晖的外网访问一直是一个问题</p>
-<p>白群晖还好说，有自带的，不过也是网速感人</p>
-<p>黑群晖就更不用说了，只能自己搞</p>
-<p>之前用的ddns，还没有大佬些docker的script，只能用计划任务配合阿里云的ddns半自动刷新</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Rainlong">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="来日方长">
-      <meta itemprop="description" content="You can't wait until life isn't hard before you decide to be happy">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 来日方长">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98" class="post-title-link" itemprop="url">PVE黑群晖直通硬盘</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-02-03 20:58:12" itemprop="dateCreated datePublished" datetime="2022-02-03T20:58:12+08:00">2022-02-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-29 16:57:26" itemprop="dateModified" datetime="2022-03-29T16:57:26+08:00">2022-03-29</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline：</span>
-  
-    <a title="waline" href="/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98" data-xid="/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span id="/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98" class="post-meta-item leancloud_visitors" data-flag-title="PVE黑群晖直通硬盘" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>770</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>目前的b站还不支持markdown语言，所以不准备写很多</p>
-<p>写这些的目的主要是把自己以后可能用得上的东西自己重新整理一下，免得找不着了，很多收藏的东西，总是找不到，还是得自己总结的东西逻辑清楚</p>
-<p>黑群晖因为特殊性，加装硬盘需要特殊方法。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/2021%E5%B9%B4%E6%98%A5%EF%BC%8C%E6%88%91%E5%8D%96%E6%8E%89%E4%BA%86iPad%EF%BC%8C%E4%B9%B0%E4%BA%86MacBook">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Rainlong">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="来日方长">
-      <meta itemprop="description" content="You can't wait until life isn't hard before you decide to be happy">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 来日方长">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021%E5%B9%B4%E6%98%A5%EF%BC%8C%E6%88%91%E5%8D%96%E6%8E%89%E4%BA%86iPad%EF%BC%8C%E4%B9%B0%E4%BA%86MacBook" class="post-title-link" itemprop="url">2021年春，我卖掉了iPad，买了MacBook</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-06-23 22:24:00" itemprop="dateCreated datePublished" datetime="2021-06-23T22:24:00+08:00">2021-06-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-28 22:56:16" itemprop="dateModified" datetime="2022-03-28T22:56:16+08:00">2022-03-28</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline：</span>
-  
-    <a title="waline" href="/2021%E5%B9%B4%E6%98%A5%EF%BC%8C%E6%88%91%E5%8D%96%E6%8E%89%E4%BA%86iPad%EF%BC%8C%E4%B9%B0%E4%BA%86MacBook#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/2021%E5%B9%B4%E6%98%A5%EF%BC%8C%E6%88%91%E5%8D%96%E6%8E%89%E4%BA%86iPad%EF%BC%8C%E4%B9%B0%E4%BA%86MacBook" data-xid="/2021%E5%B9%B4%E6%98%A5%EF%BC%8C%E6%88%91%E5%8D%96%E6%8E%89%E4%BA%86iPad%EF%BC%8C%E4%B9%B0%E4%BA%86MacBook" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span id="/2021%E5%B9%B4%E6%98%A5%EF%BC%8C%E6%88%91%E5%8D%96%E6%8E%89%E4%BA%86iPad%EF%BC%8C%E4%B9%B0%E4%BA%86MacBook" class="post-meta-item leancloud_visitors" data-flag-title="2021年春，我卖掉了iPad，买了MacBook" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.8k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="卖掉了原来的iPad-air3"><a href="#卖掉了原来的iPad-air3" class="headerlink" title="卖掉了原来的iPad air3"></a>卖掉了原来的iPad air3</h2><blockquote>
-<p>写在前面：ipad air3是2019年暑假买的，2021年春卖了。</p>
-<p>为什么呢？</p>
-<p>东西不好用，一直吃灰，在图书馆的日子，总觉得ipad不顺手，很多时候也就看看网课，pdf。更多的时候是放在书架上凑数。很多时候的功能好像用手机也行？虽然手机没有平板大，但是</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021%E5%B9%B4%E6%98%A5%EF%BC%8C%E6%88%91%E5%8D%96%E6%8E%89%E4%BA%86iPad%EF%BC%8C%E4%B9%B0%E4%BA%86MacBook#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>
@@ -2724,14 +2950,14 @@ show_date_time();
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">46k</span>
+    <span title="站点总字数">55k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">42 分钟</span>
+    <span title="站点阅读时长">50 分钟</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
