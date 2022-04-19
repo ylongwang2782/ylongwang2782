@@ -2716,3 +2716,10 @@ h4::before {
   font-size: 100%;
   color: #ff5d52;
 }
+code,
+kbd,
+figure.highlight,
+pre {
+  background: #fff3f0;
+  color: #ff6869;
+}
