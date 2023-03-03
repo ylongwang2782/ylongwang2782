@@ -133,7 +133,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">33</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -144,7 +144,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -212,6 +212,264 @@ show_date_time();
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/home%20assistant%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rainlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="来日方长">
+      <meta itemprop="description" content="You can't wait until life isn't hard before you decide to be happy">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 来日方长">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/home%20assistant%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE" class="post-title-link" itemprop="url">home assistant安装与基础配置</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-06-23 15:52:39 / 修改时间：16:12:10" itemprop="dateCreated datePublished" datetime="2022-06-23T15:52:39+08:00">2022-06-23</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/home%20assistant%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/home%20assistant%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE" data-xid="/home%20assistant%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/home%20assistant%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE" class="post-meta-item leancloud_visitors" data-flag-title="home assistant安装与基础配置" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>774</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="群晖docker安装home-assistant"><a href="#群晖docker安装home-assistant" class="headerlink" title="群晖docker安装home assistant"></a>群晖docker安装home assistant</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>因为特殊原因（qiong）家里购买了很多平台的智能设备，所以需要一个整合平台。home assistant就非常合适。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
+<li>打开docker， 选择注册表，搜索home assistant ，选择第一个收藏量最高的，下载映像</li>
+<li>下载后启动，点击高级设置，在高级设置中： 卷设置为<img src="https://pic.imgdb.cn/item/62b418070947543129aea172.jpg" alt="img"></li>
+</ol>
+<p>网络设置为与host相同。</p>
+<ol>
+<li>点击启动。</li>
+<li>输入群晖host地址后面端口为默认8123，即，hostip:8123</li>
+</ol>
+<p>以上则安装完成。</p>
+<h2 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h2><h3 id="sonoff插件安装"><a href="#sonoff插件安装" class="headerlink" title="sonoff插件安装"></a>sonoff插件安装</h3><p>sonoff是一个性价比比较高的产品系列，我选用了他家的三开智能开关，平均一个60元，非常的实惠。</p>
+<p>在home assistant中接入 sonoff的设备则需要安装插件</p>
+<ol>
+<li>在GitHub中搜索SonoffLAN，或者直接跳转链接<a target="_blank" rel="noopener" href="https://github.com/AlexxIT/SonoffLAN">https://github.com/AlexxIT/SonoffLAN</a> ，在release 中下载最新的源代码压缩文件。</li>
+<li>解压文件夹，将文件夹中sonoff整个文件夹复制粘贴到docker中以下地址<img src="https://pic.imgdb.cn/item/62b41c9e0947543129b48f9b.jpg"></li>
+<li>文件放置完成后，重启home assistant。</li>
+<li>打开home assistant - 配置 - 设备与服务 - 添加集成 - 搜索sonoff - 填写账号密码，则可以将sonoff的设备同步到ha中。</li>
+</ol>
+<h3 id="hacs插件安装与配置"><a href="#hacs插件安装与配置" class="headerlink" title="hacs插件安装与配置"></a>hacs插件安装与配置</h3><p>原本的ha UI比较朴素，整个看起来不够美丽。</p>
+<p>添加home assistant custom store 插件，则可以方便的挑选已有的美化配置。</p>
+<ol>
+<li><p>同样是在GitHub中搜索hacs（<a target="_blank" rel="noopener" href="https://github.com/hacs/integration/releases%EF%BC%89%E4%B8%8B%E8%BD%BD%E6%9C%80%E6%96%B0%E7%89%88%E3%80%82">https://github.com/hacs/integration/releases）下载最新版。</a></p>
+</li>
+<li><p>安装流程同上sonoff</p>
+</li>
+<li><p>安装成功后，在左侧栏中可以查询到hacs 的界面 <img src="https://pic.imgdb.cn/item/62b41a9f0947543129b1e62c.jpg" alt="img"></p>
+</li>
+<li><p>在其中则可以选择集成或者前端下载，其中集成是一些功能性插件；前端则包括lovelace 和 主题下载。（该下载可能需要群晖开启代理）</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/%E7%BE%A4%E6%99%96%E5%A6%82%E4%BD%95%E8%AE%BF%E9%97%AEGitHub">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rainlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="来日方长">
+      <meta itemprop="description" content="You can't wait until life isn't hard before you decide to be happy">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 来日方长">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E7%BE%A4%E6%99%96%E5%A6%82%E4%BD%95%E8%AE%BF%E9%97%AEGitHub" class="post-title-link" itemprop="url">群晖怎么访问GitHub</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-06-23 15:52:39 / 修改时间：17:31:56" itemprop="dateCreated datePublished" datetime="2022-06-23T15:52:39+08:00">2022-06-23</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/%E7%BE%A4%E6%99%96%E5%A6%82%E4%BD%95%E8%AE%BF%E9%97%AEGitHub#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/%E7%BE%A4%E6%99%96%E5%A6%82%E4%BD%95%E8%AE%BF%E9%97%AEGitHub" data-xid="/%E7%BE%A4%E6%99%96%E5%A6%82%E4%BD%95%E8%AE%BF%E9%97%AEGitHub" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/%E7%BE%A4%E6%99%96%E5%A6%82%E4%BD%95%E8%AE%BF%E9%97%AEGitHub" class="post-meta-item leancloud_visitors" data-flag-title="群晖怎么访问GitHub" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>326</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>因为安装hacs需要GitHub认证，但是家里的群晖无法访问GitHub，所以需要采取特殊手段。</p>
+<h2 id="方法设计"><a href="#方法设计" class="headerlink" title="方法设计"></a>方法设计</h2><ul>
+<li>群晖安装clash（太复杂）</li>
+<li>群晖使用pc的clash</li>
+</ul>
+<p>综上，选择第二种方法。</p>
+<h2 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h2><p>clash拥有 allow lan的功能，即局域网使用功能</p>
+<ol>
+<li>在clash中开启allow lan</li>
+<li>cmd 中 输入ipconfig 查询本机ipv4地址，或者其他方法都可以。</li>
+<li>群晖 - 控制面板 - 网络 - 代理服务器 -  地址填写pc的ip地址；端口填写默认的clash 端口 7890（或者修改后的端口）</li>
+<li>勾选通过代理服务器连接，同时pc的clash开启proxy</li>
+</ol>
+<p>以上，群晖就可以正常访问GitHub了</p>
+<h2 id="一些废话"><a href="#一些废话" class="headerlink" title="一些废话"></a>一些废话</h2><p>没有搞这个之前，我都不知道clash这个allow lan有什么用，现在想来，终于搞懂了</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1899,245 +2157,6 @@ show_date_time();
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/jellyfin">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Rainlong">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="来日方长">
-      <meta itemprop="description" content="You can't wait until life isn't hard before you decide to be happy">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 来日方长">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/jellyfin" class="post-title-link" itemprop="url">jellyfin建立自己的媒体库</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-03-27 01:53:00 / 修改时间：14:15:54" itemprop="dateCreated datePublished" datetime="2022-03-27T01:53:00+08:00">2022-03-27</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline：</span>
-  
-    <a title="waline" href="/jellyfin#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/jellyfin" data-xid="/jellyfin" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span id="/jellyfin" class="post-meta-item leancloud_visitors" data-flag-title="jellyfin建立自己的媒体库" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.5k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>折腾了大概一天，东拼西凑终于还是搞定了</p>
-<p>外网访问那里花费的时间最多</p>
-<p>感慨颇多，前前后后还是做了很久的，必须要好好总结一下</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/jellyfin#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/hello-world">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Rainlong">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="来日方长">
-      <meta itemprop="description" content="You can't wait until life isn't hard before you decide to be happy">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 来日方长">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/hello-world" class="post-title-link" itemprop="url">hello-world</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-03-26 21:54:00" itemprop="dateCreated datePublished" datetime="2022-03-26T21:54:00+08:00">2022-03-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-30 00:55:08" itemprop="dateModified" datetime="2022-03-30T00:55:08+08:00">2022-03-30</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline：</span>
-  
-    <a title="waline" href="/hello-world#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/hello-world" data-xid="/hello-world" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span id="/hello-world" class="post-meta-item leancloud_visitors" data-flag-title="hello-world" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.3k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h2><h3 id="Reason-for-creating-a-blog"><a href="#Reason-for-creating-a-blog" class="headerlink" title="Reason for creating a blog"></a>Reason for creating a blog</h3><p>For I really love to recording my thoughts and experiences.</p>
-<p>By the way, record and summarize makes everything clear and power.</p>
-<h3 id="Reason-for-choosing-the-github"><a href="#Reason-for-choosing-the-github" class="headerlink" title="Reason for choosing the github"></a>Reason for choosing the github</h3><p>我有一台windows，一个Linux的群晖，一个mbp2017.</p>
-<p>我最终选择了在windows上面通过hexo建立我的第一个blog。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/hello-world#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -2150,8 +2169,8 @@ show_date_time();
 
 
 <div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  &copy; 2022 – 
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -2163,14 +2182,14 @@ show_date_time();
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">55k</span>
+    <span title="站点总字数">56k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">50 分钟</span>
+    <span title="站点阅读时长">51 分钟</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
