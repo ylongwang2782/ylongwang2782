@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/%E6%A3%92%E5%86%B0128.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/%E6%A3%92%E5%86%B032.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/%E6%A3%92%E5%86%B016.png">
+  <link rel="mask-icon" href="/images/%E6%A3%92%E5%86%B0.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ylongwang2782.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":null,"post_header":null,"post_body":null,"coll_header":null,"sidebar":null}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="前言（废话）群晖的外网访问一直是一个问题 白群晖还好说，有自带的，不过也是网速感人 黑群晖就更不用说了，只能自己搞 之前用的ddns，还没有大佬些docker的script，只能用计划任务配合阿里云的ddns半自动刷新">
+<meta property="og:type" content="article">
+<meta property="og:title" content="黑群晖+ddns+阿里云&#x3D;免费的最快的外网访问">
+<meta property="og:url" content="https://ylongwang2782.github.io/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE">
+<meta property="og:site_name" content="来日方长">
+<meta property="og:description" content="前言（废话）群晖的外网访问一直是一个问题 白群晖还好说，有自带的，不过也是网速感人 黑群晖就更不用说了，只能自己搞 之前用的ddns，还没有大佬些docker的script，只能用计划任务配合阿里云的ddns半自动刷新">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6241816a27f86abb2a33f083.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6241819627f86abb2a34efff.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/624181a827f86abb2a3558e1.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/624181b627f86abb2a359807.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/624181c327f86abb2a35db26.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/624181e727f86abb2a36a945.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/624181f927f86abb2a371f48.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6241820327f86abb2a37622f.png">
+<meta property="article:published_time" content="2022-02-07T10:29:00.000Z">
+<meta property="article:modified_time" content="2022-03-28T10:01:54.000Z">
+<meta property="article:author" content="Rainlong">
+<meta property="article:tag" content="笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/6241816a27f86abb2a33f083.png">
+
+
+<link rel="canonical" href="https://ylongwang2782.github.io/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://ylongwang2782.github.io/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE","path":"黑群晖+ddns+阿里云=免费的最快的外网访问.html","title":"黑群晖+ddns+阿里云=免费的最快的外网访问"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>黑群晖+ddns+阿里云=免费的最快的外网访问 | 来日方长</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ058Y2LKZ"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-VQ058Y2LKZ","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?2aacacbf31837d9a367324e67673a9cc"></script>
+
+
+
+<link rel="dns-prefetch" href="waline-server-seven.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">来日方长</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-message"><a href="/message/" rel="section"><i class="fa fa-book fa-fw"></i>自言自语</a></li><li class="menu-item menu-item-meme"><a href="/meme/" rel="section"><i class="fa fa-pencil fa-fw"></i>留言板</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">前言（废话）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AC%E7%BD%91IP%EF%BC%81"><span class="nav-number">2.</span> <span class="nav-text">公网IP！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BE%A4%E6%99%96ddns%E8%AE%BE%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">群晖ddns设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1%E5%99%A8%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E8%AE%BE%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">路由器端口转发设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91"><span class="nav-number">5.</span> <span class="nav-text">阿里云</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Rainlong"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Rainlong</p>
+  <div class="site-description" itemprop="description">You can't wait until life isn't hard before you decide to be happy</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ylongwang2782" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ylongwang2782" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:ylongwang@icloud.com" title="E-Mail → mailto:ylongwang@icloud.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/87307916" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;87307916" rel="noopener" target="_blank"><i class="fab fa-bilibili fa-fw"></i>Bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://sighttp.qq.com/authd?IDKEY=40d9224302167c6445ae98e209f27a5a2163835f4e0a2938" title="QQ → http:&#x2F;&#x2F;sighttp.qq.com&#x2F;authd?IDKEY&#x3D;40d9224302167c6445ae98e209f27a5a2163835f4e0a2938" rel="noopener" target="_blank"><i class="fab fa-qq fa-fw"></i>QQ</a>
+      </span>
+  </div>
+
+
+<div id="days"></div>
+    <script>
+    function show_date_time(){
+        window.setTimeout("show_date_time()", 1000);
+        BirthDay=new Date("03/26/2022 21:54:00");
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=setzero(Math.floor(e_hrsold));
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+        seconds=setzero(Math.floor((e_minsold-minsold)*60));
+        document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+    }
+function setzero(i){
+    if (i<10)
+    {i="0" + i};
+    return i;
+}
+show_date_time();
+</script>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://ylongwang2782.github.io/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rainlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="来日方长">
+      <meta itemprop="description" content="You can't wait until life isn't hard before you decide to be happy">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="黑群晖+ddns+阿里云=免费的最快的外网访问 | 来日方长">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          黑群晖+ddns+阿里云=免费的最快的外网访问
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-02-07 18:29:00" itemprop="dateCreated datePublished" datetime="2022-02-07T18:29:00+08:00">2022-02-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-28 18:01:54" itemprop="dateModified" datetime="2022-03-28T18:01:54+08:00">2022-03-28</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE" data-xid="/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE" class="post-meta-item leancloud_visitors" data-flag-title="黑群晖+ddns+阿里云=免费的最快的外网访问" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="前言（废话）"><a href="#前言（废话）" class="headerlink" title="前言（废话）"></a>前言（废话）</h2><p>群晖的外网访问一直是一个问题</p>
+<p>白群晖还好说，有自带的，不过也是网速感人</p>
+<p>黑群晖就更不用说了，只能自己搞</p>
+<p>之前用的ddns，还没有大佬些docker的script，只能用计划任务配合阿里云的ddns半自动刷新</p>
+<span id="more"></span>
+
+<p><img src="https://pic.imgdb.cn/item/6241816a27f86abb2a33f083.png"></p>
+<p>而且相当不稳定，也不知道是我的设置问题还是因为什么，时常ddns更新不上。</p>
+<p>后来就搁置了几年</p>
+<p>直到今年又准备把外网访问重新搞上。</p>
+<p>下面开始正经说</p>
+<hr>
+<h2 id="公网IP！"><a href="#公网IP！" class="headerlink" title="公网IP！"></a>公网IP！</h2><p>必须要有ipv6或者ipv4的公网地址！动态静态都可以</p>
+<p>ipv4重庆这边必须要配合套餐199+50元，或者299一个月，或者企业199套餐可以搞到公网v4</p>
+<p>ipv6就很简单了，拿到光猫的管理员密码，打开光猫的v6，打开路由器的v6分配就可以了。</p>
+<p>值得注意的是，路由器的v6分配，几乎都要开启路由的拨号模式才可以启动。所以设置光猫的时候，更改为ipv4+ipv6,并且将光猫的模式更改的桥接模式，由路由器拨号和分配地址。</p>
+<p>设置完后，建议重启一下，就能获得ipv6地址，检查是否获得v6地址，可以访问<a target="_blank" rel="noopener" href="http://www.test-**ipv6**.com/%E5%9C%B0%E5%9D%80%E6%9F%A5%E7%9C%8B%EF%BC%8C%E4%BA%A6%E6%88%96%E6%98%AF%E9%80%9A%E8%BF%87%E6%9F%A5%E7%9C%8B%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E5%88%A4%E6%96%AD%E2%80%94%E2%80%94ipv6">www.test-**ipv6**.com/地址查看，亦或是通过查看网络连接判断——ipv6</a> internet——即有v6地址</p>
+<p><img src="https://pic.imgdb.cn/item/6241819627f86abb2a34efff.png"></p>
+<hr>
+<h2 id="群晖ddns设置"><a href="#群晖ddns设置" class="headerlink" title="群晖ddns设置"></a>群晖ddns设置</h2><p><img src="https://pic.imgdb.cn/item/624181a827f86abb2a3558e1.png"></p>
+<p>docker里面注册表里搜索ddns</p>
+<p>因为一直有大佬再更新ddns</p>
+<p>所以一般选择收藏量最大的那个就可以了</p>
+<p>我下载的就是jeessy&#x2F;ddns-go</p>
+<p>这个相比其他的ddns，拥有单独的webUI管理界面， 更加的方便。</p>
+<p>安装过程记得勾选与本机IP地址相同，不然访问不了！</p>
+<p>附上大佬的dockerhub网页</p>
+<p><a target="_blank" rel="noopener" href="https://registry.hub.docker.com/r/jeessy/ddns-go/">https://registry.hub.docker.com/r/jeessy/ddns-go/</a></p>
+<hr>
+<p>jeessy&#x2F;ddns-go</p>
+<p>安装完成后</p>
+<p>输入群晖IP：9876，9876是这个ddns的端口</p>
+<p><img src="https://pic.imgdb.cn/item/624181b627f86abb2a359807.png"></p>
+<p>在ipv6这一行，勾选上，选择通过网卡获取</p>
+<p>这里我的domains是我在阿里云申请的域名，可以先忽略</p>
+<hr>
+<h2 id="路由器端口转发设置"><a href="#路由器端口转发设置" class="headerlink" title="路由器端口转发设置"></a>路由器端口转发设置</h2><p><img src="https://pic.imgdb.cn/item/624181c327f86abb2a35db26.png"></p>
+<p>我是小米路由器，其他路由器同理，和我一样设置就可以了</p>
+<hr>
+<p>到这里其实已经可以外网访问了，</p>
+<p>输入群晖里的IPV6地址，加上中括号，再加上端口5000</p>
+<p>就可以正常访问了。</p>
+<p>后面是ddns设置</p>
+<hr>
+<h2 id="阿里云"><a href="#阿里云" class="headerlink" title="阿里云"></a>阿里云</h2><p>在阿里云里申请一个域名，大多数域名非常便宜</p>
+<p>选择一个自己喜欢的便宜的域名就行</p>
+<p><img src="https://pic.imgdb.cn/item/624181e727f86abb2a36a945.png"></p>
+<p>注册完后就跟着阿里云的步骤走就可以了</p>
+<p>因为有各种实名认证问题 ，估计这里会耽搁半天审核的时间。</p>
+<p>注册完后就</p>
+<p><img src="https://pic.imgdb.cn/item/624181f927f86abb2a371f48.png"></p>
+<p>在accesskey里创建一个accesskey</p>
+<p>创建成功后就可以得到ID and secret</p>
+<p>把相应的ID和secret输入到ddns网页里</p>
+<p><img src="https://pic.imgdb.cn/item/6241820327f86abb2a37622f.png"></p>
+<p>记得把domain也敲上</p>
+<p>最后点击save就搞定了</p>
+<p>右侧栏也可以正常看到程序运行日志</p>
+<p>这个时候就可以正常使用域名访问nas了</p>
+<hr>
+<p>本文的目的旨在帮助自己的同时，给大家指路，非手把手教学，见谅！</p>
+<p>复制阿里云的ID和secret的时候，记得检查不要有任何空格！我因此耽搁了很久</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/PVE%E9%BB%91%E7%BE%A4%E6%99%96%E7%9B%B4%E9%80%9A%E7%A1%AC%E7%9B%98" rel="prev" title="PVE黑群晖直通硬盘">
+                  <i class="fa fa-chevron-left"></i> PVE黑群晖直通硬盘
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/%E6%B5%85%E8%B0%88pt" rel="next" title="浅谈pt">
+                  浅谈pt <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2022 – 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Rainlong</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">62k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">56 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline-server-seven.vercel.app","placeholder":"畅所欲言。","avatar":"retro","pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/%E9%BB%91%E7%BE%A4%E6%99%96+ddns+%E9%98%BF%E9%87%8C%E4%BA%91=%E5%85%8D%E8%B4%B9%E7%9A%84%E6%9C%80%E5%BF%AB%E7%9A%84%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() => 
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => {
+    new Waline(CONFIG.waline);
+  });
+});
+</script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right"},"mobile":{"show":true},"react":{"opacityDefault":0.9,"opacityOnHover":0.5},"log":false});</script></body>
+</html>
